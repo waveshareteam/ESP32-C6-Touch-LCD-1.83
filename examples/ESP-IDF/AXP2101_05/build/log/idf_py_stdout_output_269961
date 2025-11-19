@@ -1,0 +1,3506 @@
+Command: /home/wxggc/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/wxggc/esp/v550/esp-idf-v5.5/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /home/wxggc/桌面/project2025/ESP32-C6-Touch-LCD-1.83/AXP2101_05/build/XPowersLib_Example.elf /home/wxggc/桌面/project2025/ESP32-C6-Touch-LCD-1.83/AXP2101_05/build/bootloader/bootloader.elf -m '/home/wxggc/.espressif/python_env/idf5.5_py3.10_env/bin/python' '/home/wxggc/esp/v550/esp-idf-v5.5/tools/idf.py' '-p' '/dev/ttyACM0'
+:Sep 19 2022
+rst:0x15 (USB_UART_HPSYS),boot:0x2d (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40803460
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xe78
+load:0x4086e610,len:0x31c8
+entry 0x4086b91a
+[0;32mI (24) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Oct 28 2025 18:30:15[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (26) boot: efuse block revision: v0.3[0m
+[0;32mI (28) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (44) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (53) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (66) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (76) esp_image: segment 0: paddr=00010020 vaddr=42020020 size=0ae00h ( 44544) map[0m
+[0;32mI (91) esp_image: segment 1: paddr=0001ae28 vaddr=40800000 size=051f0h ( 20976) load[0m
+[0;32mI (97) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=18a18h (100888) map[0m
+[0;32mI (117) esp_image: segment 3: paddr=00038a40 vaddr=408051f0 size=07f58h ( 32600) load[0m
+[0;32mI (127) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (127) boot: Disabling RNG early entropy source...[0m
+[0;32mI (137) cpu_start: Unicore app[0m
+[0;32mI (146) cpu_start: Pro cpu start user code[0m
+[0;32mI (146) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (146) app_init: Application information:[0m
+[0;32mI (146) app_init: Project name:     XPowersLib_Example[0m
+[0;32mI (151) app_init: App version:      1[0m
+[0;32mI (154) app_init: Compile time:     Oct 28 2025 18:30:10[0m
+[0;32mI (159) app_init: ELF file SHA256:  a5bfdb740...[0m
+[0;32mI (163) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (167) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (171) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (175) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (179) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (185) heap_init: At 4080E2A0 len 0006E370 (440 KiB): RAM[0m
+[0;32mI (190) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (195) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (201) spi_flash: detected chip: generic[0m
+[0;32mI (204) spi_flash: flash io: dio[0m
+[0;33mW (207) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (220) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (226) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (232) coexist: coex firmware version: 831ec70[0m
+[0;32mI (237) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (241) main_task: Started on CPU0[0m
+[0;32mI (241) main_task: Calling app_main()[0m
+[0;32mI (241) main: I2C initialized successfully[0m
+[0;32mI (251) AXP2101: Init PMU SUCCESS![0m
+[1;31mE (251) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (251) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (261) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (271) main: PMU WRITE FAILED![0m
+[1;31mE (271) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (281) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (281) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (291) main: PMU WRITE FAILED![0m
+[0;32mI (301) AXP2101: DCDC=======================================================================[0m
+
+[0;32mI (301) AXP2101: DC1  : +   Voltage:3300 mV [0m
+
+[0;32mI (311) AXP2101: DC2  : -   Voltage:900 mV [0m
+
+[0;32mI (311) AXP2101: DC3  : -   Voltage:1200 mV [0m
+
+[0;32mI (311) AXP2101: DC4  : -   Voltage:1800 mV [0m
+
+[0;32mI (321) AXP2101: DC5  : -   Voltage:1400 mV [0m
+
+[0;32mI (321) AXP2101: ALDO=======================================================================[0m
+
+[0;32mI (331) AXP2101: ALDO1: +   Voltage:3300 mV[0m
+
+[0;32mI (331) AXP2101: ALDO2: -   Voltage:3300 mV[0m
+
+[0;32mI (341) AXP2101: ALDO3: -   Voltage:3000 mV[0m
+
+[0;32mI (341) AXP2101: ALDO4: -   Voltage:1800 mV[0m
+
+[0;32mI (351) AXP2101: BLDO=======================================================================[0m
+
+[0;32mI (361) AXP2101: BLDO1: -   Voltage:1200 mV[0m
+
+[0;32mI (361) AXP2101: BLDO2: -   Voltage:2800 mV[0m
+
+[0;32mI (361) AXP2101: CPUSLDO====================================================================[0m
+
+[0;32mI (371) AXP2101: CPUSLDO: - Voltage:1200 mV[0m
+
+[0;32mI (381) AXP2101: DLDO=======================================================================[0m
+
+[0;32mI (381) AXP2101: DLDO1: -   Voltage:500 mV[0m
+
+[0;32mI (391) AXP2101: DLDO2: -   Voltage:500 mV[0m
+
+[0;32mI (391) AXP2101: ===========================================================================[0m
+
+[0;32mI (411) AXP2101: battery percentage:76 %[0m
+[0;32mI (411) main_task: Returned from app_main()[0m
+[0;32mI (421) AXP2101: Power Temperature: 39.05°C[0m
+[0;32mI (421) AXP2101: isCharging: YES[0m
+[0;32mI (421) AXP2101: isDischarge: NO[0m
+[0;32mI (421) AXP2101: isStandby: NO[0m
+[0;32mI (421) AXP2101: isVbusIn: YES[0m
+[0;32mI (431) AXP2101: isVbusGood: YES[0m
+[0;32mI (431) AXP2101: Charger Status: constant charge[0m
+[0;32mI (431) AXP2101: getBattVoltage: 4196 mV[0m
+[0;32mI (441) AXP2101: getVbusVoltage: 4538 mV[0m
+[0;32mI (441) AXP2101: getSystemVoltage: 4222 mV[0m
+[0;32mI (451) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (1451) AXP2101: Power Temperature: 39.10°C[0m
+[0;32mI (1451) AXP2101: isCharging: YES[0m
+[0;32mI (1451) AXP2101: isDischarge: NO[0m
+[0;32mI (1451) AXP2101: isStandby: NO[0m
+[0;32mI (1451) AXP2101: isVbusIn: YES[0m
+[0;32mI (1451) AXP2101: isVbusGood: YES[0m
+[0;32mI (1461) AXP2101: Charger Status: constant charge[0m
+[0;32mI (1461) AXP2101: getBattVoltage: 4201 mV[0m
+[0;32mI (1461) AXP2101: getVbusVoltage: 4539 mV[0m
+[0;32mI (1471) AXP2101: getSystemVoltage: 4225 mV[0m
+[0;32mI (1471) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (2481) AXP2101: Power Temperature: 39.10°C[0m
+[0;32mI (2481) AXP2101: isCharging: YES[0m
+[0;32mI (2481) AXP2101: isDischarge: NO[0m
+[0;32mI (2481) AXP2101: isStandby: NO[0m
+[0;32mI (2481) AXP2101: isVbusIn: YES[0m
+[0;32mI (2481) AXP2101: isVbusGood: YES[0m
+[0;32mI (2491) AXP2101: Charger Status: constant charge[0m
+[0;32mI (2491) AXP2101: getBattVoltage: 4197 mV[0m
+[0;32mI (2491) AXP2101: getVbusVoltage: 4534 mV[0m
+[0;32mI (2501) AXP2101: getSystemVoltage: 4222 mV[0m
+[0;32mI (2501) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (3511) AXP2101: Power Temperature: 39.15°C[0m
+[0;32mI (3511) AXP2101: isCharging: YES[0m
+[0;32mI (3511) AXP2101: isDischarge: NO[0m
+[0;32mI (3511) AXP2101: isStandby: NO[0m
+[0;32mI (3511) AXP2101: isVbusIn: YES[0m
+[0;32mI (3511) AXP2101: isVbusGood: YES[0m
+[0;32mI (3521) AXP2101: Charger Status: constant charge[0m
+[0;32mI (3521) AXP2101: getBattVoltage: 4205 mV[0m
+[0;32mI (3521) AXP2101: getVbusVoltage: 4543 mV[0m
+[0;32mI (3531) AXP2101: getSystemVoltage: 4230 mV[0m
+[0;32mI (3531) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (4541) AXP2101: Power Temperature: 39.20°C[0m
+[0;32mI (4541) AXP2101: isCharging: YES[0m
+[0;32mI (4541) AXP2101: isDischarge: NO[0m
+[0;32mI (4541) AXP2101: isStandby: NO[0m
+[0;32mI (4541) AXP2101: isVbusIn: YES[0m
+[0;32mI (4541) AXP2101: isVbusGood: YES[0m
+[0;32mI (4551) AXP2101: Charger Status: constant charge[0m
+[0;32mI (4551) AXP2101: getBattVoltage: 4206 mV[0m
+[0;32mI (4551) AXP2101: getVbusVoltage: 4547 mV[0m
+[0;32mI (4561) AXP2101: getSystemVoltage: 4231 mV[0m
+[0;32mI (4561) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (5571) AXP2101: Power Temperature: 39.30°C[0m
+[0;32mI (5571) AXP2101: isCharging: YES[0m
+[0;32mI (5571) AXP2101: isDischarge: NO[0m
+[0;32mI (5571) AXP2101: isStandby: NO[0m
+[0;32mI (5571) AXP2101: isVbusIn: YES[0m
+[0;32mI (5571) AXP2101: isVbusGood: YES[0m
+[0;32mI (5581) AXP2101: Charger Status: constant charge[0m
+[0;32mI (5581) AXP2101: getBattVoltage: 4206 mV[0m
+[0;32mI (5581) AXP2101: getVbusVoltage: 4548 mV[0m
+[0;32mI (5591) AXP2101: getSystemVoltage: 4233 mV[0m
+[0;32mI (5591) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (6601) AXP2101: Power Temperature: 39.35°C[0m
+[0;32mI (6601) AXP2101: isCharging: YES[0m
+[0;32mI (6601) AXP2101: isDischarge: NO[0m
+[0;32mI (6601) AXP2101: isStandby: NO[0m
+[0;32mI (6601) AXP2101: isVbusIn: YES[0m
+[0;32mI (6601) AXP2101: isVbusGood: YES[0m
+[0;32mI (6611) AXP2101: Charger Status: constant charge[0m
+[0;32mI (6611) AXP2101: getBattVoltage: 4207 mV[0m
+[0;32mI (6611) AXP2101: getVbusVoltage: 4550 mV[0m
+[0;32mI (6621) AXP2101: getSystemVoltage: 4238 mV[0m
+[0;32mI (6621) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (7631) AXP2101: Power Temperature: 39.30°C[0m
+[0;32mI (7631) AXP2101: isCharging: YES[0m
+[0;32mI (7631) AXP2101: isDischarge: NO[0m
+[0;32mI (7631) AXP2101: isStandby: NO[0m
+[0;32mI (7631) AXP2101: isVbusIn: YES[0m
+[0;32mI (7631) AXP2101: isVbusGood: YES[0m
+[0;32mI (7641) AXP2101: Charger Status: not charge[0m
+[0;32mI (7641) AXP2101: getBattVoltage: 4208 mV[0m
+[0;32mI (7641) AXP2101: getVbusVoltage: 4551 mV[0m
+[0;32mI (7651) AXP2101: getSystemVoltage: 4236 mV[0m
+[0;32mI (7651) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (8661) AXP2101: Power Temperature: 39.35°C[0m
+[0;32mI (8661) AXP2101: isCharging: YES[0m
+[0;32mI (8661) AXP2101: isDischarge: NO[0m
+[0;32mI (8661) AXP2101: isStandby: NO[0m
+[0;32mI (8661) AXP2101: isVbusIn: YES[0m
+[0;32mI (8661) AXP2101: isVbusGood: YES[0m
+[0;32mI (8671) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (8671) AXP2101: getBattVoltage: 4208 mV[0m
+[0;32mI (8671) AXP2101: getVbusVoltage: 4552 mV[0m
+[0;32mI (8681) AXP2101: getSystemVoltage: 4237 mV[0m
+[0;32mI (8681) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (9691) AXP2101: Power Temperature: 39.30°C[0m
+[0;32mI (9691) AXP2101: isCharging: YES[0m
+[0;32mI (9691) AXP2101: isDischarge: NO[0m
+[0;32mI (9691) AXP2101: isStandby: NO[0m
+[0;32mI (9691) AXP2101: isVbusIn: YES[0m
+[0;32mI (9691) AXP2101: isVbusGood: YES[0m
+[0;32mI (9701) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (9701) AXP2101: getBattVoltage: 4207 mV[0m
+[0;32mI (9701) AXP2101: getVbusVoltage: 4549 mV[0m
+[0;32mI (9711) AXP2101: getSystemVoltage: 4235 mV[0m
+[0;32mI (9711) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (10721) AXP2101: Power Temperature: 39.40°C[0m
+[0;32mI (10721) AXP2101: isCharging: YES[0m
+[0;32mI (10721) AXP2101: isDischarge: NO[0m
+[0;32mI (10721) AXP2101: isStandby: NO[0m
+[0;32mI (10721) AXP2101: isVbusIn: YES[0m
+[0;32mI (10721) AXP2101: isVbusGood: YES[0m
+[0;32mI (10731) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (10731) AXP2101: getBattVoltage: 4208 mV[0m
+[0;32mI (10731) AXP2101: getVbusVoltage: 4554 mV[0m
+[0;32mI (10741) AXP2101: getSystemVoltage: 4236 mV[0m
+[0;32mI (10741) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (11751) AXP2101: Power Temperature: 39.35°C[0m
+[0;32mI (11751) AXP2101: isCharging: YES[0m
+[0;32mI (11751) AXP2101: isDischarge: NO[0m
+[0;32mI (11751) AXP2101: isStandby: NO[0m
+[0;32mI (11751) AXP2101: isVbusIn: YES[0m
+[0;32mI (11751) AXP2101: isVbusGood: YES[0m
+[0;32mI (11761) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (11761) AXP2101: getBattVoltage: 4210 mV[0m
+[0;32mI (11761) AXP2101: getVbusVoltage: 4552 mV[0m
+[0;32mI (11771) AXP2101: getSystemVoltage: 4240 mV[0m
+[0;32mI (11771) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (12781) AXP2101: Power Temperature: 39.45°C[0m
+[0;32mI (12781) AXP2101: isCharging: YES[0m
+[0;32mI (12781) AXP2101: isDischarge: NO[0m
+[0;32mI (12781) AXP2101: isStandby: NO[0m
+[0;32mI (12781) AXP2101: isVbusIn: YES[0m
+[0;32mI (12781) AXP2101: isVbusGood: YES[0m
+[0;32mI (12791) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (12791) AXP2101: getBattVoltage: 4199 mV[0m
+[0;32mI (12791) AXP2101: getVbusVoltage: 4535 mV[0m
+[0;32mI (12801) AXP2101: getSystemVoltage: 4230 mV[0m
+[0;32mI (12801) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (13811) AXP2101: Power Temperature: 39.45°C[0m
+[0;32mI (13811) AXP2101: isCharging: YES[0m
+[0;32mI (13811) AXP2101: isDischarge: NO[0m
+[0;32mI (13811) AXP2101: isStandby: NO[0m
+[0;32mI (13811) AXP2101: isVbusIn: YES[0m
+[0;32mI (13811) AXP2101: isVbusGood: YES[0m
+[0;32mI (13821) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (13821) AXP2101: getBattVoltage: 4209 mV[0m
+[0;32mI (13821) AXP2101: getVbusVoltage: 4552 mV[0m
+[0;32mI (13831) AXP2101: getSystemVoltage: 4238 mV[0m
+[0;32mI (13831) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (14841) AXP2101: Power Temperature: 39.45°C[0m
+[0;32mI (14841) AXP2101: isCharging: YES[0m
+[0;32mI (14841) AXP2101: isDischarge: NO[0m
+[0;32mI (14841) AXP2101: isStandby: NO[0m
+[0;32mI (14841) AXP2101: isVbusIn: YES[0m
+[0;32mI (14841) AXP2101: isVbusGood: YES[0m
+[0;32mI (14851) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (14851) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (14851) AXP2101: getVbusVoltage: 4556 mV[0m
+[0;32mI (14861) AXP2101: getSystemVoltage: 4240 mV[0m
+[0;32mI (14861) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (15871) AXP2101: Power Temperature: 39.40°C[0m
+[0;32mI (15871) AXP2101: isCharging: YES[0m
+[0;32mI (15871) AXP2101: isDischarge: NO[0m
+[0;32mI (15871) AXP2101: isStandby: NO[0m
+[0;32mI (15871) AXP2101: isVbusIn: YES[0m
+[0;32mI (15871) AXP2101: isVbusGood: YES[0m
+[0;32mI (15881) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (15881) AXP2101: getBattVoltage: 4210 mV[0m
+[0;32mI (15881) AXP2101: getVbusVoltage: 4558 mV[0m
+[0;32mI (15891) AXP2101: getSystemVoltage: 4242 mV[0m
+[0;32mI (15891) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (16901) AXP2101: Power Temperature: 39.45°C[0m
+[0;32mI (16901) AXP2101: isCharging: YES[0m
+[0;32mI (16901) AXP2101: isDischarge: NO[0m
+[0;32mI (16901) AXP2101: isStandby: NO[0m
+[0;32mI (16901) AXP2101: isVbusIn: YES[0m
+[0;32mI (16901) AXP2101: isVbusGood: YES[0m
+[0;32mI (16911) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (16911) AXP2101: getBattVoltage: 4210 mV[0m
+[0;32mI (16911) AXP2101: getVbusVoltage: 4556 mV[0m
+[0;32mI (16921) AXP2101: getSystemVoltage: 4243 mV[0m
+[0;32mI (16921) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (17931) AXP2101: Power Temperature: 39.45°C[0m
+[0;32mI (17931) AXP2101: isCharging: YES[0m
+[0;32mI (17931) AXP2101: isDischarge: NO[0m
+[0;32mI (17931) AXP2101: isStandby: NO[0m
+[0;32mI (17931) AXP2101: isVbusIn: YES[0m
+[0;32mI (17931) AXP2101: isVbusGood: YES[0m
+[0;32mI (17941) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (17941) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (17941) AXP2101: getVbusVoltage: 4560 mV[0m
+[0;32mI (17951) AXP2101: getSystemVoltage: 4245 mV[0m
+[0;32mI (17951) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (18961) AXP2101: Power Temperature: 39.50°C[0m
+[0;32mI (18961) AXP2101: isCharging: YES[0m
+[0;32mI (18961) AXP2101: isDischarge: NO[0m
+[0;32mI (18961) AXP2101: isStandby: NO[0m
+[0;32mI (18961) AXP2101: isVbusIn: YES[0m
+[0;32mI (18961) AXP2101: isVbusGood: YES[0m
+[0;32mI (18971) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (18971) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (18971) AXP2101: getVbusVoltage: 4558 mV[0m
+[0;32mI (18981) AXP2101: getSystemVoltage: 4239 mV[0m
+[0;32mI (18981) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (19991) AXP2101: Power Temperature: 39.45°C[0m
+[0;32mI (19991) AXP2101: isCharging: YES[0m
+[0;32mI (19991) AXP2101: isDischarge: NO[0m
+[0;32mI (19991) AXP2101: isStandby: NO[0m
+[0;32mI (19991) AXP2101: isVbusIn: YES[0m
+[0;32mI (19991) AXP2101: isVbusGood: YES[0m
+[0;32mI (20001) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (20001) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (20001) AXP2101: getVbusVoltage: 4564 mV[0m
+[0;32mI (20011) AXP2101: getSystemVoltage: 4248 mV[0m
+[0;32mI (20011) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (21021) AXP2101: Power Temperature: 39.50°C[0m
+[0;32mI (21021) AXP2101: isCharging: YES[0m
+[0;32mI (21021) AXP2101: isDischarge: NO[0m
+[0;32mI (21021) AXP2101: isStandby: NO[0m
+[0;32mI (21021) AXP2101: isVbusIn: YES[0m
+[0;32mI (21021) AXP2101: isVbusGood: YES[0m
+[0;32mI (21031) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (21031) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (21031) AXP2101: getVbusVoltage: 4564 mV[0m
+[0;32mI (21041) AXP2101: getSystemVoltage: 4250 mV[0m
+[0;32mI (21041) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (22051) AXP2101: Power Temperature: 39.50°C[0m
+[0;32mI (22051) AXP2101: isCharging: YES[0m
+[0;32mI (22051) AXP2101: isDischarge: NO[0m
+[0;32mI (22051) AXP2101: isStandby: NO[0m
+[0;32mI (22051) AXP2101: isVbusIn: YES[0m
+[0;32mI (22051) AXP2101: isVbusGood: YES[0m
+[0;32mI (22061) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (22061) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (22061) AXP2101: getVbusVoltage: 4563 mV[0m
+[0;32mI (22071) AXP2101: getSystemVoltage: 4249 mV[0m
+[0;32mI (22071) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (23081) AXP2101: Power Temperature: 39.55°C[0m
+[0;32mI (23081) AXP2101: isCharging: YES[0m
+[0;32mI (23081) AXP2101: isDischarge: NO[0m
+[0;32mI (23081) AXP2101: isStandby: NO[0m
+[0;32mI (23081) AXP2101: isVbusIn: YES[0m
+[0;32mI (23081) AXP2101: isVbusGood: YES[0m
+[0;32mI (23091) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (23091) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (23091) AXP2101: getVbusVoltage: 4565 mV[0m
+[0;32mI (23101) AXP2101: getSystemVoltage: 4245 mV[0m
+[0;32mI (23101) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (24111) AXP2101: Power Temperature: 39.55°C[0m
+[0;32mI (24111) AXP2101: isCharging: YES[0m
+[0;32mI (24111) AXP2101: isDischarge: NO[0m
+[0;32mI (24111) AXP2101: isStandby: NO[0m
+[0;32mI (24111) AXP2101: isVbusIn: YES[0m
+[0;32mI (24111) AXP2101: isVbusGood: YES[0m
+[0;32mI (24121) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (24121) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (24121) AXP2101: getVbusVoltage: 4565 mV[0m
+[0;32mI (24131) AXP2101: getSystemVoltage: 4251 mV[0m
+[0;32mI (24131) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (25141) AXP2101: Power Temperature: 39.55°C[0m
+[0;32mI (25141) AXP2101: isCharging: YES[0m
+[0;32mI (25141) AXP2101: isDischarge: NO[0m
+[0;32mI (25141) AXP2101: isStandby: NO[0m
+[0;32mI (25141) AXP2101: isVbusIn: YES[0m
+[0;32mI (25141) AXP2101: isVbusGood: YES[0m
+[0;32mI (25151) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (25151) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (25151) AXP2101: getVbusVoltage: 4565 mV[0m
+[0;32mI (25161) AXP2101: getSystemVoltage: 4256 mV[0m
+[0;32mI (25161) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (26171) AXP2101: Power Temperature: 39.65°C[0m
+[0;32mI (26171) AXP2101: isCharging: YES[0m
+[0;32mI (26171) AXP2101: isDischarge: NO[0m
+[0;32mI (26171) AXP2101: isStandby: NO[0m
+[0;32mI (26171) AXP2101: isVbusIn: YES[0m
+[0;32mI (26171) AXP2101: isVbusGood: YES[0m
+[0;32mI (26181) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (26181) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (26181) AXP2101: getVbusVoltage: 4566 mV[0m
+[0;32mI (26191) AXP2101: getSystemVoltage: 4255 mV[0m
+[0;32mI (26191) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (27201) AXP2101: Power Temperature: 39.70°C[0m
+[0;32mI (27201) AXP2101: isCharging: YES[0m
+[0;32mI (27201) AXP2101: isDischarge: NO[0m
+[0;32mI (27201) AXP2101: isStandby: NO[0m
+[0;32mI (27201) AXP2101: isVbusIn: YES[0m
+[0;32mI (27201) AXP2101: isVbusGood: YES[0m
+[0;32mI (27211) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (27211) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (27211) AXP2101: getVbusVoltage: 4571 mV[0m
+[0;32mI (27221) AXP2101: getSystemVoltage: 4261 mV[0m
+[0;32mI (27221) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (28231) AXP2101: Power Temperature: 39.70°C[0m
+[0;32mI (28231) AXP2101: isCharging: YES[0m
+[0;32mI (28231) AXP2101: isDischarge: NO[0m
+[0;32mI (28231) AXP2101: isStandby: NO[0m
+[0;32mI (28231) AXP2101: isVbusIn: YES[0m
+[0;32mI (28231) AXP2101: isVbusGood: YES[0m
+[0;32mI (28241) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (28241) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (28241) AXP2101: getVbusVoltage: 4571 mV[0m
+[0;32mI (28251) AXP2101: getSystemVoltage: 4256 mV[0m
+[0;32mI (28251) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (29261) AXP2101: Power Temperature: 39.75°C[0m
+[0;32mI (29261) AXP2101: isCharging: YES[0m
+[0;32mI (29261) AXP2101: isDischarge: NO[0m
+[0;32mI (29261) AXP2101: isStandby: NO[0m
+[0;32mI (29261) AXP2101: isVbusIn: YES[0m
+[0;32mI (29261) AXP2101: isVbusGood: YES[0m
+[0;32mI (29271) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (29271) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (29271) AXP2101: getVbusVoltage: 4577 mV[0m
+[0;32mI (29281) AXP2101: getSystemVoltage: 4261 mV[0m
+[0;32mI (29281) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (30291) AXP2101: Power Temperature: 39.75°C[0m
+[0;32mI (30291) AXP2101: isCharging: YES[0m
+[0;32mI (30291) AXP2101: isDischarge: NO[0m
+[0;32mI (30291) AXP2101: isStandby: NO[0m
+[0;32mI (30291) AXP2101: isVbusIn: YES[0m
+[0;32mI (30291) AXP2101: isVbusGood: YES[0m
+[0;32mI (30301) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (30301) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (30301) AXP2101: getVbusVoltage: 4576 mV[0m
+[0;32mI (30311) AXP2101: getSystemVoltage: 4268 mV[0m
+[0;32mI (30311) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (31321) AXP2101: Power Temperature: 39.80°C[0m
+[0;32mI (31321) AXP2101: isCharging: YES[0m
+[0;32mI (31321) AXP2101: isDischarge: NO[0m
+[0;32mI (31321) AXP2101: isStandby: NO[0m
+[0;32mI (31321) AXP2101: isVbusIn: YES[0m
+[0;32mI (31321) AXP2101: isVbusGood: YES[0m
+[0;32mI (31331) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (31331) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (31331) AXP2101: getVbusVoltage: 4582 mV[0m
+[0;32mI (31341) AXP2101: getSystemVoltage: 4262 mV[0m
+[0;32mI (31341) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (32351) AXP2101: Power Temperature: 39.85°C[0m
+[0;32mI (32351) AXP2101: isCharging: YES[0m
+[0;32mI (32351) AXP2101: isDischarge: NO[0m
+[0;32mI (32351) AXP2101: isStandby: NO[0m
+[0;32mI (32351) AXP2101: isVbusIn: YES[0m
+[0;32mI (32351) AXP2101: isVbusGood: YES[0m
+[0;32mI (32361) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (32361) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (32361) AXP2101: getVbusVoltage: 4575 mV[0m
+[0;32mI (32371) AXP2101: getSystemVoltage: 4266 mV[0m
+[0;32mI (32371) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (33381) AXP2101: Power Temperature: 39.95°C[0m
+[0;32mI (33381) AXP2101: isCharging: YES[0m
+[0;32mI (33381) AXP2101: isDischarge: NO[0m
+[0;32mI (33381) AXP2101: isStandby: NO[0m
+[0;32mI (33381) AXP2101: isVbusIn: YES[0m
+[0;32mI (33381) AXP2101: isVbusGood: YES[0m
+[0;32mI (33391) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (33391) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (33391) AXP2101: getVbusVoltage: 4576 mV[0m
+[0;32mI (33401) AXP2101: getSystemVoltage: 4262 mV[0m
+[0;32mI (33401) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (34411) AXP2101: Power Temperature: 40.00°C[0m
+[0;32mI (34411) AXP2101: isCharging: YES[0m
+[0;32mI (34411) AXP2101: isDischarge: NO[0m
+[0;32mI (34411) AXP2101: isStandby: NO[0m
+[0;32mI (34411) AXP2101: isVbusIn: YES[0m
+[0;32mI (34411) AXP2101: isVbusGood: YES[0m
+[0;32mI (34421) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (34421) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (34421) AXP2101: getVbusVoltage: 4576 mV[0m
+[0;32mI (34431) AXP2101: getSystemVoltage: 4272 mV[0m
+[0;32mI (34431) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (35441) AXP2101: Power Temperature: 40.00°C[0m
+[0;32mI (35441) AXP2101: isCharging: YES[0m
+[0;32mI (35441) AXP2101: isDischarge: NO[0m
+[0;32mI (35441) AXP2101: isStandby: NO[0m
+[0;32mI (35441) AXP2101: isVbusIn: YES[0m
+[0;32mI (35441) AXP2101: isVbusGood: YES[0m
+[0;32mI (35451) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (35451) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (35451) AXP2101: getVbusVoltage: 4584 mV[0m
+[0;32mI (35461) AXP2101: getSystemVoltage: 4274 mV[0m
+[0;32mI (35461) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (36471) AXP2101: Power Temperature: 40.10°C[0m
+[0;32mI (36471) AXP2101: isCharging: YES[0m
+[0;32mI (36471) AXP2101: isDischarge: NO[0m
+[0;32mI (36471) AXP2101: isStandby: NO[0m
+[0;32mI (36471) AXP2101: isVbusIn: YES[0m
+[0;32mI (36471) AXP2101: isVbusGood: YES[0m
+[0;32mI (36481) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (36481) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (36481) AXP2101: getVbusVoltage: 4586 mV[0m
+[0;32mI (36491) AXP2101: getSystemVoltage: 4278 mV[0m
+[0;32mI (36491) AXP2101: getBatteryPercent: 76 %[0m
+[0;32mI (37501) AXP2101: Power Temperature: 40.15°C[0m
+[0;32mI (37501) AXP2101: isCharging: YES[0m
+[0;32mI (37501) AXP2101: isDischarge: NO[0m
+[0;32mI (37501) AXP2101: isStandby: NO[0m
+[0;32mI (37501) AXP2101: isVbusIn: YES[0m
+[0;32mI (37501) AXP2101: isVbusGood: YES[0m
+[0;32mI (37511) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (37511) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (37511) AXP2101: getVbusVoltage: 4583 mV[0m
+[0;32mI (37521) AXP2101: getSystemVoltage: 4275 mV[0m
+[0;32mI (37521) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (38531) AXP2101: Power Temperature: 40.10°C[0m
+[0;32mI (38531) AXP2101: isCharging: YES[0m
+[0;32mI (38531) AXP2101: isDischarge: NO[0m
+[0;32mI (38531) AXP2101: isStandby: NO[0m
+[0;32mI (38531) AXP2101: isVbusIn: YES[0m
+[0;32mI (38531) AXP2101: isVbusGood: YES[0m
+[0;32mI (38541) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (38541) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (38541) AXP2101: getVbusVoltage: 4571 mV[0m
+[0;32mI (38551) AXP2101: getSystemVoltage: 4263 mV[0m
+[0;32mI (38551) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (39561) AXP2101: Power Temperature: 40.00°C[0m
+[0;32mI (39561) AXP2101: isCharging: YES[0m
+[0;32mI (39561) AXP2101: isDischarge: NO[0m
+[0;32mI (39561) AXP2101: isStandby: NO[0m
+[0;32mI (39561) AXP2101: isVbusIn: YES[0m
+[0;32mI (39561) AXP2101: isVbusGood: YES[0m
+[0;32mI (39571) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (39571) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (39571) AXP2101: getVbusVoltage: 4571 mV[0m
+[0;32mI (39581) AXP2101: getSystemVoltage: 4262 mV[0m
+[0;32mI (39581) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (40591) AXP2101: Power Temperature: 40.15°C[0m
+[0;32mI (40591) AXP2101: isCharging: YES[0m
+[0;32mI (40591) AXP2101: isDischarge: NO[0m
+[0;32mI (40591) AXP2101: isStandby: NO[0m
+[0;32mI (40591) AXP2101: isVbusIn: YES[0m
+[0;32mI (40591) AXP2101: isVbusGood: YES[0m
+[0;32mI (40601) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (40601) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (40601) AXP2101: getVbusVoltage: 4569 mV[0m
+[0;32mI (40611) AXP2101: getSystemVoltage: 4262 mV[0m
+[0;32mI (40611) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (41621) AXP2101: Power Temperature: 40.15°C[0m
+[0;32mI (41621) AXP2101: isCharging: YES[0m
+[0;32mI (41621) AXP2101: isDischarge: NO[0m
+[0;32mI (41621) AXP2101: isStandby: NO[0m
+[0;32mI (41621) AXP2101: isVbusIn: YES[0m
+[0;32mI (41621) AXP2101: isVbusGood: YES[0m
+[0;32mI (41631) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (41631) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (41631) AXP2101: getVbusVoltage: 4574 mV[0m
+[0;32mI (41641) AXP2101: getSystemVoltage: 4263 mV[0m
+[0;32mI (41641) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (42651) AXP2101: Power Temperature: 40.15°C[0m
+[0;32mI (42651) AXP2101: isCharging: YES[0m
+[0;32mI (42651) AXP2101: isDischarge: NO[0m
+[0;32mI (42651) AXP2101: isStandby: NO[0m
+[0;32mI (42651) AXP2101: isVbusIn: YES[0m
+[0;32mI (42651) AXP2101: isVbusGood: YES[0m
+[0;32mI (42661) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (42661) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (42661) AXP2101: getVbusVoltage: 4575 mV[0m
+[0;32mI (42671) AXP2101: getSystemVoltage: 4265 mV[0m
+[0;32mI (42671) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (43681) AXP2101: Power Temperature: 40.15°C[0m
+[0;32mI (43681) AXP2101: isCharging: YES[0m
+[0;32mI (43681) AXP2101: isDischarge: NO[0m
+[0;32mI (43681) AXP2101: isStandby: NO[0m
+[0;32mI (43681) AXP2101: isVbusIn: YES[0m
+[0;32mI (43681) AXP2101: isVbusGood: YES[0m
+[0;32mI (43691) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (43691) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (43691) AXP2101: getVbusVoltage: 4574 mV[0m
+[0;32mI (43701) AXP2101: getSystemVoltage: 4264 mV[0m
+[0;32mI (43701) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (44711) AXP2101: Power Temperature: 40.15°C[0m
+[0;32mI (44711) AXP2101: isCharging: YES[0m
+[0;32mI (44711) AXP2101: isDischarge: NO[0m
+[0;32mI (44711) AXP2101: isStandby: NO[0m
+[0;32mI (44711) AXP2101: isVbusIn: YES[0m
+[0;32mI (44711) AXP2101: isVbusGood: YES[0m
+[0;32mI (44721) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (44721) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (44721) AXP2101: getVbusVoltage: 4575 mV[0m
+[0;32mI (44731) AXP2101: getSystemVoltage: 4267 mV[0m
+[0;32mI (44731) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (45741) AXP2101: Power Temperature: 40.15°C[0m
+[0;32mI (45741) AXP2101: isCharging: YES[0m
+[0;32mI (45741) AXP2101: isDischarge: NO[0m
+[0;32mI (45741) AXP2101: isStandby: NO[0m
+[0;32mI (45741) AXP2101: isVbusIn: YES[0m
+[0;32mI (45741) AXP2101: isVbusGood: YES[0m
+[0;32mI (45751) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (45751) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (45751) AXP2101: getVbusVoltage: 4578 mV[0m
+[0;32mI (45761) AXP2101: getSystemVoltage: 4269 mV[0m
+[0;32mI (45761) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (46771) AXP2101: Power Temperature: 40.25°C[0m
+[0;32mI (46771) AXP2101: isCharging: YES[0m
+[0;32mI (46771) AXP2101: isDischarge: NO[0m
+[0;32mI (46771) AXP2101: isStandby: NO[0m
+[0;32mI (46771) AXP2101: isVbusIn: YES[0m
+[0;32mI (46771) AXP2101: isVbusGood: YES[0m
+[0;32mI (46781) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (46781) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (46781) AXP2101: getVbusVoltage: 4578 mV[0m
+[0;32mI (46791) AXP2101: getSystemVoltage: 4270 mV[0m
+[0;32mI (46791) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (47801) AXP2101: Power Temperature: 40.30°C[0m
+[0;32mI (47801) AXP2101: isCharging: YES[0m
+[0;32mI (47801) AXP2101: isDischarge: NO[0m
+[0;32mI (47801) AXP2101: isStandby: NO[0m
+[0;32mI (47801) AXP2101: isVbusIn: YES[0m
+[0;32mI (47801) AXP2101: isVbusGood: YES[0m
+[0;32mI (47811) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (47811) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (47811) AXP2101: getVbusVoltage: 4578 mV[0m
+[0;32mI (47821) AXP2101: getSystemVoltage: 4269 mV[0m
+[0;32mI (47821) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (48831) AXP2101: Power Temperature: 40.25°C[0m
+[0;32mI (48831) AXP2101: isCharging: YES[0m
+[0;32mI (48831) AXP2101: isDischarge: NO[0m
+[0;32mI (48831) AXP2101: isStandby: NO[0m
+[0;32mI (48831) AXP2101: isVbusIn: YES[0m
+[0;32mI (48831) AXP2101: isVbusGood: YES[0m
+[0;32mI (48841) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (48841) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (48841) AXP2101: getVbusVoltage: 4580 mV[0m
+[0;32mI (48851) AXP2101: getSystemVoltage: 4273 mV[0m
+[0;32mI (48851) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (49861) AXP2101: Power Temperature: 40.35°C[0m
+[0;32mI (49861) AXP2101: isCharging: YES[0m
+[0;32mI (49861) AXP2101: isDischarge: NO[0m
+[0;32mI (49861) AXP2101: isStandby: NO[0m
+[0;32mI (49861) AXP2101: isVbusIn: YES[0m
+[0;32mI (49861) AXP2101: isVbusGood: YES[0m
+[0;32mI (49871) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (49871) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (49871) AXP2101: getVbusVoltage: 4580 mV[0m
+[0;32mI (49881) AXP2101: getSystemVoltage: 4270 mV[0m
+[0;32mI (49881) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (50891) AXP2101: Power Temperature: 40.35°C[0m
+[0;32mI (50891) AXP2101: isCharging: YES[0m
+[0;32mI (50891) AXP2101: isDischarge: NO[0m
+[0;32mI (50891) AXP2101: isStandby: NO[0m
+[0;32mI (50891) AXP2101: isVbusIn: YES[0m
+[0;32mI (50891) AXP2101: isVbusGood: YES[0m
+[0;32mI (50901) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (50901) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (50901) AXP2101: getVbusVoltage: 4581 mV[0m
+[0;32mI (50911) AXP2101: getSystemVoltage: 4273 mV[0m
+[0;32mI (50911) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (51921) AXP2101: Power Temperature: 40.30°C[0m
+[0;32mI (51921) AXP2101: isCharging: YES[0m
+[0;32mI (51921) AXP2101: isDischarge: NO[0m
+[0;32mI (51921) AXP2101: isStandby: NO[0m
+[0;32mI (51921) AXP2101: isVbusIn: YES[0m
+[0;32mI (51921) AXP2101: isVbusGood: YES[0m
+[0;32mI (51931) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (51931) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (51931) AXP2101: getVbusVoltage: 4582 mV[0m
+[0;32mI (51941) AXP2101: getSystemVoltage: 4273 mV[0m
+[0;32mI (51941) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (52951) AXP2101: Power Temperature: 40.40°C[0m
+[0;32mI (52951) AXP2101: isCharging: YES[0m
+[0;32mI (52951) AXP2101: isDischarge: NO[0m
+[0;32mI (52951) AXP2101: isStandby: NO[0m
+[0;32mI (52951) AXP2101: isVbusIn: YES[0m
+[0;32mI (52951) AXP2101: isVbusGood: YES[0m
+[0;32mI (52961) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (52961) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (52961) AXP2101: getVbusVoltage: 4580 mV[0m
+[0;32mI (52971) AXP2101: getSystemVoltage: 4276 mV[0m
+[0;32mI (52971) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (53981) AXP2101: Power Temperature: 40.40°C[0m
+[0;32mI (53981) AXP2101: isCharging: YES[0m
+[0;32mI (53981) AXP2101: isDischarge: NO[0m
+[0;32mI (53981) AXP2101: isStandby: NO[0m
+[0;32mI (53981) AXP2101: isVbusIn: YES[0m
+[0;32mI (53981) AXP2101: isVbusGood: YES[0m
+[0;32mI (53991) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (53991) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (53991) AXP2101: getVbusVoltage: 4581 mV[0m
+[0;32mI (54001) AXP2101: getSystemVoltage: 4275 mV[0m
+[0;32mI (54001) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (55011) AXP2101: Power Temperature: 40.45°C[0m
+[0;32mI (55011) AXP2101: isCharging: YES[0m
+[0;32mI (55011) AXP2101: isDischarge: NO[0m
+[0;32mI (55011) AXP2101: isStandby: NO[0m
+[0;32mI (55011) AXP2101: isVbusIn: YES[0m
+[0;32mI (55011) AXP2101: isVbusGood: YES[0m
+[0;32mI (55021) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (55021) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (55021) AXP2101: getVbusVoltage: 4578 mV[0m
+[0;32mI (55031) AXP2101: getSystemVoltage: 4275 mV[0m
+[0;32mI (55031) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (56041) AXP2101: Power Temperature: 40.45°C[0m
+[0;32mI (56041) AXP2101: isCharging: YES[0m
+[0;32mI (56041) AXP2101: isDischarge: NO[0m
+[0;32mI (56041) AXP2101: isStandby: NO[0m
+[0;32mI (56041) AXP2101: isVbusIn: YES[0m
+[0;32mI (56041) AXP2101: isVbusGood: YES[0m
+[0;32mI (56051) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (56051) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (56051) AXP2101: getVbusVoltage: 4586 mV[0m
+[0;32mI (56061) AXP2101: getSystemVoltage: 4271 mV[0m
+[0;32mI (56061) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (57071) AXP2101: Power Temperature: 40.40°C[0m
+[0;32mI (57071) AXP2101: isCharging: YES[0m
+[0;32mI (57071) AXP2101: isDischarge: NO[0m
+[0;32mI (57071) AXP2101: isStandby: NO[0m
+[0;32mI (57071) AXP2101: isVbusIn: YES[0m
+[0;32mI (57071) AXP2101: isVbusGood: YES[0m
+[0;32mI (57081) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (57081) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (57081) AXP2101: getVbusVoltage: 4584 mV[0m
+[0;32mI (57091) AXP2101: getSystemVoltage: 4269 mV[0m
+[0;32mI (57091) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (58101) AXP2101: Power Temperature: 40.45°C[0m
+[0;32mI (58101) AXP2101: isCharging: YES[0m
+[0;32mI (58101) AXP2101: isDischarge: NO[0m
+[0;32mI (58101) AXP2101: isStandby: NO[0m
+[0;32mI (58101) AXP2101: isVbusIn: YES[0m
+[0;32mI (58101) AXP2101: isVbusGood: YES[0m
+[0;32mI (58111) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (58111) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (58111) AXP2101: getVbusVoltage: 4586 mV[0m
+[0;32mI (58121) AXP2101: getSystemVoltage: 4278 mV[0m
+[0;32mI (58121) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (59131) AXP2101: Power Temperature: 40.50°C[0m
+[0;32mI (59131) AXP2101: isCharging: YES[0m
+[0;32mI (59131) AXP2101: isDischarge: NO[0m
+[0;32mI (59131) AXP2101: isStandby: NO[0m
+[0;32mI (59131) AXP2101: isVbusIn: YES[0m
+[0;32mI (59131) AXP2101: isVbusGood: YES[0m
+[0;32mI (59141) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (59141) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (59141) AXP2101: getVbusVoltage: 4584 mV[0m
+[0;32mI (59151) AXP2101: getSystemVoltage: 4280 mV[0m
+[0;32mI (59151) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (60161) AXP2101: Power Temperature: 40.60°C[0m
+[0;32mI (60161) AXP2101: isCharging: YES[0m
+[0;32mI (60161) AXP2101: isDischarge: NO[0m
+[0;32mI (60161) AXP2101: isStandby: NO[0m
+[0;32mI (60161) AXP2101: isVbusIn: YES[0m
+[0;32mI (60161) AXP2101: isVbusGood: YES[0m
+[0;32mI (60171) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (60171) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (60171) AXP2101: getVbusVoltage: 4581 mV[0m
+[0;32mI (60181) AXP2101: getSystemVoltage: 4280 mV[0m
+[0;32mI (60181) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (61191) AXP2101: Power Temperature: 40.55°C[0m
+[0;32mI (61191) AXP2101: isCharging: YES[0m
+[0;32mI (61191) AXP2101: isDischarge: NO[0m
+[0;32mI (61191) AXP2101: isStandby: NO[0m
+[0;32mI (61191) AXP2101: isVbusIn: YES[0m
+[0;32mI (61191) AXP2101: isVbusGood: YES[0m
+[0;32mI (61201) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (61201) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (61201) AXP2101: getVbusVoltage: 4584 mV[0m
+[0;32mI (61211) AXP2101: getSystemVoltage: 4280 mV[0m
+[0;32mI (61211) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (62221) AXP2101: Power Temperature: 40.65°C[0m
+[0;32mI (62221) AXP2101: isCharging: YES[0m
+[0;32mI (62221) AXP2101: isDischarge: NO[0m
+[0;32mI (62221) AXP2101: isStandby: NO[0m
+[0;32mI (62221) AXP2101: isVbusIn: YES[0m
+[0;32mI (62221) AXP2101: isVbusGood: YES[0m
+[0;32mI (62231) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (62231) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (62231) AXP2101: getVbusVoltage: 4585 mV[0m
+[0;32mI (62241) AXP2101: getSystemVoltage: 4282 mV[0m
+[0;32mI (62241) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (63251) AXP2101: Power Temperature: 40.65°C[0m
+[0;32mI (63251) AXP2101: isCharging: YES[0m
+[0;32mI (63251) AXP2101: isDischarge: NO[0m
+[0;32mI (63251) AXP2101: isStandby: NO[0m
+[0;32mI (63251) AXP2101: isVbusIn: YES[0m
+[0;32mI (63251) AXP2101: isVbusGood: YES[0m
+[0;32mI (63261) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (63261) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (63261) AXP2101: getVbusVoltage: 4589 mV[0m
+[0;32mI (63271) AXP2101: getSystemVoltage: 4285 mV[0m
+[0;32mI (63271) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (64281) AXP2101: Power Temperature: 40.60°C[0m
+[0;32mI (64281) AXP2101: isCharging: YES[0m
+[0;32mI (64281) AXP2101: isDischarge: NO[0m
+[0;32mI (64281) AXP2101: isStandby: NO[0m
+[0;32mI (64281) AXP2101: isVbusIn: YES[0m
+[0;32mI (64281) AXP2101: isVbusGood: YES[0m
+[0;32mI (64291) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (64291) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (64291) AXP2101: getVbusVoltage: 4588 mV[0m
+[0;32mI (64301) AXP2101: getSystemVoltage: 4277 mV[0m
+[0;32mI (64301) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (65311) AXP2101: Power Temperature: 40.65°C[0m
+[0;32mI (65311) AXP2101: isCharging: YES[0m
+[0;32mI (65311) AXP2101: isDischarge: NO[0m
+[0;32mI (65311) AXP2101: isStandby: NO[0m
+[0;32mI (65311) AXP2101: isVbusIn: YES[0m
+[0;32mI (65311) AXP2101: isVbusGood: YES[0m
+[0;32mI (65321) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (65321) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (65321) AXP2101: getVbusVoltage: 4584 mV[0m
+[0;32mI (65331) AXP2101: getSystemVoltage: 4283 mV[0m
+[0;32mI (65331) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (66341) AXP2101: Power Temperature: 40.60°C[0m
+[0;32mI (66341) AXP2101: isCharging: YES[0m
+[0;32mI (66341) AXP2101: isDischarge: NO[0m
+[0;32mI (66341) AXP2101: isStandby: NO[0m
+[0;32mI (66341) AXP2101: isVbusIn: YES[0m
+[0;32mI (66341) AXP2101: isVbusGood: YES[0m
+[0;32mI (66351) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (66351) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (66351) AXP2101: getVbusVoltage: 4582 mV[0m
+[0;32mI (66361) AXP2101: getSystemVoltage: 4272 mV[0m
+[0;32mI (66361) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (67371) AXP2101: Power Temperature: 40.65°C[0m
+[0;32mI (67371) AXP2101: isCharging: YES[0m
+[0;32mI (67371) AXP2101: isDischarge: NO[0m
+[0;32mI (67371) AXP2101: isStandby: NO[0m
+[0;32mI (67371) AXP2101: isVbusIn: YES[0m
+[0;32mI (67371) AXP2101: isVbusGood: YES[0m
+[0;32mI (67381) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (67381) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (67381) AXP2101: getVbusVoltage: 4577 mV[0m
+[0;32mI (67391) AXP2101: getSystemVoltage: 4270 mV[0m
+[0;32mI (67391) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (68401) AXP2101: Power Temperature: 40.60°C[0m
+[0;32mI (68401) AXP2101: isCharging: YES[0m
+[0;32mI (68401) AXP2101: isDischarge: NO[0m
+[0;32mI (68401) AXP2101: isStandby: NO[0m
+[0;32mI (68401) AXP2101: isVbusIn: YES[0m
+[0;32mI (68401) AXP2101: isVbusGood: YES[0m
+[0;32mI (68411) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (68411) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (68411) AXP2101: getVbusVoltage: 4574 mV[0m
+[0;32mI (68421) AXP2101: getSystemVoltage: 4271 mV[0m
+[0;32mI (68421) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (69431) AXP2101: Power Temperature: 40.60°C[0m
+[0;32mI (69431) AXP2101: isCharging: YES[0m
+[0;32mI (69431) AXP2101: isDischarge: NO[0m
+[0;32mI (69431) AXP2101: isStandby: NO[0m
+[0;32mI (69431) AXP2101: isVbusIn: YES[0m
+[0;32mI (69431) AXP2101: isVbusGood: YES[0m
+[0;32mI (69441) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (69441) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (69441) AXP2101: getVbusVoltage: 4576 mV[0m
+[0;32mI (69451) AXP2101: getSystemVoltage: 4271 mV[0m
+[0;32mI (69451) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (70461) AXP2101: Power Temperature: 40.60°C[0m
+[0;32mI (70461) AXP2101: isCharging: YES[0m
+[0;32mI (70461) AXP2101: isDischarge: NO[0m
+[0;32mI (70461) AXP2101: isStandby: NO[0m
+[0;32mI (70461) AXP2101: isVbusIn: YES[0m
+[0;32mI (70461) AXP2101: isVbusGood: YES[0m
+[0;32mI (70471) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (70471) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (70471) AXP2101: getVbusVoltage: 4580 mV[0m
+[0;32mI (70481) AXP2101: getSystemVoltage: 4273 mV[0m
+[0;32mI (70481) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (71491) AXP2101: Power Temperature: 40.60°C[0m
+[0;32mI (71491) AXP2101: isCharging: YES[0m
+[0;32mI (71491) AXP2101: isDischarge: NO[0m
+[0;32mI (71491) AXP2101: isStandby: NO[0m
+[0;32mI (71491) AXP2101: isVbusIn: YES[0m
+[0;32mI (71491) AXP2101: isVbusGood: YES[0m
+[0;32mI (71501) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (71501) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (71501) AXP2101: getVbusVoltage: 4579 mV[0m
+[0;32mI (71511) AXP2101: getSystemVoltage: 4275 mV[0m
+[0;32mI (71511) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (72521) AXP2101: Power Temperature: 40.65°C[0m
+[0;32mI (72521) AXP2101: isCharging: YES[0m
+[0;32mI (72521) AXP2101: isDischarge: NO[0m
+[0;32mI (72521) AXP2101: isStandby: NO[0m
+[0;32mI (72521) AXP2101: isVbusIn: YES[0m
+[0;32mI (72521) AXP2101: isVbusGood: YES[0m
+[0;32mI (72531) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (72531) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (72531) AXP2101: getVbusVoltage: 4581 mV[0m
+[0;32mI (72541) AXP2101: getSystemVoltage: 4277 mV[0m
+[0;32mI (72541) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (73551) AXP2101: Power Temperature: 40.65°C[0m
+[0;32mI (73551) AXP2101: isCharging: YES[0m
+[0;32mI (73551) AXP2101: isDischarge: NO[0m
+[0;32mI (73551) AXP2101: isStandby: NO[0m
+[0;32mI (73551) AXP2101: isVbusIn: YES[0m
+[0;32mI (73551) AXP2101: isVbusGood: YES[0m
+[0;32mI (73561) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (73561) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (73561) AXP2101: getVbusVoltage: 4580 mV[0m
+[0;32mI (73571) AXP2101: getSystemVoltage: 4275 mV[0m
+[0;32mI (73571) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (74581) AXP2101: Power Temperature: 40.70°C[0m
+[0;32mI (74581) AXP2101: isCharging: YES[0m
+[0;32mI (74581) AXP2101: isDischarge: NO[0m
+[0;32mI (74581) AXP2101: isStandby: NO[0m
+[0;32mI (74581) AXP2101: isVbusIn: YES[0m
+[0;32mI (74581) AXP2101: isVbusGood: YES[0m
+[0;32mI (74591) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (74591) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (74591) AXP2101: getVbusVoltage: 4589 mV[0m
+[0;32mI (74601) AXP2101: getSystemVoltage: 4276 mV[0m
+[0;32mI (74601) AXP2101: getBatteryPercent: 77 %[0m
+[0;32mI (75611) AXP2101: Power Temperature: 40.70°C[0m
+[0;32mI (75611) AXP2101: isCharging: YES[0m
+[0;32mI (75611) AXP2101: isDischarge: NO[0m
+[0;32mI (75611) AXP2101: isStandby: NO[0m
+[0;32mI (75611) AXP2101: isVbusIn: YES[0m
+[0;32mI (75611) AXP2101: isVbusGood: YES[0m
+[0;32mI (75621) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (75621) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (75621) AXP2101: getVbusVoltage: 4579 mV[0m
+[0;32mI (75631) AXP2101: getSystemVoltage: 4275 mV[0m
+[0;32mI (75631) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (76641) AXP2101: Power Temperature: 40.70°C[0m
+[0;32mI (76641) AXP2101: isCharging: YES[0m
+[0;32mI (76641) AXP2101: isDischarge: NO[0m
+[0;32mI (76641) AXP2101: isStandby: NO[0m
+[0;32mI (76641) AXP2101: isVbusIn: YES[0m
+[0;32mI (76641) AXP2101: isVbusGood: YES[0m
+[0;32mI (76651) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (76651) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (76651) AXP2101: getVbusVoltage: 4585 mV[0m
+[0;32mI (76661) AXP2101: getSystemVoltage: 4282 mV[0m
+[0;32mI (76661) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (77671) AXP2101: Power Temperature: 40.70°C[0m
+[0;32mI (77671) AXP2101: isCharging: YES[0m
+[0;32mI (77671) AXP2101: isDischarge: NO[0m
+[0;32mI (77671) AXP2101: isStandby: NO[0m
+[0;32mI (77671) AXP2101: isVbusIn: YES[0m
+[0;32mI (77671) AXP2101: isVbusGood: YES[0m
+[0;32mI (77681) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (77681) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (77681) AXP2101: getVbusVoltage: 4585 mV[0m
+[0;32mI (77691) AXP2101: getSystemVoltage: 4279 mV[0m
+[0;32mI (77691) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (78701) AXP2101: Power Temperature: 40.70°C[0m
+[0;32mI (78701) AXP2101: isCharging: YES[0m
+[0;32mI (78701) AXP2101: isDischarge: NO[0m
+[0;32mI (78701) AXP2101: isStandby: NO[0m
+[0;32mI (78701) AXP2101: isVbusIn: YES[0m
+[0;32mI (78701) AXP2101: isVbusGood: YES[0m
+[0;32mI (78711) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (78711) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (78711) AXP2101: getVbusVoltage: 4589 mV[0m
+[0;32mI (78721) AXP2101: getSystemVoltage: 4282 mV[0m
+[0;32mI (78721) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (79731) AXP2101: Power Temperature: 40.80°C[0m
+[0;32mI (79731) AXP2101: isCharging: YES[0m
+[0;32mI (79731) AXP2101: isDischarge: NO[0m
+[0;32mI (79731) AXP2101: isStandby: NO[0m
+[0;32mI (79731) AXP2101: isVbusIn: YES[0m
+[0;32mI (79731) AXP2101: isVbusGood: YES[0m
+[0;32mI (79741) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (79741) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (79741) AXP2101: getVbusVoltage: 4588 mV[0m
+[0;32mI (79751) AXP2101: getSystemVoltage: 4278 mV[0m
+[0;32mI (79751) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (80761) AXP2101: Power Temperature: 40.75°C[0m
+[0;32mI (80761) AXP2101: isCharging: YES[0m
+[0;32mI (80761) AXP2101: isDischarge: NO[0m
+[0;32mI (80761) AXP2101: isStandby: NO[0m
+[0;32mI (80761) AXP2101: isVbusIn: YES[0m
+[0;32mI (80761) AXP2101: isVbusGood: YES[0m
+[0;32mI (80771) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (80771) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (80771) AXP2101: getVbusVoltage: 4585 mV[0m
+[0;32mI (80781) AXP2101: getSystemVoltage: 4284 mV[0m
+[0;32mI (80781) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (81791) AXP2101: Power Temperature: 40.80°C[0m
+[0;32mI (81791) AXP2101: isCharging: YES[0m
+[0;32mI (81791) AXP2101: isDischarge: NO[0m
+[0;32mI (81791) AXP2101: isStandby: NO[0m
+[0;32mI (81791) AXP2101: isVbusIn: YES[0m
+[0;32mI (81791) AXP2101: isVbusGood: YES[0m
+[0;32mI (81801) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (81801) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (81801) AXP2101: getVbusVoltage: 4583 mV[0m
+[0;32mI (81811) AXP2101: getSystemVoltage: 4278 mV[0m
+[0;32mI (81811) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (82821) AXP2101: Power Temperature: 40.80°C[0m
+[0;32mI (82821) AXP2101: isCharging: YES[0m
+[0;32mI (82821) AXP2101: isDischarge: NO[0m
+[0;32mI (82821) AXP2101: isStandby: NO[0m
+[0;32mI (82821) AXP2101: isVbusIn: YES[0m
+[0;32mI (82821) AXP2101: isVbusGood: YES[0m
+[0;32mI (82831) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (82831) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (82831) AXP2101: getVbusVoltage: 4588 mV[0m
+[0;32mI (82841) AXP2101: getSystemVoltage: 4280 mV[0m
+[0;32mI (82841) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (83851) AXP2101: Power Temperature: 40.75°C[0m
+[0;32mI (83851) AXP2101: isCharging: YES[0m
+[0;32mI (83851) AXP2101: isDischarge: NO[0m
+[0;32mI (83851) AXP2101: isStandby: NO[0m
+[0;32mI (83851) AXP2101: isVbusIn: YES[0m
+[0;32mI (83851) AXP2101: isVbusGood: YES[0m
+[0;32mI (83861) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (83861) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (83861) AXP2101: getVbusVoltage: 4586 mV[0m
+[0;32mI (83871) AXP2101: getSystemVoltage: 4280 mV[0m
+[0;32mI (83871) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (84881) AXP2101: Power Temperature: 40.80°C[0m
+[0;32mI (84881) AXP2101: isCharging: YES[0m
+[0;32mI (84881) AXP2101: isDischarge: NO[0m
+[0;32mI (84881) AXP2101: isStandby: NO[0m
+[0;32mI (84881) AXP2101: isVbusIn: YES[0m
+[0;32mI (84881) AXP2101: isVbusGood: YES[0m
+[0;32mI (84891) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (84891) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (84891) AXP2101: getVbusVoltage: 4586 mV[0m
+[0;32mI (84901) AXP2101: getSystemVoltage: 4277 mV[0m
+[0;32mI (84901) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (85911) AXP2101: Power Temperature: 40.85°C[0m
+[0;32mI (85911) AXP2101: isCharging: YES[0m
+[0;32mI (85911) AXP2101: isDischarge: NO[0m
+[0;32mI (85911) AXP2101: isStandby: NO[0m
+[0;32mI (85911) AXP2101: isVbusIn: YES[0m
+[0;32mI (85911) AXP2101: isVbusGood: YES[0m
+[0;32mI (85921) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (85921) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (85921) AXP2101: getVbusVoltage: 4588 mV[0m
+[0;32mI (85931) AXP2101: getSystemVoltage: 4284 mV[0m
+[0;32mI (85931) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (86941) AXP2101: Power Temperature: 40.80°C[0m
+[0;32mI (86941) AXP2101: isCharging: YES[0m
+[0;32mI (86941) AXP2101: isDischarge: NO[0m
+[0;32mI (86941) AXP2101: isStandby: NO[0m
+[0;32mI (86941) AXP2101: isVbusIn: YES[0m
+[0;32mI (86941) AXP2101: isVbusGood: YES[0m
+[0;32mI (86951) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (86951) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (86951) AXP2101: getVbusVoltage: 4588 mV[0m
+[0;32mI (86961) AXP2101: getSystemVoltage: 4284 mV[0m
+[0;32mI (86961) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (87971) AXP2101: Power Temperature: 40.85°C[0m
+[0;32mI (87971) AXP2101: isCharging: YES[0m
+[0;32mI (87971) AXP2101: isDischarge: NO[0m
+[0;32mI (87971) AXP2101: isStandby: NO[0m
+[0;32mI (87971) AXP2101: isVbusIn: YES[0m
+[0;32mI (87971) AXP2101: isVbusGood: YES[0m
+[0;32mI (87981) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (87981) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (87981) AXP2101: getVbusVoltage: 4588 mV[0m
+[0;32mI (87991) AXP2101: getSystemVoltage: 4286 mV[0m
+[0;32mI (87991) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (89001) AXP2101: Power Temperature: 40.85°C[0m
+[0;32mI (89001) AXP2101: isCharging: YES[0m
+[0;32mI (89001) AXP2101: isDischarge: NO[0m
+[0;32mI (89001) AXP2101: isStandby: NO[0m
+[0;32mI (89001) AXP2101: isVbusIn: YES[0m
+[0;32mI (89001) AXP2101: isVbusGood: YES[0m
+[0;32mI (89011) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (89011) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (89011) AXP2101: getVbusVoltage: 4588 mV[0m
+[0;32mI (89021) AXP2101: getSystemVoltage: 4284 mV[0m
+[0;32mI (89021) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (90031) AXP2101: Power Temperature: 40.85°C[0m
+[0;32mI (90031) AXP2101: isCharging: YES[0m
+[0;32mI (90031) AXP2101: isDischarge: NO[0m
+[0;32mI (90031) AXP2101: isStandby: NO[0m
+[0;32mI (90031) AXP2101: isVbusIn: YES[0m
+[0;32mI (90031) AXP2101: isVbusGood: YES[0m
+[0;32mI (90041) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (90041) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (90041) AXP2101: getVbusVoltage: 4591 mV[0m
+[0;32mI (90051) AXP2101: getSystemVoltage: 4285 mV[0m
+[0;32mI (90051) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (91061) AXP2101: Power Temperature: 40.85°C[0m
+[0;32mI (91061) AXP2101: isCharging: YES[0m
+[0;32mI (91061) AXP2101: isDischarge: NO[0m
+[0;32mI (91061) AXP2101: isStandby: NO[0m
+[0;32mI (91061) AXP2101: isVbusIn: YES[0m
+[0;32mI (91061) AXP2101: isVbusGood: YES[0m
+[0;32mI (91071) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (91071) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (91071) AXP2101: getVbusVoltage: 4593 mV[0m
+[0;32mI (91081) AXP2101: getSystemVoltage: 4285 mV[0m
+[0;32mI (91081) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (92091) AXP2101: Power Temperature: 40.80°C[0m
+[0;32mI (92091) AXP2101: isCharging: YES[0m
+[0;32mI (92091) AXP2101: isDischarge: NO[0m
+[0;32mI (92091) AXP2101: isStandby: NO[0m
+[0;32mI (92091) AXP2101: isVbusIn: YES[0m
+[0;32mI (92091) AXP2101: isVbusGood: YES[0m
+[0;32mI (92101) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (92101) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (92101) AXP2101: getVbusVoltage: 4587 mV[0m
+[0;32mI (92111) AXP2101: getSystemVoltage: 4290 mV[0m
+[0;32mI (92111) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (93121) AXP2101: Power Temperature: 40.90°C[0m
+[0;32mI (93121) AXP2101: isCharging: YES[0m
+[0;32mI (93121) AXP2101: isDischarge: NO[0m
+[0;32mI (93121) AXP2101: isStandby: NO[0m
+[0;32mI (93121) AXP2101: isVbusIn: YES[0m
+[0;32mI (93121) AXP2101: isVbusGood: YES[0m
+[0;32mI (93131) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (93131) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (93131) AXP2101: getVbusVoltage: 4590 mV[0m
+[0;32mI (93141) AXP2101: getSystemVoltage: 4296 mV[0m
+[0;32mI (93141) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (94151) AXP2101: Power Temperature: 40.85°C[0m
+[0;32mI (94151) AXP2101: isCharging: YES[0m
+[0;32mI (94151) AXP2101: isDischarge: NO[0m
+[0;32mI (94151) AXP2101: isStandby: NO[0m
+[0;32mI (94151) AXP2101: isVbusIn: YES[0m
+[0;32mI (94151) AXP2101: isVbusGood: YES[0m
+[0;32mI (94161) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (94161) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (94161) AXP2101: getVbusVoltage: 4584 mV[0m
+[0;32mI (94171) AXP2101: getSystemVoltage: 4283 mV[0m
+[0;32mI (94171) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (95181) AXP2101: Power Temperature: 40.90°C[0m
+[0;32mI (95181) AXP2101: isCharging: YES[0m
+[0;32mI (95181) AXP2101: isDischarge: NO[0m
+[0;32mI (95181) AXP2101: isStandby: NO[0m
+[0;32mI (95181) AXP2101: isVbusIn: YES[0m
+[0;32mI (95181) AXP2101: isVbusGood: YES[0m
+[0;32mI (95191) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (95191) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (95191) AXP2101: getVbusVoltage: 4595 mV[0m
+[0;32mI (95201) AXP2101: getSystemVoltage: 4284 mV[0m
+[0;32mI (95201) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (96211) AXP2101: Power Temperature: 40.90°C[0m
+[0;32mI (96211) AXP2101: isCharging: YES[0m
+[0;32mI (96211) AXP2101: isDischarge: NO[0m
+[0;32mI (96211) AXP2101: isStandby: NO[0m
+[0;32mI (96211) AXP2101: isVbusIn: YES[0m
+[0;32mI (96211) AXP2101: isVbusGood: YES[0m
+[0;32mI (96221) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (96221) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (96221) AXP2101: getVbusVoltage: 4588 mV[0m
+[0;32mI (96231) AXP2101: getSystemVoltage: 4291 mV[0m
+[0;32mI (96231) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (97241) AXP2101: Power Temperature: 40.95°C[0m
+[0;32mI (97241) AXP2101: isCharging: YES[0m
+[0;32mI (97241) AXP2101: isDischarge: NO[0m
+[0;32mI (97241) AXP2101: isStandby: NO[0m
+[0;32mI (97241) AXP2101: isVbusIn: YES[0m
+[0;32mI (97241) AXP2101: isVbusGood: YES[0m
+[0;32mI (97251) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (97251) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (97251) AXP2101: getVbusVoltage: 4588 mV[0m
+[0;32mI (97261) AXP2101: getSystemVoltage: 4284 mV[0m
+[0;32mI (97261) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (98271) AXP2101: Power Temperature: 40.90°C[0m
+[0;32mI (98271) AXP2101: isCharging: YES[0m
+[0;32mI (98271) AXP2101: isDischarge: NO[0m
+[0;32mI (98271) AXP2101: isStandby: NO[0m
+[0;32mI (98271) AXP2101: isVbusIn: YES[0m
+[0;32mI (98271) AXP2101: isVbusGood: YES[0m
+[0;32mI (98281) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (98281) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (98281) AXP2101: getVbusVoltage: 4590 mV[0m
+[0;32mI (98291) AXP2101: getSystemVoltage: 4288 mV[0m
+[0;32mI (98291) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (99301) AXP2101: Power Temperature: 40.90°C[0m
+[0;32mI (99301) AXP2101: isCharging: YES[0m
+[0;32mI (99301) AXP2101: isDischarge: NO[0m
+[0;32mI (99301) AXP2101: isStandby: NO[0m
+[0;32mI (99301) AXP2101: isVbusIn: YES[0m
+[0;32mI (99301) AXP2101: isVbusGood: YES[0m
+[0;32mI (99311) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (99311) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (99311) AXP2101: getVbusVoltage: 4590 mV[0m
+[0;32mI (99321) AXP2101: getSystemVoltage: 4287 mV[0m
+[0;32mI (99321) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (100331) AXP2101: Power Temperature: 40.95°C[0m
+[0;32mI (100331) AXP2101: isCharging: YES[0m
+[0;32mI (100331) AXP2101: isDischarge: NO[0m
+[0;32mI (100331) AXP2101: isStandby: NO[0m
+[0;32mI (100331) AXP2101: isVbusIn: YES[0m
+[0;32mI (100331) AXP2101: isVbusGood: YES[0m
+[0;32mI (100341) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (100341) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (100341) AXP2101: getVbusVoltage: 4600 mV[0m
+[0;32mI (100351) AXP2101: getSystemVoltage: 4285 mV[0m
+[0;32mI (100351) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (101361) AXP2101: Power Temperature: 40.90°C[0m
+[0;32mI (101361) AXP2101: isCharging: YES[0m
+[0;32mI (101361) AXP2101: isDischarge: NO[0m
+[0;32mI (101361) AXP2101: isStandby: NO[0m
+[0;32mI (101361) AXP2101: isVbusIn: YES[0m
+[0;32mI (101361) AXP2101: isVbusGood: YES[0m
+[0;32mI (101371) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (101371) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (101371) AXP2101: getVbusVoltage: 4590 mV[0m
+[0;32mI (101381) AXP2101: getSystemVoltage: 4293 mV[0m
+[0;32mI (101381) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (102391) AXP2101: Power Temperature: 40.90°C[0m
+[0;32mI (102391) AXP2101: isCharging: YES[0m
+[0;32mI (102391) AXP2101: isDischarge: NO[0m
+[0;32mI (102391) AXP2101: isStandby: NO[0m
+[0;32mI (102391) AXP2101: isVbusIn: YES[0m
+[0;32mI (102391) AXP2101: isVbusGood: YES[0m
+[0;32mI (102401) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (102401) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (102401) AXP2101: getVbusVoltage: 4589 mV[0m
+[0;32mI (102411) AXP2101: getSystemVoltage: 4291 mV[0m
+[0;32mI (102411) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (103421) AXP2101: Power Temperature: 40.95°C[0m
+[0;32mI (103421) AXP2101: isCharging: YES[0m
+[0;32mI (103421) AXP2101: isDischarge: NO[0m
+[0;32mI (103421) AXP2101: isStandby: NO[0m
+[0;32mI (103421) AXP2101: isVbusIn: YES[0m
+[0;32mI (103421) AXP2101: isVbusGood: YES[0m
+[0;32mI (103431) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (103431) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (103431) AXP2101: getVbusVoltage: 4588 mV[0m
+[0;32mI (103441) AXP2101: getSystemVoltage: 4289 mV[0m
+[0;32mI (103441) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (104451) AXP2101: Power Temperature: 41.00°C[0m
+[0;32mI (104451) AXP2101: isCharging: YES[0m
+[0;32mI (104451) AXP2101: isDischarge: NO[0m
+[0;32mI (104451) AXP2101: isStandby: NO[0m
+[0;32mI (104451) AXP2101: isVbusIn: YES[0m
+[0;32mI (104451) AXP2101: isVbusGood: YES[0m
+[0;32mI (104461) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (104461) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (104461) AXP2101: getVbusVoltage: 4590 mV[0m
+[0;32mI (104471) AXP2101: getSystemVoltage: 4291 mV[0m
+[0;32mI (104471) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (105481) AXP2101: Power Temperature: 41.00°C[0m
+[0;32mI (105481) AXP2101: isCharging: YES[0m
+[0;32mI (105481) AXP2101: isDischarge: NO[0m
+[0;32mI (105481) AXP2101: isStandby: NO[0m
+[0;32mI (105481) AXP2101: isVbusIn: YES[0m
+[0;32mI (105481) AXP2101: isVbusGood: YES[0m
+[0;32mI (105491) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (105491) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (105491) AXP2101: getVbusVoltage: 4603 mV[0m
+[0;32mI (105501) AXP2101: getSystemVoltage: 4289 mV[0m
+[0;32mI (105501) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (106511) AXP2101: Power Temperature: 41.05°C[0m
+[0;32mI (106511) AXP2101: isCharging: YES[0m
+[0;32mI (106511) AXP2101: isDischarge: NO[0m
+[0;32mI (106511) AXP2101: isStandby: NO[0m
+[0;32mI (106511) AXP2101: isVbusIn: YES[0m
+[0;32mI (106511) AXP2101: isVbusGood: YES[0m
+[0;32mI (106521) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (106521) AXP2101: getBattVoltage: 4210 mV[0m
+[0;32mI (106521) AXP2101: getVbusVoltage: 4592 mV[0m
+[0;32mI (106531) AXP2101: getSystemVoltage: 4288 mV[0m
+[0;32mI (106531) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (107541) AXP2101: Power Temperature: 41.05°C[0m
+[0;32mI (107541) AXP2101: isCharging: YES[0m
+[0;32mI (107541) AXP2101: isDischarge: NO[0m
+[0;32mI (107541) AXP2101: isStandby: NO[0m
+[0;32mI (107541) AXP2101: isVbusIn: YES[0m
+[0;32mI (107541) AXP2101: isVbusGood: YES[0m
+[0;32mI (107551) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (107551) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (107551) AXP2101: getVbusVoltage: 4592 mV[0m
+[0;32mI (107561) AXP2101: getSystemVoltage: 4289 mV[0m
+[0;32mI (107561) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (108571) AXP2101: Power Temperature: 41.05°C[0m
+[0;32mI (108571) AXP2101: isCharging: YES[0m
+[0;32mI (108571) AXP2101: isDischarge: NO[0m
+[0;32mI (108571) AXP2101: isStandby: NO[0m
+[0;32mI (108571) AXP2101: isVbusIn: YES[0m
+[0;32mI (108571) AXP2101: isVbusGood: YES[0m
+[0;32mI (108581) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (108581) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (108581) AXP2101: getVbusVoltage: 4597 mV[0m
+[0;32mI (108591) AXP2101: getSystemVoltage: 4291 mV[0m
+[0;32mI (108591) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (109601) AXP2101: Power Temperature: 41.05°C[0m
+[0;32mI (109601) AXP2101: isCharging: YES[0m
+[0;32mI (109601) AXP2101: isDischarge: NO[0m
+[0;32mI (109601) AXP2101: isStandby: NO[0m
+[0;32mI (109601) AXP2101: isVbusIn: YES[0m
+[0;32mI (109601) AXP2101: isVbusGood: YES[0m
+[0;32mI (109611) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (109611) AXP2101: getBattVoltage: 4210 mV[0m
+[0;32mI (109611) AXP2101: getVbusVoltage: 4592 mV[0m
+[0;32mI (109621) AXP2101: getSystemVoltage: 4292 mV[0m
+[0;32mI (109621) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (110631) AXP2101: Power Temperature: 41.05°C[0m
+[0;32mI (110631) AXP2101: isCharging: YES[0m
+[0;32mI (110631) AXP2101: isDischarge: NO[0m
+[0;32mI (110631) AXP2101: isStandby: NO[0m
+[0;32mI (110631) AXP2101: isVbusIn: YES[0m
+[0;32mI (110631) AXP2101: isVbusGood: YES[0m
+[0;32mI (110641) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (110641) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (110641) AXP2101: getVbusVoltage: 4603 mV[0m
+[0;32mI (110651) AXP2101: getSystemVoltage: 4292 mV[0m
+[0;32mI (110651) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (111661) AXP2101: Power Temperature: 41.10°C[0m
+[0;32mI (111661) AXP2101: isCharging: YES[0m
+[0;32mI (111661) AXP2101: isDischarge: NO[0m
+[0;32mI (111661) AXP2101: isStandby: NO[0m
+[0;32mI (111661) AXP2101: isVbusIn: YES[0m
+[0;32mI (111661) AXP2101: isVbusGood: YES[0m
+[0;32mI (111671) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (111671) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (111671) AXP2101: getVbusVoltage: 4594 mV[0m
+[0;32mI (111681) AXP2101: getSystemVoltage: 4293 mV[0m
+[0;32mI (111681) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (112691) AXP2101: Power Temperature: 41.00°C[0m
+[0;32mI (112691) AXP2101: isCharging: YES[0m
+[0;32mI (112691) AXP2101: isDischarge: NO[0m
+[0;32mI (112691) AXP2101: isStandby: NO[0m
+[0;32mI (112691) AXP2101: isVbusIn: YES[0m
+[0;32mI (112691) AXP2101: isVbusGood: YES[0m
+[0;32mI (112701) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (112701) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (112701) AXP2101: getVbusVoltage: 4592 mV[0m
+[0;32mI (112711) AXP2101: getSystemVoltage: 4295 mV[0m
+[0;32mI (112711) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (113721) AXP2101: Power Temperature: 41.05°C[0m
+[0;32mI (113721) AXP2101: isCharging: YES[0m
+[0;32mI (113721) AXP2101: isDischarge: NO[0m
+[0;32mI (113721) AXP2101: isStandby: NO[0m
+[0;32mI (113721) AXP2101: isVbusIn: YES[0m
+[0;32mI (113721) AXP2101: isVbusGood: YES[0m
+[0;32mI (113731) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (113731) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (113731) AXP2101: getVbusVoltage: 4595 mV[0m
+[0;32mI (113741) AXP2101: getSystemVoltage: 4293 mV[0m
+[0;32mI (113741) AXP2101: getBatteryPercent: 78 %[0m
+[0;32mI (114751) AXP2101: Power Temperature: 41.10°C[0m
+[0;32mI (114751) AXP2101: isCharging: YES[0m
+[0;32mI (114751) AXP2101: isDischarge: NO[0m
+[0;32mI (114751) AXP2101: isStandby: NO[0m
+[0;32mI (114751) AXP2101: isVbusIn: YES[0m
+[0;32mI (114751) AXP2101: isVbusGood: YES[0m
+[0;32mI (114761) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (114761) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (114761) AXP2101: getVbusVoltage: 4597 mV[0m
+[0;32mI (114771) AXP2101: getSystemVoltage: 4294 mV[0m
+[0;32mI (114771) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (115781) AXP2101: Power Temperature: 41.10°C[0m
+[0;32mI (115781) AXP2101: isCharging: YES[0m
+[0;32mI (115781) AXP2101: isDischarge: NO[0m
+[0;32mI (115781) AXP2101: isStandby: NO[0m
+[0;32mI (115781) AXP2101: isVbusIn: YES[0m
+[0;32mI (115781) AXP2101: isVbusGood: YES[0m
+[0;32mI (115791) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (115791) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (115791) AXP2101: getVbusVoltage: 4598 mV[0m
+[0;32mI (115801) AXP2101: getSystemVoltage: 4293 mV[0m
+[0;32mI (115801) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (116811) AXP2101: Power Temperature: 41.05°C[0m
+[0;32mI (116811) AXP2101: isCharging: YES[0m
+[0;32mI (116811) AXP2101: isDischarge: NO[0m
+[0;32mI (116811) AXP2101: isStandby: NO[0m
+[0;32mI (116811) AXP2101: isVbusIn: YES[0m
+[0;32mI (116811) AXP2101: isVbusGood: YES[0m
+[0;32mI (116821) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (116821) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (116821) AXP2101: getVbusVoltage: 4598 mV[0m
+[0;32mI (116831) AXP2101: getSystemVoltage: 4297 mV[0m
+[0;32mI (116831) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (117841) AXP2101: Power Temperature: 41.05°C[0m
+[0;32mI (117841) AXP2101: isCharging: YES[0m
+[0;32mI (117841) AXP2101: isDischarge: NO[0m
+[0;32mI (117841) AXP2101: isStandby: NO[0m
+[0;32mI (117841) AXP2101: isVbusIn: YES[0m
+[0;32mI (117841) AXP2101: isVbusGood: YES[0m
+[0;32mI (117851) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (117851) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (117851) AXP2101: getVbusVoltage: 4600 mV[0m
+[0;32mI (117861) AXP2101: getSystemVoltage: 4298 mV[0m
+[0;32mI (117861) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (118871) AXP2101: Power Temperature: 41.10°C[0m
+[0;32mI (118871) AXP2101: isCharging: YES[0m
+[0;32mI (118871) AXP2101: isDischarge: NO[0m
+[0;32mI (118871) AXP2101: isStandby: NO[0m
+[0;32mI (118871) AXP2101: isVbusIn: YES[0m
+[0;32mI (118871) AXP2101: isVbusGood: YES[0m
+[0;32mI (118881) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (118881) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (118881) AXP2101: getVbusVoltage: 4598 mV[0m
+[0;32mI (118891) AXP2101: getSystemVoltage: 4298 mV[0m
+[0;32mI (118891) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (119901) AXP2101: Power Temperature: 41.05°C[0m
+[0;32mI (119901) AXP2101: isCharging: YES[0m
+[0;32mI (119901) AXP2101: isDischarge: NO[0m
+[0;32mI (119901) AXP2101: isStandby: NO[0m
+[0;32mI (119901) AXP2101: isVbusIn: YES[0m
+[0;32mI (119901) AXP2101: isVbusGood: YES[0m
+[0;32mI (119911) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (119911) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (119911) AXP2101: getVbusVoltage: 4600 mV[0m
+[0;32mI (119921) AXP2101: getSystemVoltage: 4302 mV[0m
+[0;32mI (119921) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (120931) AXP2101: Power Temperature: 41.15°C[0m
+[0;32mI (120931) AXP2101: isCharging: YES[0m
+[0;32mI (120931) AXP2101: isDischarge: NO[0m
+[0;32mI (120931) AXP2101: isStandby: NO[0m
+[0;32mI (120931) AXP2101: isVbusIn: YES[0m
+[0;32mI (120931) AXP2101: isVbusGood: YES[0m
+[0;32mI (120941) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (120941) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (120941) AXP2101: getVbusVoltage: 4597 mV[0m
+[0;32mI (120951) AXP2101: getSystemVoltage: 4300 mV[0m
+[0;32mI (120951) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (121961) AXP2101: Power Temperature: 41.10°C[0m
+[0;32mI (121961) AXP2101: isCharging: YES[0m
+[0;32mI (121961) AXP2101: isDischarge: NO[0m
+[0;32mI (121961) AXP2101: isStandby: NO[0m
+[0;32mI (121961) AXP2101: isVbusIn: YES[0m
+[0;32mI (121961) AXP2101: isVbusGood: YES[0m
+[0;32mI (121971) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (121971) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (121971) AXP2101: getVbusVoltage: 4608 mV[0m
+[0;32mI (121981) AXP2101: getSystemVoltage: 4305 mV[0m
+[0;32mI (121981) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (122991) AXP2101: Power Temperature: 41.10°C[0m
+[0;32mI (122991) AXP2101: isCharging: YES[0m
+[0;32mI (122991) AXP2101: isDischarge: NO[0m
+[0;32mI (122991) AXP2101: isStandby: NO[0m
+[0;32mI (122991) AXP2101: isVbusIn: YES[0m
+[0;32mI (122991) AXP2101: isVbusGood: YES[0m
+[0;32mI (123001) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (123001) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (123001) AXP2101: getVbusVoltage: 4597 mV[0m
+[0;32mI (123011) AXP2101: getSystemVoltage: 4299 mV[0m
+[0;32mI (123011) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (124021) AXP2101: Power Temperature: 41.15°C[0m
+[0;32mI (124021) AXP2101: isCharging: YES[0m
+[0;32mI (124021) AXP2101: isDischarge: NO[0m
+[0;32mI (124021) AXP2101: isStandby: NO[0m
+[0;32mI (124021) AXP2101: isVbusIn: YES[0m
+[0;32mI (124021) AXP2101: isVbusGood: YES[0m
+[0;32mI (124031) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (124031) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (124031) AXP2101: getVbusVoltage: 4596 mV[0m
+[0;32mI (124041) AXP2101: getSystemVoltage: 4300 mV[0m
+[0;32mI (124041) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (125051) AXP2101: Power Temperature: 41.15°C[0m
+[0;32mI (125051) AXP2101: isCharging: YES[0m
+[0;32mI (125051) AXP2101: isDischarge: NO[0m
+[0;32mI (125051) AXP2101: isStandby: NO[0m
+[0;32mI (125051) AXP2101: isVbusIn: YES[0m
+[0;32mI (125051) AXP2101: isVbusGood: YES[0m
+[0;32mI (125061) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (125061) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (125061) AXP2101: getVbusVoltage: 4599 mV[0m
+[0;32mI (125071) AXP2101: getSystemVoltage: 4301 mV[0m
+[0;32mI (125071) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (126081) AXP2101: Power Temperature: 41.15°C[0m
+[0;32mI (126081) AXP2101: isCharging: YES[0m
+[0;32mI (126081) AXP2101: isDischarge: NO[0m
+[0;32mI (126081) AXP2101: isStandby: NO[0m
+[0;32mI (126081) AXP2101: isVbusIn: YES[0m
+[0;32mI (126081) AXP2101: isVbusGood: YES[0m
+[0;32mI (126091) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (126091) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (126091) AXP2101: getVbusVoltage: 4599 mV[0m
+[0;32mI (126101) AXP2101: getSystemVoltage: 4305 mV[0m
+[0;32mI (126101) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (127111) AXP2101: Power Temperature: 41.15°C[0m
+[0;32mI (127111) AXP2101: isCharging: YES[0m
+[0;32mI (127111) AXP2101: isDischarge: NO[0m
+[0;32mI (127111) AXP2101: isStandby: NO[0m
+[0;32mI (127111) AXP2101: isVbusIn: YES[0m
+[0;32mI (127111) AXP2101: isVbusGood: YES[0m
+[0;32mI (127121) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (127121) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (127121) AXP2101: getVbusVoltage: 4599 mV[0m
+[0;32mI (127131) AXP2101: getSystemVoltage: 4298 mV[0m
+[0;32mI (127131) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (128141) AXP2101: Power Temperature: 41.15°C[0m
+[0;32mI (128141) AXP2101: isCharging: YES[0m
+[0;32mI (128141) AXP2101: isDischarge: NO[0m
+[0;32mI (128141) AXP2101: isStandby: NO[0m
+[0;32mI (128141) AXP2101: isVbusIn: YES[0m
+[0;32mI (128141) AXP2101: isVbusGood: YES[0m
+[0;32mI (128151) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (128151) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (128151) AXP2101: getVbusVoltage: 4601 mV[0m
+[0;32mI (128161) AXP2101: getSystemVoltage: 4301 mV[0m
+[0;32mI (128161) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (129171) AXP2101: Power Temperature: 41.10°C[0m
+[0;32mI (129171) AXP2101: isCharging: YES[0m
+[0;32mI (129171) AXP2101: isDischarge: NO[0m
+[0;32mI (129171) AXP2101: isStandby: NO[0m
+[0;32mI (129171) AXP2101: isVbusIn: YES[0m
+[0;32mI (129171) AXP2101: isVbusGood: YES[0m
+[0;32mI (129181) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (129181) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (129181) AXP2101: getVbusVoltage: 4601 mV[0m
+[0;32mI (129191) AXP2101: getSystemVoltage: 4300 mV[0m
+[0;32mI (129191) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (130201) AXP2101: Power Temperature: 41.20°C[0m
+[0;32mI (130201) AXP2101: isCharging: YES[0m
+[0;32mI (130201) AXP2101: isDischarge: NO[0m
+[0;32mI (130201) AXP2101: isStandby: NO[0m
+[0;32mI (130201) AXP2101: isVbusIn: YES[0m
+[0;32mI (130201) AXP2101: isVbusGood: YES[0m
+[0;32mI (130211) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (130211) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (130211) AXP2101: getVbusVoltage: 4611 mV[0m
+[0;32mI (130221) AXP2101: getSystemVoltage: 4308 mV[0m
+[0;32mI (130221) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (131231) AXP2101: Power Temperature: 41.15°C[0m
+[0;32mI (131231) AXP2101: isCharging: YES[0m
+[0;32mI (131231) AXP2101: isDischarge: NO[0m
+[0;32mI (131231) AXP2101: isStandby: NO[0m
+[0;32mI (131231) AXP2101: isVbusIn: YES[0m
+[0;32mI (131231) AXP2101: isVbusGood: YES[0m
+[0;32mI (131241) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (131241) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (131241) AXP2101: getVbusVoltage: 4604 mV[0m
+[0;32mI (131251) AXP2101: getSystemVoltage: 4313 mV[0m
+[0;32mI (131251) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (132261) AXP2101: Power Temperature: 41.15°C[0m
+[0;32mI (132261) AXP2101: isCharging: YES[0m
+[0;32mI (132261) AXP2101: isDischarge: NO[0m
+[0;32mI (132261) AXP2101: isStandby: NO[0m
+[0;32mI (132261) AXP2101: isVbusIn: YES[0m
+[0;32mI (132261) AXP2101: isVbusGood: YES[0m
+[0;32mI (132271) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (132271) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (132271) AXP2101: getVbusVoltage: 4601 mV[0m
+[0;32mI (132281) AXP2101: getSystemVoltage: 4303 mV[0m
+[0;32mI (132281) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (133291) AXP2101: Power Temperature: 41.10°C[0m
+[0;32mI (133291) AXP2101: isCharging: YES[0m
+[0;32mI (133291) AXP2101: isDischarge: NO[0m
+[0;32mI (133291) AXP2101: isStandby: NO[0m
+[0;32mI (133291) AXP2101: isVbusIn: YES[0m
+[0;32mI (133291) AXP2101: isVbusGood: YES[0m
+[0;32mI (133301) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (133301) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (133301) AXP2101: getVbusVoltage: 4600 mV[0m
+[0;32mI (133311) AXP2101: getSystemVoltage: 4302 mV[0m
+[0;32mI (133311) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (134321) AXP2101: Power Temperature: 41.20°C[0m
+[0;32mI (134321) AXP2101: isCharging: YES[0m
+[0;32mI (134321) AXP2101: isDischarge: NO[0m
+[0;32mI (134321) AXP2101: isStandby: NO[0m
+[0;32mI (134321) AXP2101: isVbusIn: YES[0m
+[0;32mI (134321) AXP2101: isVbusGood: YES[0m
+[0;32mI (134331) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (134331) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (134331) AXP2101: getVbusVoltage: 4604 mV[0m
+[0;32mI (134341) AXP2101: getSystemVoltage: 4302 mV[0m
+[0;32mI (134341) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (135351) AXP2101: Power Temperature: 41.20°C[0m
+[0;32mI (135351) AXP2101: isCharging: YES[0m
+[0;32mI (135351) AXP2101: isDischarge: NO[0m
+[0;32mI (135351) AXP2101: isStandby: NO[0m
+[0;32mI (135351) AXP2101: isVbusIn: YES[0m
+[0;32mI (135351) AXP2101: isVbusGood: YES[0m
+[0;32mI (135361) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (135361) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (135361) AXP2101: getVbusVoltage: 4603 mV[0m
+[0;32mI (135371) AXP2101: getSystemVoltage: 4310 mV[0m
+[0;32mI (135371) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (136381) AXP2101: Power Temperature: 41.20°C[0m
+[0;32mI (136381) AXP2101: isCharging: YES[0m
+[0;32mI (136381) AXP2101: isDischarge: NO[0m
+[0;32mI (136381) AXP2101: isStandby: NO[0m
+[0;32mI (136381) AXP2101: isVbusIn: YES[0m
+[0;32mI (136381) AXP2101: isVbusGood: YES[0m
+[0;32mI (136391) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (136391) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (136391) AXP2101: getVbusVoltage: 4610 mV[0m
+[0;32mI (136401) AXP2101: getSystemVoltage: 4308 mV[0m
+[0;32mI (136401) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (137411) AXP2101: Power Temperature: 41.15°C[0m
+[0;32mI (137411) AXP2101: isCharging: YES[0m
+[0;32mI (137411) AXP2101: isDischarge: NO[0m
+[0;32mI (137411) AXP2101: isStandby: NO[0m
+[0;32mI (137411) AXP2101: isVbusIn: YES[0m
+[0;32mI (137411) AXP2101: isVbusGood: YES[0m
+[0;32mI (137421) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (137421) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (137421) AXP2101: getVbusVoltage: 4605 mV[0m
+[0;32mI (137431) AXP2101: getSystemVoltage: 4309 mV[0m
+[0;32mI (137431) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (138441) AXP2101: Power Temperature: 41.15°C[0m
+[0;32mI (138441) AXP2101: isCharging: YES[0m
+[0;32mI (138441) AXP2101: isDischarge: NO[0m
+[0;32mI (138441) AXP2101: isStandby: NO[0m
+[0;32mI (138441) AXP2101: isVbusIn: YES[0m
+[0;32mI (138441) AXP2101: isVbusGood: YES[0m
+[0;32mI (138451) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (138451) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (138451) AXP2101: getVbusVoltage: 4608 mV[0m
+[0;32mI (138461) AXP2101: getSystemVoltage: 4308 mV[0m
+[0;32mI (138461) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (139471) AXP2101: Power Temperature: 41.15°C[0m
+[0;32mI (139471) AXP2101: isCharging: YES[0m
+[0;32mI (139471) AXP2101: isDischarge: NO[0m
+[0;32mI (139471) AXP2101: isStandby: NO[0m
+[0;32mI (139471) AXP2101: isVbusIn: YES[0m
+[0;32mI (139471) AXP2101: isVbusGood: YES[0m
+[0;32mI (139481) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (139481) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (139481) AXP2101: getVbusVoltage: 4609 mV[0m
+[0;32mI (139491) AXP2101: getSystemVoltage: 4307 mV[0m
+[0;32mI (139491) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (140501) AXP2101: Power Temperature: 41.20°C[0m
+[0;32mI (140501) AXP2101: isCharging: YES[0m
+[0;32mI (140501) AXP2101: isDischarge: NO[0m
+[0;32mI (140501) AXP2101: isStandby: NO[0m
+[0;32mI (140501) AXP2101: isVbusIn: YES[0m
+[0;32mI (140501) AXP2101: isVbusGood: YES[0m
+[0;32mI (140511) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (140511) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (140511) AXP2101: getVbusVoltage: 4603 mV[0m
+[0;32mI (140521) AXP2101: getSystemVoltage: 4320 mV[0m
+[0;32mI (140521) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (141531) AXP2101: Power Temperature: 41.20°C[0m
+[0;32mI (141531) AXP2101: isCharging: YES[0m
+[0;32mI (141531) AXP2101: isDischarge: NO[0m
+[0;32mI (141531) AXP2101: isStandby: NO[0m
+[0;32mI (141531) AXP2101: isVbusIn: YES[0m
+[0;32mI (141531) AXP2101: isVbusGood: YES[0m
+[0;32mI (141541) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (141541) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (141541) AXP2101: getVbusVoltage: 4604 mV[0m
+[0;32mI (141551) AXP2101: getSystemVoltage: 4310 mV[0m
+[0;32mI (141551) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (142561) AXP2101: Power Temperature: 41.20°C[0m
+[0;32mI (142561) AXP2101: isCharging: YES[0m
+[0;32mI (142561) AXP2101: isDischarge: NO[0m
+[0;32mI (142561) AXP2101: isStandby: NO[0m
+[0;32mI (142561) AXP2101: isVbusIn: YES[0m
+[0;32mI (142561) AXP2101: isVbusGood: YES[0m
+[0;32mI (142571) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (142571) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (142571) AXP2101: getVbusVoltage: 4605 mV[0m
+[0;32mI (142581) AXP2101: getSystemVoltage: 4311 mV[0m
+[0;32mI (142581) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (143591) AXP2101: Power Temperature: 41.20°C[0m
+[0;32mI (143591) AXP2101: isCharging: YES[0m
+[0;32mI (143591) AXP2101: isDischarge: NO[0m
+[0;32mI (143591) AXP2101: isStandby: NO[0m
+[0;32mI (143591) AXP2101: isVbusIn: YES[0m
+[0;32mI (143591) AXP2101: isVbusGood: YES[0m
+[0;32mI (143601) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (143601) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (143601) AXP2101: getVbusVoltage: 4605 mV[0m
+[0;32mI (143611) AXP2101: getSystemVoltage: 4310 mV[0m
+[0;32mI (143611) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (144621) AXP2101: Power Temperature: 41.20°C[0m
+[0;32mI (144621) AXP2101: isCharging: YES[0m
+[0;32mI (144621) AXP2101: isDischarge: NO[0m
+[0;32mI (144621) AXP2101: isStandby: NO[0m
+[0;32mI (144621) AXP2101: isVbusIn: YES[0m
+[0;32mI (144621) AXP2101: isVbusGood: YES[0m
+[0;32mI (144631) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (144631) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (144631) AXP2101: getVbusVoltage: 4607 mV[0m
+[0;32mI (144641) AXP2101: getSystemVoltage: 4309 mV[0m
+[0;32mI (144641) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (145651) AXP2101: Power Temperature: 41.30°C[0m
+[0;32mI (145651) AXP2101: isCharging: YES[0m
+[0;32mI (145651) AXP2101: isDischarge: NO[0m
+[0;32mI (145651) AXP2101: isStandby: NO[0m
+[0;32mI (145651) AXP2101: isVbusIn: YES[0m
+[0;32mI (145651) AXP2101: isVbusGood: YES[0m
+[0;32mI (145661) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (145661) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (145661) AXP2101: getVbusVoltage: 4608 mV[0m
+[0;32mI (145671) AXP2101: getSystemVoltage: 4317 mV[0m
+[0;32mI (145671) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (146681) AXP2101: Power Temperature: 41.25°C[0m
+[0;32mI (146681) AXP2101: isCharging: YES[0m
+[0;32mI (146681) AXP2101: isDischarge: NO[0m
+[0;32mI (146681) AXP2101: isStandby: NO[0m
+[0;32mI (146681) AXP2101: isVbusIn: YES[0m
+[0;32mI (146681) AXP2101: isVbusGood: YES[0m
+[0;32mI (146691) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (146691) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (146691) AXP2101: getVbusVoltage: 4611 mV[0m
+[0;32mI (146701) AXP2101: getSystemVoltage: 4314 mV[0m
+[0;32mI (146701) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (147711) AXP2101: Power Temperature: 41.25°C[0m
+[0;32mI (147711) AXP2101: isCharging: YES[0m
+[0;32mI (147711) AXP2101: isDischarge: NO[0m
+[0;32mI (147711) AXP2101: isStandby: NO[0m
+[0;32mI (147711) AXP2101: isVbusIn: YES[0m
+[0;32mI (147711) AXP2101: isVbusGood: YES[0m
+[0;32mI (147721) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (147721) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (147721) AXP2101: getVbusVoltage: 4609 mV[0m
+[0;32mI (147731) AXP2101: getSystemVoltage: 4310 mV[0m
+[0;32mI (147731) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (148741) AXP2101: Power Temperature: 41.25°C[0m
+[0;32mI (148741) AXP2101: isCharging: YES[0m
+[0;32mI (148741) AXP2101: isDischarge: NO[0m
+[0;32mI (148741) AXP2101: isStandby: NO[0m
+[0;32mI (148741) AXP2101: isVbusIn: YES[0m
+[0;32mI (148741) AXP2101: isVbusGood: YES[0m
+[0;32mI (148751) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (148751) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (148751) AXP2101: getVbusVoltage: 4609 mV[0m
+[0;32mI (148761) AXP2101: getSystemVoltage: 4314 mV[0m
+[0;32mI (148761) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (149771) AXP2101: Power Temperature: 41.25°C[0m
+[0;32mI (149771) AXP2101: isCharging: YES[0m
+[0;32mI (149771) AXP2101: isDischarge: NO[0m
+[0;32mI (149771) AXP2101: isStandby: NO[0m
+[0;32mI (149771) AXP2101: isVbusIn: YES[0m
+[0;32mI (149771) AXP2101: isVbusGood: YES[0m
+[0;32mI (149781) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (149781) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (149781) AXP2101: getVbusVoltage: 4610 mV[0m
+[0;32mI (149791) AXP2101: getSystemVoltage: 4311 mV[0m
+[0;32mI (149791) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (150801) AXP2101: Power Temperature: 41.30°C[0m
+[0;32mI (150801) AXP2101: isCharging: YES[0m
+[0;32mI (150801) AXP2101: isDischarge: NO[0m
+[0;32mI (150801) AXP2101: isStandby: NO[0m
+[0;32mI (150801) AXP2101: isVbusIn: YES[0m
+[0;32mI (150801) AXP2101: isVbusGood: YES[0m
+[0;32mI (150811) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (150811) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (150811) AXP2101: getVbusVoltage: 4612 mV[0m
+[0;32mI (150821) AXP2101: getSystemVoltage: 4322 mV[0m
+[0;32mI (150821) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (151831) AXP2101: Power Temperature: 41.30°C[0m
+[0;32mI (151831) AXP2101: isCharging: YES[0m
+[0;32mI (151831) AXP2101: isDischarge: NO[0m
+[0;32mI (151831) AXP2101: isStandby: NO[0m
+[0;32mI (151831) AXP2101: isVbusIn: YES[0m
+[0;32mI (151831) AXP2101: isVbusGood: YES[0m
+[0;32mI (151841) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (151841) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (151841) AXP2101: getVbusVoltage: 4612 mV[0m
+[0;32mI (151851) AXP2101: getSystemVoltage: 4320 mV[0m
+[0;32mI (151851) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (152861) AXP2101: Power Temperature: 41.30°C[0m
+[0;32mI (152861) AXP2101: isCharging: YES[0m
+[0;32mI (152861) AXP2101: isDischarge: NO[0m
+[0;32mI (152861) AXP2101: isStandby: NO[0m
+[0;32mI (152861) AXP2101: isVbusIn: YES[0m
+[0;32mI (152861) AXP2101: isVbusGood: YES[0m
+[0;32mI (152871) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (152871) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (152871) AXP2101: getVbusVoltage: 4606 mV[0m
+[0;32mI (152881) AXP2101: getSystemVoltage: 4313 mV[0m
+[0;32mI (152881) AXP2101: getBatteryPercent: 79 %[0m
+[0;32mI (153891) AXP2101: Power Temperature: 41.25°C[0m
+[0;32mI (153891) AXP2101: isCharging: YES[0m
+[0;32mI (153891) AXP2101: isDischarge: NO[0m
+[0;32mI (153891) AXP2101: isStandby: NO[0m
+[0;32mI (153891) AXP2101: isVbusIn: YES[0m
+[0;32mI (153891) AXP2101: isVbusGood: YES[0m
+[0;32mI (153901) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (153901) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (153901) AXP2101: getVbusVoltage: 4608 mV[0m
+[0;32mI (153911) AXP2101: getSystemVoltage: 4310 mV[0m
+[0;32mI (153911) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (154921) AXP2101: Power Temperature: 41.25°C[0m
+[0;32mI (154921) AXP2101: isCharging: YES[0m
+[0;32mI (154921) AXP2101: isDischarge: NO[0m
+[0;32mI (154921) AXP2101: isStandby: NO[0m
+[0;32mI (154921) AXP2101: isVbusIn: YES[0m
+[0;32mI (154921) AXP2101: isVbusGood: YES[0m
+[0;32mI (154931) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (154931) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (154931) AXP2101: getVbusVoltage: 4615 mV[0m
+[0;32mI (154941) AXP2101: getSystemVoltage: 4313 mV[0m
+[0;32mI (154941) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (155951) AXP2101: Power Temperature: 41.30°C[0m
+[0;32mI (155951) AXP2101: isCharging: YES[0m
+[0;32mI (155951) AXP2101: isDischarge: NO[0m
+[0;32mI (155951) AXP2101: isStandby: NO[0m
+[0;32mI (155951) AXP2101: isVbusIn: YES[0m
+[0;32mI (155951) AXP2101: isVbusGood: YES[0m
+[0;32mI (155961) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (155961) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (155961) AXP2101: getVbusVoltage: 4609 mV[0m
+[0;32mI (155971) AXP2101: getSystemVoltage: 4316 mV[0m
+[0;32mI (155971) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (156981) AXP2101: Power Temperature: 41.25°C[0m
+[0;32mI (156981) AXP2101: isCharging: YES[0m
+[0;32mI (156981) AXP2101: isDischarge: NO[0m
+[0;32mI (156981) AXP2101: isStandby: NO[0m
+[0;32mI (156981) AXP2101: isVbusIn: YES[0m
+[0;32mI (156981) AXP2101: isVbusGood: YES[0m
+[0;32mI (156991) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (156991) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (156991) AXP2101: getVbusVoltage: 4612 mV[0m
+[0;32mI (157001) AXP2101: getSystemVoltage: 4316 mV[0m
+[0;32mI (157001) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (158011) AXP2101: Power Temperature: 41.30°C[0m
+[0;32mI (158011) AXP2101: isCharging: YES[0m
+[0;32mI (158011) AXP2101: isDischarge: NO[0m
+[0;32mI (158011) AXP2101: isStandby: NO[0m
+[0;32mI (158011) AXP2101: isVbusIn: YES[0m
+[0;32mI (158011) AXP2101: isVbusGood: YES[0m
+[0;32mI (158021) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (158021) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (158021) AXP2101: getVbusVoltage: 4610 mV[0m
+[0;32mI (158031) AXP2101: getSystemVoltage: 4317 mV[0m
+[0;32mI (158031) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (159041) AXP2101: Power Temperature: 41.25°C[0m
+[0;32mI (159041) AXP2101: isCharging: YES[0m
+[0;32mI (159041) AXP2101: isDischarge: NO[0m
+[0;32mI (159041) AXP2101: isStandby: NO[0m
+[0;32mI (159041) AXP2101: isVbusIn: YES[0m
+[0;32mI (159041) AXP2101: isVbusGood: YES[0m
+[0;32mI (159051) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (159051) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (159051) AXP2101: getVbusVoltage: 4610 mV[0m
+[0;32mI (159061) AXP2101: getSystemVoltage: 4321 mV[0m
+[0;32mI (159061) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (160071) AXP2101: Power Temperature: 41.30°C[0m
+[0;32mI (160071) AXP2101: isCharging: YES[0m
+[0;32mI (160071) AXP2101: isDischarge: NO[0m
+[0;32mI (160071) AXP2101: isStandby: NO[0m
+[0;32mI (160071) AXP2101: isVbusIn: YES[0m
+[0;32mI (160071) AXP2101: isVbusGood: YES[0m
+[0;32mI (160081) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (160081) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (160081) AXP2101: getVbusVoltage: 4609 mV[0m
+[0;32mI (160091) AXP2101: getSystemVoltage: 4318 mV[0m
+[0;32mI (160091) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (161101) AXP2101: Power Temperature: 41.30°C[0m
+[0;32mI (161101) AXP2101: isCharging: YES[0m
+[0;32mI (161101) AXP2101: isDischarge: NO[0m
+[0;32mI (161101) AXP2101: isStandby: NO[0m
+[0;32mI (161101) AXP2101: isVbusIn: YES[0m
+[0;32mI (161101) AXP2101: isVbusGood: YES[0m
+[0;32mI (161111) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (161111) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (161111) AXP2101: getVbusVoltage: 4623 mV[0m
+[0;32mI (161121) AXP2101: getSystemVoltage: 4329 mV[0m
+[0;32mI (161121) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (162131) AXP2101: Power Temperature: 41.30°C[0m
+[0;32mI (162131) AXP2101: isCharging: YES[0m
+[0;32mI (162131) AXP2101: isDischarge: NO[0m
+[0;32mI (162131) AXP2101: isStandby: NO[0m
+[0;32mI (162131) AXP2101: isVbusIn: YES[0m
+[0;32mI (162131) AXP2101: isVbusGood: YES[0m
+[0;32mI (162141) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (162141) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (162141) AXP2101: getVbusVoltage: 4612 mV[0m
+[0;32mI (162151) AXP2101: getSystemVoltage: 4317 mV[0m
+[0;32mI (162151) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (163161) AXP2101: Power Temperature: 41.30°C[0m
+[0;32mI (163161) AXP2101: isCharging: YES[0m
+[0;32mI (163161) AXP2101: isDischarge: NO[0m
+[0;32mI (163161) AXP2101: isStandby: NO[0m
+[0;32mI (163161) AXP2101: isVbusIn: YES[0m
+[0;32mI (163161) AXP2101: isVbusGood: YES[0m
+[0;32mI (163171) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (163171) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (163171) AXP2101: getVbusVoltage: 4610 mV[0m
+[0;32mI (163181) AXP2101: getSystemVoltage: 4314 mV[0m
+[0;32mI (163181) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (164191) AXP2101: Power Temperature: 41.30°C[0m
+[0;32mI (164191) AXP2101: isCharging: YES[0m
+[0;32mI (164191) AXP2101: isDischarge: NO[0m
+[0;32mI (164191) AXP2101: isStandby: NO[0m
+[0;32mI (164191) AXP2101: isVbusIn: YES[0m
+[0;32mI (164191) AXP2101: isVbusGood: YES[0m
+[0;32mI (164201) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (164201) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (164201) AXP2101: getVbusVoltage: 4613 mV[0m
+[0;32mI (164211) AXP2101: getSystemVoltage: 4318 mV[0m
+[0;32mI (164211) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (165221) AXP2101: Power Temperature: 41.25°C[0m
+[0;32mI (165221) AXP2101: isCharging: YES[0m
+[0;32mI (165221) AXP2101: isDischarge: NO[0m
+[0;32mI (165221) AXP2101: isStandby: NO[0m
+[0;32mI (165221) AXP2101: isVbusIn: YES[0m
+[0;32mI (165221) AXP2101: isVbusGood: YES[0m
+[0;32mI (165231) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (165231) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (165231) AXP2101: getVbusVoltage: 4615 mV[0m
+[0;32mI (165241) AXP2101: getSystemVoltage: 4316 mV[0m
+[0;32mI (165241) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (166251) AXP2101: Power Temperature: 41.35°C[0m
+[0;32mI (166251) AXP2101: isCharging: YES[0m
+[0;32mI (166251) AXP2101: isDischarge: NO[0m
+[0;32mI (166251) AXP2101: isStandby: NO[0m
+[0;32mI (166251) AXP2101: isVbusIn: YES[0m
+[0;32mI (166251) AXP2101: isVbusGood: YES[0m
+[0;32mI (166261) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (166261) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (166261) AXP2101: getVbusVoltage: 4614 mV[0m
+[0;32mI (166271) AXP2101: getSystemVoltage: 4320 mV[0m
+[0;32mI (166271) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (167281) AXP2101: Power Temperature: 41.35°C[0m
+[0;32mI (167281) AXP2101: isCharging: YES[0m
+[0;32mI (167281) AXP2101: isDischarge: NO[0m
+[0;32mI (167281) AXP2101: isStandby: NO[0m
+[0;32mI (167281) AXP2101: isVbusIn: YES[0m
+[0;32mI (167281) AXP2101: isVbusGood: YES[0m
+[0;32mI (167291) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (167291) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (167291) AXP2101: getVbusVoltage: 4615 mV[0m
+[0;32mI (167301) AXP2101: getSystemVoltage: 4325 mV[0m
+[0;32mI (167301) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (168311) AXP2101: Power Temperature: 41.35°C[0m
+[0;32mI (168311) AXP2101: isCharging: YES[0m
+[0;32mI (168311) AXP2101: isDischarge: NO[0m
+[0;32mI (168311) AXP2101: isStandby: NO[0m
+[0;32mI (168311) AXP2101: isVbusIn: YES[0m
+[0;32mI (168311) AXP2101: isVbusGood: YES[0m
+[0;32mI (168321) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (168321) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (168321) AXP2101: getVbusVoltage: 4616 mV[0m
+[0;32mI (168331) AXP2101: getSystemVoltage: 4319 mV[0m
+[0;32mI (168331) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (169341) AXP2101: Power Temperature: 41.30°C[0m
+[0;32mI (169341) AXP2101: isCharging: YES[0m
+[0;32mI (169341) AXP2101: isDischarge: NO[0m
+[0;32mI (169341) AXP2101: isStandby: NO[0m
+[0;32mI (169341) AXP2101: isVbusIn: YES[0m
+[0;32mI (169341) AXP2101: isVbusGood: YES[0m
+[0;32mI (169351) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (169351) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (169351) AXP2101: getVbusVoltage: 4615 mV[0m
+[0;32mI (169361) AXP2101: getSystemVoltage: 4322 mV[0m
+[0;32mI (169361) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (170371) AXP2101: Power Temperature: 41.40°C[0m
+[0;32mI (170371) AXP2101: isCharging: YES[0m
+[0;32mI (170371) AXP2101: isDischarge: NO[0m
+[0;32mI (170371) AXP2101: isStandby: NO[0m
+[0;32mI (170371) AXP2101: isVbusIn: YES[0m
+[0;32mI (170371) AXP2101: isVbusGood: YES[0m
+[0;32mI (170381) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (170381) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (170381) AXP2101: getVbusVoltage: 4614 mV[0m
+[0;32mI (170391) AXP2101: getSystemVoltage: 4318 mV[0m
+[0;32mI (170391) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (171401) AXP2101: Power Temperature: 41.35°C[0m
+[0;32mI (171401) AXP2101: isCharging: YES[0m
+[0;32mI (171401) AXP2101: isDischarge: NO[0m
+[0;32mI (171401) AXP2101: isStandby: NO[0m
+[0;32mI (171401) AXP2101: isVbusIn: YES[0m
+[0;32mI (171401) AXP2101: isVbusGood: YES[0m
+[0;32mI (171411) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (171411) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (171411) AXP2101: getVbusVoltage: 4616 mV[0m
+[0;32mI (171421) AXP2101: getSystemVoltage: 4321 mV[0m
+[0;32mI (171421) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (172431) AXP2101: Power Temperature: 41.40°C[0m
+[0;32mI (172431) AXP2101: isCharging: YES[0m
+[0;32mI (172431) AXP2101: isDischarge: NO[0m
+[0;32mI (172431) AXP2101: isStandby: NO[0m
+[0;32mI (172431) AXP2101: isVbusIn: YES[0m
+[0;32mI (172431) AXP2101: isVbusGood: YES[0m
+[0;32mI (172441) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (172441) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (172441) AXP2101: getVbusVoltage: 4616 mV[0m
+[0;32mI (172451) AXP2101: getSystemVoltage: 4320 mV[0m
+[0;32mI (172451) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (173461) AXP2101: Power Temperature: 41.40°C[0m
+[0;32mI (173461) AXP2101: isCharging: YES[0m
+[0;32mI (173461) AXP2101: isDischarge: NO[0m
+[0;32mI (173461) AXP2101: isStandby: NO[0m
+[0;32mI (173461) AXP2101: isVbusIn: YES[0m
+[0;32mI (173461) AXP2101: isVbusGood: YES[0m
+[0;32mI (173471) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (173471) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (173471) AXP2101: getVbusVoltage: 4615 mV[0m
+[0;32mI (173481) AXP2101: getSystemVoltage: 4320 mV[0m
+[0;32mI (173481) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (174491) AXP2101: Power Temperature: 41.40°C[0m
+[0;32mI (174491) AXP2101: isCharging: YES[0m
+[0;32mI (174491) AXP2101: isDischarge: NO[0m
+[0;32mI (174491) AXP2101: isStandby: NO[0m
+[0;32mI (174491) AXP2101: isVbusIn: YES[0m
+[0;32mI (174491) AXP2101: isVbusGood: YES[0m
+[0;32mI (174501) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (174501) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (174501) AXP2101: getVbusVoltage: 4616 mV[0m
+[0;32mI (174511) AXP2101: getSystemVoltage: 4322 mV[0m
+[0;32mI (174511) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (175521) AXP2101: Power Temperature: 41.45°C[0m
+[0;32mI (175521) AXP2101: isCharging: YES[0m
+[0;32mI (175521) AXP2101: isDischarge: NO[0m
+[0;32mI (175521) AXP2101: isStandby: NO[0m
+[0;32mI (175521) AXP2101: isVbusIn: YES[0m
+[0;32mI (175521) AXP2101: isVbusGood: YES[0m
+[0;32mI (175531) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (175531) AXP2101: getBattVoltage: 4210 mV[0m
+[0;32mI (175531) AXP2101: getVbusVoltage: 4617 mV[0m
+[0;32mI (175541) AXP2101: getSystemVoltage: 4324 mV[0m
+[0;32mI (175541) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (176551) AXP2101: Power Temperature: 41.40°C[0m
+[0;32mI (176551) AXP2101: isCharging: YES[0m
+[0;32mI (176551) AXP2101: isDischarge: NO[0m
+[0;32mI (176551) AXP2101: isStandby: NO[0m
+[0;32mI (176551) AXP2101: isVbusIn: YES[0m
+[0;32mI (176551) AXP2101: isVbusGood: YES[0m
+[0;32mI (176561) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (176561) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (176561) AXP2101: getVbusVoltage: 4622 mV[0m
+[0;32mI (176571) AXP2101: getSystemVoltage: 4322 mV[0m
+[0;32mI (176571) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (177581) AXP2101: Power Temperature: 41.45°C[0m
+[0;32mI (177581) AXP2101: isCharging: YES[0m
+[0;32mI (177581) AXP2101: isDischarge: NO[0m
+[0;32mI (177581) AXP2101: isStandby: NO[0m
+[0;32mI (177581) AXP2101: isVbusIn: YES[0m
+[0;32mI (177581) AXP2101: isVbusGood: YES[0m
+[0;32mI (177591) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (177591) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (177591) AXP2101: getVbusVoltage: 4615 mV[0m
+[0;32mI (177601) AXP2101: getSystemVoltage: 4325 mV[0m
+[0;32mI (177601) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (178611) AXP2101: Power Temperature: 41.40°C[0m
+[0;32mI (178611) AXP2101: isCharging: YES[0m
+[0;32mI (178611) AXP2101: isDischarge: NO[0m
+[0;32mI (178611) AXP2101: isStandby: NO[0m
+[0;32mI (178611) AXP2101: isVbusIn: YES[0m
+[0;32mI (178611) AXP2101: isVbusGood: YES[0m
+[0;32mI (178621) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (178621) AXP2101: getBattVoltage: 4210 mV[0m
+[0;32mI (178621) AXP2101: getVbusVoltage: 4617 mV[0m
+[0;32mI (178631) AXP2101: getSystemVoltage: 4324 mV[0m
+[0;32mI (178631) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (179641) AXP2101: Power Temperature: 41.40°C[0m
+[0;32mI (179641) AXP2101: isCharging: YES[0m
+[0;32mI (179641) AXP2101: isDischarge: NO[0m
+[0;32mI (179641) AXP2101: isStandby: NO[0m
+[0;32mI (179641) AXP2101: isVbusIn: YES[0m
+[0;32mI (179641) AXP2101: isVbusGood: YES[0m
+[0;32mI (179651) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (179651) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (179651) AXP2101: getVbusVoltage: 4620 mV[0m
+[0;32mI (179661) AXP2101: getSystemVoltage: 4324 mV[0m
+[0;32mI (179661) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (180671) AXP2101: Power Temperature: 41.40°C[0m
+[0;32mI (180671) AXP2101: isCharging: YES[0m
+[0;32mI (180671) AXP2101: isDischarge: NO[0m
+[0;32mI (180671) AXP2101: isStandby: NO[0m
+[0;32mI (180671) AXP2101: isVbusIn: YES[0m
+[0;32mI (180671) AXP2101: isVbusGood: YES[0m
+[0;32mI (180681) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (180681) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (180681) AXP2101: getVbusVoltage: 4621 mV[0m
+[0;32mI (180691) AXP2101: getSystemVoltage: 4331 mV[0m
+[0;32mI (180691) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (181701) AXP2101: Power Temperature: 41.45°C[0m
+[0;32mI (181701) AXP2101: isCharging: YES[0m
+[0;32mI (181701) AXP2101: isDischarge: NO[0m
+[0;32mI (181701) AXP2101: isStandby: NO[0m
+[0;32mI (181701) AXP2101: isVbusIn: YES[0m
+[0;32mI (181701) AXP2101: isVbusGood: YES[0m
+[0;32mI (181711) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (181711) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (181711) AXP2101: getVbusVoltage: 4624 mV[0m
+[0;32mI (181721) AXP2101: getSystemVoltage: 4324 mV[0m
+[0;32mI (181721) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (182731) AXP2101: Power Temperature: 41.45°C[0m
+[0;32mI (182731) AXP2101: isCharging: YES[0m
+[0;32mI (182731) AXP2101: isDischarge: NO[0m
+[0;32mI (182731) AXP2101: isStandby: NO[0m
+[0;32mI (182731) AXP2101: isVbusIn: YES[0m
+[0;32mI (182731) AXP2101: isVbusGood: YES[0m
+[0;32mI (182741) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (182741) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (182741) AXP2101: getVbusVoltage: 4619 mV[0m
+[0;32mI (182751) AXP2101: getSystemVoltage: 4326 mV[0m
+[0;32mI (182751) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (183761) AXP2101: Power Temperature: 41.40°C[0m
+[0;32mI (183761) AXP2101: isCharging: YES[0m
+[0;32mI (183761) AXP2101: isDischarge: NO[0m
+[0;32mI (183761) AXP2101: isStandby: NO[0m
+[0;32mI (183761) AXP2101: isVbusIn: YES[0m
+[0;32mI (183761) AXP2101: isVbusGood: YES[0m
+[0;32mI (183771) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (183771) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (183771) AXP2101: getVbusVoltage: 4624 mV[0m
+[0;32mI (183781) AXP2101: getSystemVoltage: 4334 mV[0m
+[0;32mI (183781) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (184791) AXP2101: Power Temperature: 41.45°C[0m
+[0;32mI (184791) AXP2101: isCharging: YES[0m
+[0;32mI (184791) AXP2101: isDischarge: NO[0m
+[0;32mI (184791) AXP2101: isStandby: NO[0m
+[0;32mI (184791) AXP2101: isVbusIn: YES[0m
+[0;32mI (184791) AXP2101: isVbusGood: YES[0m
+[0;32mI (184801) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (184801) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (184801) AXP2101: getVbusVoltage: 4634 mV[0m
+[0;32mI (184811) AXP2101: getSystemVoltage: 4325 mV[0m
+[0;32mI (184811) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (185821) AXP2101: Power Temperature: 41.45°C[0m
+[0;32mI (185821) AXP2101: isCharging: YES[0m
+[0;32mI (185821) AXP2101: isDischarge: NO[0m
+[0;32mI (185821) AXP2101: isStandby: NO[0m
+[0;32mI (185821) AXP2101: isVbusIn: YES[0m
+[0;32mI (185821) AXP2101: isVbusGood: YES[0m
+[0;32mI (185831) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (185831) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (185831) AXP2101: getVbusVoltage: 4621 mV[0m
+[0;32mI (185841) AXP2101: getSystemVoltage: 4324 mV[0m
+[0;32mI (185841) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (186851) AXP2101: Power Temperature: 41.50°C[0m
+[0;32mI (186851) AXP2101: isCharging: YES[0m
+[0;32mI (186851) AXP2101: isDischarge: NO[0m
+[0;32mI (186851) AXP2101: isStandby: NO[0m
+[0;32mI (186851) AXP2101: isVbusIn: YES[0m
+[0;32mI (186851) AXP2101: isVbusGood: YES[0m
+[0;32mI (186861) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (186861) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (186861) AXP2101: getVbusVoltage: 4619 mV[0m
+[0;32mI (186871) AXP2101: getSystemVoltage: 4333 mV[0m
+[0;32mI (186871) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (187881) AXP2101: Power Temperature: 41.45°C[0m
+[0;32mI (187881) AXP2101: isCharging: YES[0m
+[0;32mI (187881) AXP2101: isDischarge: NO[0m
+[0;32mI (187881) AXP2101: isStandby: NO[0m
+[0;32mI (187881) AXP2101: isVbusIn: YES[0m
+[0;32mI (187881) AXP2101: isVbusGood: YES[0m
+[0;32mI (187891) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (187891) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (187891) AXP2101: getVbusVoltage: 4620 mV[0m
+[0;32mI (187901) AXP2101: getSystemVoltage: 4337 mV[0m
+[0;32mI (187901) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (188911) AXP2101: Power Temperature: 41.40°C[0m
+[0;32mI (188911) AXP2101: isCharging: YES[0m
+[0;32mI (188911) AXP2101: isDischarge: NO[0m
+[0;32mI (188911) AXP2101: isStandby: NO[0m
+[0;32mI (188911) AXP2101: isVbusIn: YES[0m
+[0;32mI (188911) AXP2101: isVbusGood: YES[0m
+[0;32mI (188921) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (188921) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (188921) AXP2101: getVbusVoltage: 4622 mV[0m
+[0;32mI (188931) AXP2101: getSystemVoltage: 4328 mV[0m
+[0;32mI (188931) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (189941) AXP2101: Power Temperature: 41.45°C[0m
+[0;32mI (189941) AXP2101: isCharging: YES[0m
+[0;32mI (189941) AXP2101: isDischarge: NO[0m
+[0;32mI (189941) AXP2101: isStandby: NO[0m
+[0;32mI (189941) AXP2101: isVbusIn: YES[0m
+[0;32mI (189941) AXP2101: isVbusGood: YES[0m
+[0;32mI (189951) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (189951) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (189951) AXP2101: getVbusVoltage: 4634 mV[0m
+[0;32mI (189961) AXP2101: getSystemVoltage: 4330 mV[0m
+[0;32mI (189961) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (190971) AXP2101: Power Temperature: 41.45°C[0m
+[0;32mI (190971) AXP2101: isCharging: YES[0m
+[0;32mI (190971) AXP2101: isDischarge: NO[0m
+[0;32mI (190971) AXP2101: isStandby: NO[0m
+[0;32mI (190971) AXP2101: isVbusIn: YES[0m
+[0;32mI (190971) AXP2101: isVbusGood: YES[0m
+[0;32mI (190981) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (190981) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (190981) AXP2101: getVbusVoltage: 4625 mV[0m
+[0;32mI (190991) AXP2101: getSystemVoltage: 4328 mV[0m
+[0;32mI (190991) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (192001) AXP2101: Power Temperature: 41.45°C[0m
+[0;32mI (192001) AXP2101: isCharging: YES[0m
+[0;32mI (192001) AXP2101: isDischarge: NO[0m
+[0;32mI (192001) AXP2101: isStandby: NO[0m
+[0;32mI (192001) AXP2101: isVbusIn: YES[0m
+[0;32mI (192001) AXP2101: isVbusGood: YES[0m
+[0;32mI (192011) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (192011) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (192011) AXP2101: getVbusVoltage: 4631 mV[0m
+[0;32mI (192021) AXP2101: getSystemVoltage: 4328 mV[0m
+[0;32mI (192021) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (193031) AXP2101: Power Temperature: 41.45°C[0m
+[0;32mI (193031) AXP2101: isCharging: YES[0m
+[0;32mI (193031) AXP2101: isDischarge: NO[0m
+[0;32mI (193031) AXP2101: isStandby: NO[0m
+[0;32mI (193031) AXP2101: isVbusIn: YES[0m
+[0;32mI (193031) AXP2101: isVbusGood: YES[0m
+[0;32mI (193041) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (193041) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (193041) AXP2101: getVbusVoltage: 4631 mV[0m
+[0;32mI (193051) AXP2101: getSystemVoltage: 4330 mV[0m
+[0;32mI (193051) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (194061) AXP2101: Power Temperature: 41.45°C[0m
+[0;32mI (194061) AXP2101: isCharging: YES[0m
+[0;32mI (194061) AXP2101: isDischarge: NO[0m
+[0;32mI (194061) AXP2101: isStandby: NO[0m
+[0;32mI (194061) AXP2101: isVbusIn: YES[0m
+[0;32mI (194061) AXP2101: isVbusGood: YES[0m
+[0;32mI (194071) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (194071) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (194071) AXP2101: getVbusVoltage: 4626 mV[0m
+[0;32mI (194081) AXP2101: getSystemVoltage: 4329 mV[0m
+[0;32mI (194081) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (195091) AXP2101: Power Temperature: 41.45°C[0m
+[0;32mI (195091) AXP2101: isCharging: YES[0m
+[0;32mI (195091) AXP2101: isDischarge: NO[0m
+[0;32mI (195091) AXP2101: isStandby: NO[0m
+[0;32mI (195091) AXP2101: isVbusIn: YES[0m
+[0;32mI (195091) AXP2101: isVbusGood: YES[0m
+[0;32mI (195101) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (195101) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (195101) AXP2101: getVbusVoltage: 4624 mV[0m
+[0;32mI (195111) AXP2101: getSystemVoltage: 4333 mV[0m
+[0;32mI (195111) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (196121) AXP2101: Power Temperature: 41.50°C[0m
+[0;32mI (196121) AXP2101: isCharging: YES[0m
+[0;32mI (196121) AXP2101: isDischarge: NO[0m
+[0;32mI (196121) AXP2101: isStandby: NO[0m
+[0;32mI (196121) AXP2101: isVbusIn: YES[0m
+[0;32mI (196121) AXP2101: isVbusGood: YES[0m
+[0;32mI (196131) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (196131) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (196131) AXP2101: getVbusVoltage: 4625 mV[0m
+[0;32mI (196141) AXP2101: getSystemVoltage: 4331 mV[0m
+[0;32mI (196141) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (197151) AXP2101: Power Temperature: 41.50°C[0m
+[0;32mI (197151) AXP2101: isCharging: YES[0m
+[0;32mI (197151) AXP2101: isDischarge: NO[0m
+[0;32mI (197151) AXP2101: isStandby: NO[0m
+[0;32mI (197151) AXP2101: isVbusIn: YES[0m
+[0;32mI (197151) AXP2101: isVbusGood: YES[0m
+[0;32mI (197161) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (197161) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (197161) AXP2101: getVbusVoltage: 4624 mV[0m
+[0;32mI (197171) AXP2101: getSystemVoltage: 4332 mV[0m
+[0;32mI (197171) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (198181) AXP2101: Power Temperature: 41.45°C[0m
+[0;32mI (198181) AXP2101: isCharging: YES[0m
+[0;32mI (198181) AXP2101: isDischarge: NO[0m
+[0;32mI (198181) AXP2101: isStandby: NO[0m
+[0;32mI (198181) AXP2101: isVbusIn: YES[0m
+[0;32mI (198181) AXP2101: isVbusGood: YES[0m
+[0;32mI (198191) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (198191) AXP2101: getBattVoltage: 4210 mV[0m
+[0;32mI (198191) AXP2101: getVbusVoltage: 4624 mV[0m
+[0;32mI (198201) AXP2101: getSystemVoltage: 4328 mV[0m
+[0;32mI (198201) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (199211) AXP2101: Power Temperature: 41.50°C[0m
+[0;32mI (199211) AXP2101: isCharging: YES[0m
+[0;32mI (199211) AXP2101: isDischarge: NO[0m
+[0;32mI (199211) AXP2101: isStandby: NO[0m
+[0;32mI (199211) AXP2101: isVbusIn: YES[0m
+[0;32mI (199211) AXP2101: isVbusGood: YES[0m
+[0;32mI (199221) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (199221) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (199221) AXP2101: getVbusVoltage: 4622 mV[0m
+[0;32mI (199231) AXP2101: getSystemVoltage: 4331 mV[0m
+[0;32mI (199231) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (200241) AXP2101: Power Temperature: 41.40°C[0m
+[0;32mI (200241) AXP2101: isCharging: YES[0m
+[0;32mI (200241) AXP2101: isDischarge: NO[0m
+[0;32mI (200241) AXP2101: isStandby: NO[0m
+[0;32mI (200241) AXP2101: isVbusIn: YES[0m
+[0;32mI (200241) AXP2101: isVbusGood: YES[0m
+[0;32mI (200251) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (200251) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (200251) AXP2101: getVbusVoltage: 4623 mV[0m
+[0;32mI (200261) AXP2101: getSystemVoltage: 4334 mV[0m
+[0;32mI (200261) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (201271) AXP2101: Power Temperature: 41.45°C[0m
+[0;32mI (201271) AXP2101: isCharging: YES[0m
+[0;32mI (201271) AXP2101: isDischarge: NO[0m
+[0;32mI (201271) AXP2101: isStandby: NO[0m
+[0;32mI (201271) AXP2101: isVbusIn: YES[0m
+[0;32mI (201271) AXP2101: isVbusGood: YES[0m
+[0;32mI (201281) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (201281) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (201281) AXP2101: getVbusVoltage: 4625 mV[0m
+[0;32mI (201291) AXP2101: getSystemVoltage: 4336 mV[0m
+[0;32mI (201291) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (202301) AXP2101: Power Temperature: 41.45°C[0m
+[0;32mI (202301) AXP2101: isCharging: YES[0m
+[0;32mI (202301) AXP2101: isDischarge: NO[0m
+[0;32mI (202301) AXP2101: isStandby: NO[0m
+[0;32mI (202301) AXP2101: isVbusIn: YES[0m
+[0;32mI (202301) AXP2101: isVbusGood: YES[0m
+[0;32mI (202311) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (202311) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (202311) AXP2101: getVbusVoltage: 4625 mV[0m
+[0;32mI (202321) AXP2101: getSystemVoltage: 4336 mV[0m
+[0;32mI (202321) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (203331) AXP2101: Power Temperature: 41.50°C[0m
+[0;32mI (203331) AXP2101: isCharging: YES[0m
+[0;32mI (203331) AXP2101: isDischarge: NO[0m
+[0;32mI (203331) AXP2101: isStandby: NO[0m
+[0;32mI (203331) AXP2101: isVbusIn: YES[0m
+[0;32mI (203331) AXP2101: isVbusGood: YES[0m
+[0;32mI (203341) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (203341) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (203341) AXP2101: getVbusVoltage: 4627 mV[0m
+[0;32mI (203351) AXP2101: getSystemVoltage: 4336 mV[0m
+[0;32mI (203351) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (204361) AXP2101: Power Temperature: 41.50°C[0m
+[0;32mI (204361) AXP2101: isCharging: YES[0m
+[0;32mI (204361) AXP2101: isDischarge: NO[0m
+[0;32mI (204361) AXP2101: isStandby: NO[0m
+[0;32mI (204361) AXP2101: isVbusIn: YES[0m
+[0;32mI (204361) AXP2101: isVbusGood: YES[0m
+[0;32mI (204371) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (204371) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (204371) AXP2101: getVbusVoltage: 4625 mV[0m
+[0;32mI (204381) AXP2101: getSystemVoltage: 4333 mV[0m
+[0;32mI (204381) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (205391) AXP2101: Power Temperature: 41.50°C[0m
+[0;32mI (205391) AXP2101: isCharging: YES[0m
+[0;32mI (205391) AXP2101: isDischarge: NO[0m
+[0;32mI (205391) AXP2101: isStandby: NO[0m
+[0;32mI (205391) AXP2101: isVbusIn: YES[0m
+[0;32mI (205391) AXP2101: isVbusGood: YES[0m
+[0;32mI (205401) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (205401) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (205401) AXP2101: getVbusVoltage: 4625 mV[0m
+[0;32mI (205411) AXP2101: getSystemVoltage: 4338 mV[0m
+[0;32mI (205411) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (206421) AXP2101: Power Temperature: 41.50°C[0m
+[0;32mI (206421) AXP2101: isCharging: YES[0m
+[0;32mI (206421) AXP2101: isDischarge: NO[0m
+[0;32mI (206421) AXP2101: isStandby: NO[0m
+[0;32mI (206421) AXP2101: isVbusIn: YES[0m
+[0;32mI (206421) AXP2101: isVbusGood: YES[0m
+[0;32mI (206431) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (206431) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (206431) AXP2101: getVbusVoltage: 4629 mV[0m
+[0;32mI (206441) AXP2101: getSystemVoltage: 4339 mV[0m
+[0;32mI (206441) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (207451) AXP2101: Power Temperature: 41.55°C[0m
+[0;32mI (207451) AXP2101: isCharging: YES[0m
+[0;32mI (207451) AXP2101: isDischarge: NO[0m
+[0;32mI (207451) AXP2101: isStandby: NO[0m
+[0;32mI (207451) AXP2101: isVbusIn: YES[0m
+[0;32mI (207451) AXP2101: isVbusGood: YES[0m
+[0;32mI (207461) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (207461) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (207461) AXP2101: getVbusVoltage: 4631 mV[0m
+[0;32mI (207471) AXP2101: getSystemVoltage: 4348 mV[0m
+[0;32mI (207471) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (208481) AXP2101: Power Temperature: 41.55°C[0m
+[0;32mI (208481) AXP2101: isCharging: YES[0m
+[0;32mI (208481) AXP2101: isDischarge: NO[0m
+[0;32mI (208481) AXP2101: isStandby: NO[0m
+[0;32mI (208481) AXP2101: isVbusIn: YES[0m
+[0;32mI (208481) AXP2101: isVbusGood: YES[0m
+[0;32mI (208491) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (208491) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (208491) AXP2101: getVbusVoltage: 4625 mV[0m
+[0;32mI (208501) AXP2101: getSystemVoltage: 4339 mV[0m
+[0;32mI (208501) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (209511) AXP2101: Power Temperature: 41.50°C[0m
+[0;32mI (209511) AXP2101: isCharging: YES[0m
+[0;32mI (209511) AXP2101: isDischarge: NO[0m
+[0;32mI (209511) AXP2101: isStandby: NO[0m
+[0;32mI (209511) AXP2101: isVbusIn: YES[0m
+[0;32mI (209511) AXP2101: isVbusGood: YES[0m
+[0;32mI (209521) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (209521) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (209521) AXP2101: getVbusVoltage: 4631 mV[0m
+[0;32mI (209531) AXP2101: getSystemVoltage: 4338 mV[0m
+[0;32mI (209531) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (210541) AXP2101: Power Temperature: 41.50°C[0m
+[0;32mI (210541) AXP2101: isCharging: YES[0m
+[0;32mI (210541) AXP2101: isDischarge: NO[0m
+[0;32mI (210541) AXP2101: isStandby: NO[0m
+[0;32mI (210541) AXP2101: isVbusIn: YES[0m
+[0;32mI (210541) AXP2101: isVbusGood: YES[0m
+[0;32mI (210551) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (210551) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (210551) AXP2101: getVbusVoltage: 4630 mV[0m
+[0;32mI (210561) AXP2101: getSystemVoltage: 4336 mV[0m
+[0;32mI (210561) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (211571) AXP2101: Power Temperature: 41.45°C[0m
+[0;32mI (211571) AXP2101: isCharging: YES[0m
+[0;32mI (211571) AXP2101: isDischarge: NO[0m
+[0;32mI (211571) AXP2101: isStandby: NO[0m
+[0;32mI (211571) AXP2101: isVbusIn: YES[0m
+[0;32mI (211571) AXP2101: isVbusGood: YES[0m
+[0;32mI (211581) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (211581) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (211581) AXP2101: getVbusVoltage: 4631 mV[0m
+[0;32mI (211591) AXP2101: getSystemVoltage: 4338 mV[0m
+[0;32mI (211591) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (212601) AXP2101: Power Temperature: 41.50°C[0m
+[0;32mI (212601) AXP2101: isCharging: YES[0m
+[0;32mI (212601) AXP2101: isDischarge: NO[0m
+[0;32mI (212601) AXP2101: isStandby: NO[0m
+[0;32mI (212601) AXP2101: isVbusIn: YES[0m
+[0;32mI (212601) AXP2101: isVbusGood: YES[0m
+[0;32mI (212611) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (212611) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (212611) AXP2101: getVbusVoltage: 4634 mV[0m
+[0;32mI (212621) AXP2101: getSystemVoltage: 4344 mV[0m
+[0;32mI (212621) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (213631) AXP2101: Power Temperature: 41.50°C[0m
+[0;32mI (213631) AXP2101: isCharging: YES[0m
+[0;32mI (213631) AXP2101: isDischarge: NO[0m
+[0;32mI (213631) AXP2101: isStandby: NO[0m
+[0;32mI (213631) AXP2101: isVbusIn: YES[0m
+[0;32mI (213631) AXP2101: isVbusGood: YES[0m
+[0;32mI (213641) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (213641) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (213641) AXP2101: getVbusVoltage: 4632 mV[0m
+[0;32mI (213651) AXP2101: getSystemVoltage: 4345 mV[0m
+[0;32mI (213651) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (214661) AXP2101: Power Temperature: 41.50°C[0m
+[0;32mI (214661) AXP2101: isCharging: YES[0m
+[0;32mI (214661) AXP2101: isDischarge: NO[0m
+[0;32mI (214661) AXP2101: isStandby: NO[0m
+[0;32mI (214661) AXP2101: isVbusIn: YES[0m
+[0;32mI (214661) AXP2101: isVbusGood: YES[0m
+[0;32mI (214671) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (214671) AXP2101: getBattVoltage: 4210 mV[0m
+[0;32mI (214671) AXP2101: getVbusVoltage: 4632 mV[0m
+[0;32mI (214681) AXP2101: getSystemVoltage: 4345 mV[0m
+[0;32mI (214681) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (215691) AXP2101: Power Temperature: 41.55°C[0m
+[0;32mI (215691) AXP2101: isCharging: YES[0m
+[0;32mI (215691) AXP2101: isDischarge: NO[0m
+[0;32mI (215691) AXP2101: isStandby: NO[0m
+[0;32mI (215691) AXP2101: isVbusIn: YES[0m
+[0;32mI (215691) AXP2101: isVbusGood: YES[0m
+[0;32mI (215701) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (215701) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (215701) AXP2101: getVbusVoltage: 4630 mV[0m
+[0;32mI (215711) AXP2101: getSystemVoltage: 4341 mV[0m
+[0;32mI (215711) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (216721) AXP2101: Power Temperature: 41.50°C[0m
+[0;32mI (216721) AXP2101: isCharging: YES[0m
+[0;32mI (216721) AXP2101: isDischarge: NO[0m
+[0;32mI (216721) AXP2101: isStandby: NO[0m
+[0;32mI (216721) AXP2101: isVbusIn: YES[0m
+[0;32mI (216721) AXP2101: isVbusGood: YES[0m
+[0;32mI (216731) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (216731) AXP2101: getBattVoltage: 4210 mV[0m
+[0;32mI (216731) AXP2101: getVbusVoltage: 4645 mV[0m
+[0;32mI (216741) AXP2101: getSystemVoltage: 4339 mV[0m
+[0;32mI (216741) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (217751) AXP2101: Power Temperature: 41.55°C[0m
+[0;32mI (217751) AXP2101: isCharging: YES[0m
+[0;32mI (217751) AXP2101: isDischarge: NO[0m
+[0;32mI (217751) AXP2101: isStandby: NO[0m
+[0;32mI (217751) AXP2101: isVbusIn: YES[0m
+[0;32mI (217751) AXP2101: isVbusGood: YES[0m
+[0;32mI (217761) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (217761) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (217761) AXP2101: getVbusVoltage: 4630 mV[0m
+[0;32mI (217771) AXP2101: getSystemVoltage: 4341 mV[0m
+[0;32mI (217771) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (218781) AXP2101: Power Temperature: 41.50°C[0m
+[0;32mI (218781) AXP2101: isCharging: YES[0m
+[0;32mI (218781) AXP2101: isDischarge: NO[0m
+[0;32mI (218781) AXP2101: isStandby: NO[0m
+[0;32mI (218781) AXP2101: isVbusIn: YES[0m
+[0;32mI (218781) AXP2101: isVbusGood: YES[0m
+[0;32mI (218791) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (218791) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (218791) AXP2101: getVbusVoltage: 4630 mV[0m
+[0;32mI (218801) AXP2101: getSystemVoltage: 4353 mV[0m
+[0;32mI (218801) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (219811) AXP2101: Power Temperature: 41.55°C[0m
+[0;32mI (219811) AXP2101: isCharging: YES[0m
+[0;32mI (219811) AXP2101: isDischarge: NO[0m
+[0;32mI (219811) AXP2101: isStandby: NO[0m
+[0;32mI (219811) AXP2101: isVbusIn: YES[0m
+[0;32mI (219811) AXP2101: isVbusGood: YES[0m
+[0;32mI (219821) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (219821) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (219821) AXP2101: getVbusVoltage: 4638 mV[0m
+[0;32mI (219831) AXP2101: getSystemVoltage: 4343 mV[0m
+[0;32mI (219831) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (220841) AXP2101: Power Temperature: 41.55°C[0m
+[0;32mI (220841) AXP2101: isCharging: YES[0m
+[0;32mI (220841) AXP2101: isDischarge: NO[0m
+[0;32mI (220841) AXP2101: isStandby: NO[0m
+[0;32mI (220841) AXP2101: isVbusIn: YES[0m
+[0;32mI (220841) AXP2101: isVbusGood: YES[0m
+[0;32mI (220851) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (220851) AXP2101: getBattVoltage: 4210 mV[0m
+[0;32mI (220851) AXP2101: getVbusVoltage: 4639 mV[0m
+[0;32mI (220861) AXP2101: getSystemVoltage: 4358 mV[0m
+[0;32mI (220861) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (221871) AXP2101: Power Temperature: 41.50°C[0m
+[0;32mI (221871) AXP2101: isCharging: YES[0m
+[0;32mI (221871) AXP2101: isDischarge: NO[0m
+[0;32mI (221871) AXP2101: isStandby: NO[0m
+[0;32mI (221871) AXP2101: isVbusIn: YES[0m
+[0;32mI (221871) AXP2101: isVbusGood: YES[0m
+[0;32mI (221881) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (221881) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (221881) AXP2101: getVbusVoltage: 4635 mV[0m
+[0;32mI (221891) AXP2101: getSystemVoltage: 4345 mV[0m
+[0;32mI (221891) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (222901) AXP2101: Power Temperature: 41.55°C[0m
+[0;32mI (222901) AXP2101: isCharging: YES[0m
+[0;32mI (222901) AXP2101: isDischarge: NO[0m
+[0;32mI (222901) AXP2101: isStandby: NO[0m
+[0;32mI (222901) AXP2101: isVbusIn: YES[0m
+[0;32mI (222901) AXP2101: isVbusGood: YES[0m
+[0;32mI (222911) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (222911) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (222911) AXP2101: getVbusVoltage: 4632 mV[0m
+[0;32mI (222921) AXP2101: getSystemVoltage: 4344 mV[0m
+[0;32mI (222921) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (223931) AXP2101: Power Temperature: 41.55°C[0m
+[0;32mI (223931) AXP2101: isCharging: YES[0m
+[0;32mI (223931) AXP2101: isDischarge: NO[0m
+[0;32mI (223931) AXP2101: isStandby: NO[0m
+[0;32mI (223931) AXP2101: isVbusIn: YES[0m
+[0;32mI (223931) AXP2101: isVbusGood: YES[0m
+[0;32mI (223941) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (223941) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (223941) AXP2101: getVbusVoltage: 4633 mV[0m
+[0;32mI (223951) AXP2101: getSystemVoltage: 4347 mV[0m
+[0;32mI (223951) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (224961) AXP2101: Power Temperature: 41.55°C[0m
+[0;32mI (224961) AXP2101: isCharging: YES[0m
+[0;32mI (224961) AXP2101: isDischarge: NO[0m
+[0;32mI (224961) AXP2101: isStandby: NO[0m
+[0;32mI (224961) AXP2101: isVbusIn: YES[0m
+[0;32mI (224961) AXP2101: isVbusGood: YES[0m
+[0;32mI (224971) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (224971) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (224971) AXP2101: getVbusVoltage: 4635 mV[0m
+[0;32mI (224981) AXP2101: getSystemVoltage: 4348 mV[0m
+[0;32mI (224981) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (225991) AXP2101: Power Temperature: 41.50°C[0m
+[0;32mI (225991) AXP2101: isCharging: YES[0m
+[0;32mI (225991) AXP2101: isDischarge: NO[0m
+[0;32mI (225991) AXP2101: isStandby: NO[0m
+[0;32mI (225991) AXP2101: isVbusIn: YES[0m
+[0;32mI (225991) AXP2101: isVbusGood: YES[0m
+[0;32mI (226001) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (226001) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (226001) AXP2101: getVbusVoltage: 4635 mV[0m
+[0;32mI (226011) AXP2101: getSystemVoltage: 4362 mV[0m
+[0;32mI (226011) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (227021) AXP2101: Power Temperature: 41.55°C[0m
+[0;32mI (227021) AXP2101: isCharging: YES[0m
+[0;32mI (227021) AXP2101: isDischarge: NO[0m
+[0;32mI (227021) AXP2101: isStandby: NO[0m
+[0;32mI (227021) AXP2101: isVbusIn: YES[0m
+[0;32mI (227021) AXP2101: isVbusGood: YES[0m
+[0;32mI (227031) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (227031) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (227031) AXP2101: getVbusVoltage: 4636 mV[0m
+[0;32mI (227041) AXP2101: getSystemVoltage: 4361 mV[0m
+[0;32mI (227041) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (228051) AXP2101: Power Temperature: 41.55°C[0m
+[0;32mI (228051) AXP2101: isCharging: YES[0m
+[0;32mI (228051) AXP2101: isDischarge: NO[0m
+[0;32mI (228051) AXP2101: isStandby: NO[0m
+[0;32mI (228051) AXP2101: isVbusIn: YES[0m
+[0;32mI (228051) AXP2101: isVbusGood: YES[0m
+[0;32mI (228061) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (228061) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (228061) AXP2101: getVbusVoltage: 4634 mV[0m
+[0;32mI (228071) AXP2101: getSystemVoltage: 4348 mV[0m
+[0;32mI (228071) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (229081) AXP2101: Power Temperature: 41.55°C[0m
+[0;32mI (229081) AXP2101: isCharging: YES[0m
+[0;32mI (229081) AXP2101: isDischarge: NO[0m
+[0;32mI (229081) AXP2101: isStandby: NO[0m
+[0;32mI (229081) AXP2101: isVbusIn: YES[0m
+[0;32mI (229081) AXP2101: isVbusGood: YES[0m
+[0;32mI (229091) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (229091) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (229091) AXP2101: getVbusVoltage: 4640 mV[0m
+[0;32mI (229101) AXP2101: getSystemVoltage: 4354 mV[0m
+[0;32mI (229101) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (230111) AXP2101: Power Temperature: 41.55°C[0m
+[0;32mI (230111) AXP2101: isCharging: YES[0m
+[0;32mI (230111) AXP2101: isDischarge: NO[0m
+[0;32mI (230111) AXP2101: isStandby: NO[0m
+[0;32mI (230111) AXP2101: isVbusIn: YES[0m
+[0;32mI (230111) AXP2101: isVbusGood: YES[0m
+[0;32mI (230121) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (230121) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (230121) AXP2101: getVbusVoltage: 4637 mV[0m
+[0;32mI (230131) AXP2101: getSystemVoltage: 4354 mV[0m
+[0;32mI (230131) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (231141) AXP2101: Power Temperature: 41.50°C[0m
+[0;32mI (231141) AXP2101: isCharging: YES[0m
+[0;32mI (231141) AXP2101: isDischarge: NO[0m
+[0;32mI (231141) AXP2101: isStandby: NO[0m
+[0;32mI (231141) AXP2101: isVbusIn: YES[0m
+[0;32mI (231141) AXP2101: isVbusGood: YES[0m
+[0;32mI (231151) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (231151) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (231151) AXP2101: getVbusVoltage: 4646 mV[0m
+[0;32mI (231161) AXP2101: getSystemVoltage: 4350 mV[0m
+[0;32mI (231161) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (232171) AXP2101: Power Temperature: 41.50°C[0m
+[0;32mI (232171) AXP2101: isCharging: YES[0m
+[0;32mI (232171) AXP2101: isDischarge: NO[0m
+[0;32mI (232171) AXP2101: isStandby: NO[0m
+[0;32mI (232171) AXP2101: isVbusIn: YES[0m
+[0;32mI (232171) AXP2101: isVbusGood: YES[0m
+[0;32mI (232181) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (232181) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (232181) AXP2101: getVbusVoltage: 4637 mV[0m
+[0;32mI (232191) AXP2101: getSystemVoltage: 4356 mV[0m
+[0;32mI (232191) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (233201) AXP2101: Power Temperature: 41.55°C[0m
+[0;32mI (233201) AXP2101: isCharging: YES[0m
+[0;32mI (233201) AXP2101: isDischarge: NO[0m
+[0;32mI (233201) AXP2101: isStandby: NO[0m
+[0;32mI (233201) AXP2101: isVbusIn: YES[0m
+[0;32mI (233201) AXP2101: isVbusGood: YES[0m
+[0;32mI (233211) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (233211) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (233211) AXP2101: getVbusVoltage: 4638 mV[0m
+[0;32mI (233221) AXP2101: getSystemVoltage: 4364 mV[0m
+[0;32mI (233221) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (234231) AXP2101: Power Temperature: 41.55°C[0m
+[0;32mI (234231) AXP2101: isCharging: YES[0m
+[0;32mI (234231) AXP2101: isDischarge: NO[0m
+[0;32mI (234231) AXP2101: isStandby: NO[0m
+[0;32mI (234231) AXP2101: isVbusIn: YES[0m
+[0;32mI (234231) AXP2101: isVbusGood: YES[0m
+[0;32mI (234241) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (234241) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (234241) AXP2101: getVbusVoltage: 4638 mV[0m
+[0;32mI (234251) AXP2101: getSystemVoltage: 4355 mV[0m
+[0;32mI (234251) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (235261) AXP2101: Power Temperature: 41.55°C[0m
+[0;32mI (235261) AXP2101: isCharging: YES[0m
+[0;32mI (235261) AXP2101: isDischarge: NO[0m
+[0;32mI (235261) AXP2101: isStandby: NO[0m
+[0;32mI (235261) AXP2101: isVbusIn: YES[0m
+[0;32mI (235261) AXP2101: isVbusGood: YES[0m
+[0;32mI (235271) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (235271) AXP2101: getBattVoltage: 4210 mV[0m
+[0;32mI (235271) AXP2101: getVbusVoltage: 4638 mV[0m
+[0;32mI (235281) AXP2101: getSystemVoltage: 4355 mV[0m
+[0;32mI (235281) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (236291) AXP2101: Power Temperature: 41.55°C[0m
+[0;32mI (236291) AXP2101: isCharging: YES[0m
+[0;32mI (236291) AXP2101: isDischarge: NO[0m
+[0;32mI (236291) AXP2101: isStandby: NO[0m
+[0;32mI (236291) AXP2101: isVbusIn: YES[0m
+[0;32mI (236291) AXP2101: isVbusGood: YES[0m
+[0;32mI (236301) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (236301) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (236301) AXP2101: getVbusVoltage: 4652 mV[0m
+[0;32mI (236311) AXP2101: getSystemVoltage: 4351 mV[0m
+[0;32mI (236311) AXP2101: getBatteryPercent: 81 %[0m
+[0;32mI (237321) AXP2101: Power Temperature: 41.55°C[0m
+[0;32mI (237321) AXP2101: isCharging: YES[0m
+[0;32mI (237321) AXP2101: isDischarge: NO[0m
+[0;32mI (237321) AXP2101: isStandby: NO[0m
+[0;32mI (237321) AXP2101: isVbusIn: YES[0m
+[0;32mI (237321) AXP2101: isVbusGood: YES[0m
+[0;32mI (237331) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (237331) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (237331) AXP2101: getVbusVoltage: 4639 mV[0m
+[0;32mI (237341) AXP2101: getSystemVoltage: 4353 mV[0m
+[0;32mI (237341) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (238351) AXP2101: Power Temperature: 41.60°C[0m
+[0;32mI (238351) AXP2101: isCharging: YES[0m
+[0;32mI (238351) AXP2101: isDischarge: NO[0m
+[0;32mI (238351) AXP2101: isStandby: NO[0m
+[0;32mI (238351) AXP2101: isVbusIn: YES[0m
+[0;32mI (238351) AXP2101: isVbusGood: YES[0m
+[0;32mI (238361) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (238361) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (238361) AXP2101: getVbusVoltage: 4638 mV[0m
+[0;32mI (238371) AXP2101: getSystemVoltage: 4349 mV[0m
+[0;32mI (238371) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (239381) AXP2101: Power Temperature: 41.55°C[0m
+[0;32mI (239381) AXP2101: isCharging: YES[0m
+[0;32mI (239381) AXP2101: isDischarge: NO[0m
+[0;32mI (239381) AXP2101: isStandby: NO[0m
+[0;32mI (239381) AXP2101: isVbusIn: YES[0m
+[0;32mI (239381) AXP2101: isVbusGood: YES[0m
+[0;32mI (239391) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (239391) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (239391) AXP2101: getVbusVoltage: 4639 mV[0m
+[0;32mI (239401) AXP2101: getSystemVoltage: 4351 mV[0m
+[0;32mI (239401) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (240411) AXP2101: Power Temperature: 41.60°C[0m
+[0;32mI (240411) AXP2101: isCharging: YES[0m
+[0;32mI (240411) AXP2101: isDischarge: NO[0m
+[0;32mI (240411) AXP2101: isStandby: NO[0m
+[0;32mI (240411) AXP2101: isVbusIn: YES[0m
+[0;32mI (240411) AXP2101: isVbusGood: YES[0m
+[0;32mI (240421) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (240421) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (240421) AXP2101: getVbusVoltage: 4637 mV[0m
+[0;32mI (240431) AXP2101: getSystemVoltage: 4352 mV[0m
+[0;32mI (240431) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (241441) AXP2101: Power Temperature: 41.55°C[0m
+[0;32mI (241441) AXP2101: isCharging: YES[0m
+[0;32mI (241441) AXP2101: isDischarge: NO[0m
+[0;32mI (241441) AXP2101: isStandby: NO[0m
+[0;32mI (241441) AXP2101: isVbusIn: YES[0m
+[0;32mI (241441) AXP2101: isVbusGood: YES[0m
+[0;32mI (241451) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (241451) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (241451) AXP2101: getVbusVoltage: 4643 mV[0m
+[0;32mI (241461) AXP2101: getSystemVoltage: 4350 mV[0m
+[0;32mI (241461) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (242471) AXP2101: Power Temperature: 41.65°C[0m
+[0;32mI (242471) AXP2101: isCharging: YES[0m
+[0;32mI (242471) AXP2101: isDischarge: NO[0m
+[0;32mI (242471) AXP2101: isStandby: NO[0m
+[0;32mI (242471) AXP2101: isVbusIn: YES[0m
+[0;32mI (242471) AXP2101: isVbusGood: YES[0m
+[0;32mI (242481) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (242481) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (242481) AXP2101: getVbusVoltage: 4640 mV[0m
+[0;32mI (242491) AXP2101: getSystemVoltage: 4353 mV[0m
+[0;32mI (242491) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (243501) AXP2101: Power Temperature: 41.65°C[0m
+[0;32mI (243501) AXP2101: isCharging: YES[0m
+[0;32mI (243501) AXP2101: isDischarge: NO[0m
+[0;32mI (243501) AXP2101: isStandby: NO[0m
+[0;32mI (243501) AXP2101: isVbusIn: YES[0m
+[0;32mI (243501) AXP2101: isVbusGood: YES[0m
+[0;32mI (243511) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (243511) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (243511) AXP2101: getVbusVoltage: 4641 mV[0m
+[0;32mI (243521) AXP2101: getSystemVoltage: 4354 mV[0m
+[0;32mI (243521) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (244531) AXP2101: Power Temperature: 41.55°C[0m
+[0;32mI (244531) AXP2101: isCharging: YES[0m
+[0;32mI (244531) AXP2101: isDischarge: NO[0m
+[0;32mI (244531) AXP2101: isStandby: NO[0m
+[0;32mI (244531) AXP2101: isVbusIn: YES[0m
+[0;32mI (244531) AXP2101: isVbusGood: YES[0m
+[0;32mI (244541) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (244541) AXP2101: getBattVoltage: 4210 mV[0m
+[0;32mI (244541) AXP2101: getVbusVoltage: 4645 mV[0m
+[0;32mI (244551) AXP2101: getSystemVoltage: 4353 mV[0m
+[0;32mI (244551) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (245561) AXP2101: Power Temperature: 41.60°C[0m
+[0;32mI (245561) AXP2101: isCharging: YES[0m
+[0;32mI (245561) AXP2101: isDischarge: NO[0m
+[0;32mI (245561) AXP2101: isStandby: NO[0m
+[0;32mI (245561) AXP2101: isVbusIn: YES[0m
+[0;32mI (245561) AXP2101: isVbusGood: YES[0m
+[0;32mI (245571) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (245571) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (245571) AXP2101: getVbusVoltage: 4645 mV[0m
+[0;32mI (245581) AXP2101: getSystemVoltage: 4356 mV[0m
+[0;32mI (245581) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (246591) AXP2101: Power Temperature: 41.60°C[0m
+[0;32mI (246591) AXP2101: isCharging: YES[0m
+[0;32mI (246591) AXP2101: isDischarge: NO[0m
+[0;32mI (246591) AXP2101: isStandby: NO[0m
+[0;32mI (246591) AXP2101: isVbusIn: YES[0m
+[0;32mI (246591) AXP2101: isVbusGood: YES[0m
+[0;32mI (246601) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (246601) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (246601) AXP2101: getVbusVoltage: 4641 mV[0m
+[0;32mI (246611) AXP2101: getSystemVoltage: 4361 mV[0m
+[0;32mI (246611) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (247621) AXP2101: Power Temperature: 41.65°C[0m
+[0;32mI (247621) AXP2101: isCharging: YES[0m
+[0;32mI (247621) AXP2101: isDischarge: NO[0m
+[0;32mI (247621) AXP2101: isStandby: NO[0m
+[0;32mI (247621) AXP2101: isVbusIn: YES[0m
+[0;32mI (247621) AXP2101: isVbusGood: YES[0m
+[0;32mI (247631) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (247631) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (247631) AXP2101: getVbusVoltage: 4645 mV[0m
+[0;32mI (247641) AXP2101: getSystemVoltage: 4356 mV[0m
+[0;32mI (247641) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (248651) AXP2101: Power Temperature: 41.60°C[0m
+[0;32mI (248651) AXP2101: isCharging: YES[0m
+[0;32mI (248651) AXP2101: isDischarge: NO[0m
+[0;32mI (248651) AXP2101: isStandby: NO[0m
+[0;32mI (248651) AXP2101: isVbusIn: YES[0m
+[0;32mI (248651) AXP2101: isVbusGood: YES[0m
+[0;32mI (248661) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (248661) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (248661) AXP2101: getVbusVoltage: 4645 mV[0m
+[0;32mI (248671) AXP2101: getSystemVoltage: 4355 mV[0m
+[0;32mI (248671) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (249681) AXP2101: Power Temperature: 41.60°C[0m
+[0;32mI (249681) AXP2101: isCharging: YES[0m
+[0;32mI (249681) AXP2101: isDischarge: NO[0m
+[0;32mI (249681) AXP2101: isStandby: NO[0m
+[0;32mI (249681) AXP2101: isVbusIn: YES[0m
+[0;32mI (249681) AXP2101: isVbusGood: YES[0m
+[0;32mI (249691) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (249691) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (249691) AXP2101: getVbusVoltage: 4648 mV[0m
+[0;32mI (249701) AXP2101: getSystemVoltage: 4361 mV[0m
+[0;32mI (249701) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (250711) AXP2101: Power Temperature: 41.65°C[0m
+[0;32mI (250711) AXP2101: isCharging: YES[0m
+[0;32mI (250711) AXP2101: isDischarge: NO[0m
+[0;32mI (250711) AXP2101: isStandby: NO[0m
+[0;32mI (250711) AXP2101: isVbusIn: YES[0m
+[0;32mI (250711) AXP2101: isVbusGood: YES[0m
+[0;32mI (250721) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (250721) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (250721) AXP2101: getVbusVoltage: 4642 mV[0m
+[0;32mI (250731) AXP2101: getSystemVoltage: 4358 mV[0m
+[0;32mI (250731) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (251741) AXP2101: Power Temperature: 41.60°C[0m
+[0;32mI (251741) AXP2101: isCharging: YES[0m
+[0;32mI (251741) AXP2101: isDischarge: NO[0m
+[0;32mI (251741) AXP2101: isStandby: NO[0m
+[0;32mI (251741) AXP2101: isVbusIn: YES[0m
+[0;32mI (251741) AXP2101: isVbusGood: YES[0m
+[0;32mI (251751) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (251751) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (251751) AXP2101: getVbusVoltage: 4643 mV[0m
+[0;32mI (251761) AXP2101: getSystemVoltage: 4357 mV[0m
+[0;32mI (251761) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (252771) AXP2101: Power Temperature: 41.70°C[0m
+[0;32mI (252771) AXP2101: isCharging: YES[0m
+[0;32mI (252771) AXP2101: isDischarge: NO[0m
+[0;32mI (252771) AXP2101: isStandby: NO[0m
+[0;32mI (252771) AXP2101: isVbusIn: YES[0m
+[0;32mI (252771) AXP2101: isVbusGood: YES[0m
+[0;32mI (252781) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (252781) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (252781) AXP2101: getVbusVoltage: 4656 mV[0m
+[0;32mI (252791) AXP2101: getSystemVoltage: 4356 mV[0m
+[0;32mI (252791) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (253801) AXP2101: Power Temperature: 41.60°C[0m
+[0;32mI (253801) AXP2101: isCharging: YES[0m
+[0;32mI (253801) AXP2101: isDischarge: NO[0m
+[0;32mI (253801) AXP2101: isStandby: NO[0m
+[0;32mI (253801) AXP2101: isVbusIn: YES[0m
+[0;32mI (253801) AXP2101: isVbusGood: YES[0m
+[0;32mI (253811) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (253811) AXP2101: getBattVoltage: 4210 mV[0m
+[0;32mI (253811) AXP2101: getVbusVoltage: 4645 mV[0m
+[0;32mI (253821) AXP2101: getSystemVoltage: 4360 mV[0m
+[0;32mI (253821) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (254831) AXP2101: Power Temperature: 41.60°C[0m
+[0;32mI (254831) AXP2101: isCharging: YES[0m
+[0;32mI (254831) AXP2101: isDischarge: NO[0m
+[0;32mI (254831) AXP2101: isStandby: NO[0m
+[0;32mI (254831) AXP2101: isVbusIn: YES[0m
+[0;32mI (254831) AXP2101: isVbusGood: YES[0m
+[0;32mI (254841) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (254841) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (254841) AXP2101: getVbusVoltage: 4645 mV[0m
+[0;32mI (254851) AXP2101: getSystemVoltage: 4356 mV[0m
+[0;32mI (254851) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (255861) AXP2101: Power Temperature: 41.60°C[0m
+[0;32mI (255861) AXP2101: isCharging: YES[0m
+[0;32mI (255861) AXP2101: isDischarge: NO[0m
+[0;32mI (255861) AXP2101: isStandby: NO[0m
+[0;32mI (255861) AXP2101: isVbusIn: YES[0m
+[0;32mI (255861) AXP2101: isVbusGood: YES[0m
+[0;32mI (255871) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (255871) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (255871) AXP2101: getVbusVoltage: 4646 mV[0m
+[0;32mI (255881) AXP2101: getSystemVoltage: 4359 mV[0m
+[0;32mI (255881) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (256891) AXP2101: Power Temperature: 41.65°C[0m
+[0;32mI (256891) AXP2101: isCharging: YES[0m
+[0;32mI (256891) AXP2101: isDischarge: NO[0m
+[0;32mI (256891) AXP2101: isStandby: NO[0m
+[0;32mI (256891) AXP2101: isVbusIn: YES[0m
+[0;32mI (256891) AXP2101: isVbusGood: YES[0m
+[0;32mI (256901) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (256901) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (256901) AXP2101: getVbusVoltage: 4645 mV[0m
+[0;32mI (256911) AXP2101: getSystemVoltage: 4358 mV[0m
+[0;32mI (256911) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (257921) AXP2101: Power Temperature: 41.55°C[0m
+[0;32mI (257921) AXP2101: isCharging: YES[0m
+[0;32mI (257921) AXP2101: isDischarge: NO[0m
+[0;32mI (257921) AXP2101: isStandby: NO[0m
+[0;32mI (257921) AXP2101: isVbusIn: YES[0m
+[0;32mI (257921) AXP2101: isVbusGood: YES[0m
+[0;32mI (257931) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (257931) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (257931) AXP2101: getVbusVoltage: 4645 mV[0m
+[0;32mI (257941) AXP2101: getSystemVoltage: 4361 mV[0m
+[0;32mI (257941) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (258951) AXP2101: Power Temperature: 41.60°C[0m
+[0;32mI (258951) AXP2101: isCharging: YES[0m
+[0;32mI (258951) AXP2101: isDischarge: NO[0m
+[0;32mI (258951) AXP2101: isStandby: NO[0m
+[0;32mI (258951) AXP2101: isVbusIn: YES[0m
+[0;32mI (258951) AXP2101: isVbusGood: YES[0m
+[0;32mI (258961) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (258961) AXP2101: getBattVoltage: 4210 mV[0m
+[0;32mI (258961) AXP2101: getVbusVoltage: 4646 mV[0m
+[0;32mI (258971) AXP2101: getSystemVoltage: 4359 mV[0m
+[0;32mI (258971) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (259981) AXP2101: Power Temperature: 41.65°C[0m
+[0;32mI (259981) AXP2101: isCharging: YES[0m
+[0;32mI (259981) AXP2101: isDischarge: NO[0m
+[0;32mI (259981) AXP2101: isStandby: NO[0m
+[0;32mI (259981) AXP2101: isVbusIn: YES[0m
+[0;32mI (259981) AXP2101: isVbusGood: YES[0m
+[0;32mI (259991) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (259991) AXP2101: getBattVoltage: 4210 mV[0m
+[0;32mI (259991) AXP2101: getVbusVoltage: 4646 mV[0m
+[0;32mI (260001) AXP2101: getSystemVoltage: 4362 mV[0m
+[0;32mI (260001) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (261011) AXP2101: Power Temperature: 41.65°C[0m
+[0;32mI (261011) AXP2101: isCharging: YES[0m
+[0;32mI (261011) AXP2101: isDischarge: NO[0m
+[0;32mI (261011) AXP2101: isStandby: NO[0m
+[0;32mI (261011) AXP2101: isVbusIn: YES[0m
+[0;32mI (261011) AXP2101: isVbusGood: YES[0m
+[0;32mI (261021) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (261021) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (261021) AXP2101: getVbusVoltage: 4650 mV[0m
+[0;32mI (261031) AXP2101: getSystemVoltage: 4365 mV[0m
+[0;32mI (261031) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (262041) AXP2101: Power Temperature: 41.60°C[0m
+[0;32mI (262041) AXP2101: isCharging: YES[0m
+[0;32mI (262041) AXP2101: isDischarge: NO[0m
+[0;32mI (262041) AXP2101: isStandby: NO[0m
+[0;32mI (262041) AXP2101: isVbusIn: YES[0m
+[0;32mI (262041) AXP2101: isVbusGood: YES[0m
+[0;32mI (262051) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (262051) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (262051) AXP2101: getVbusVoltage: 4646 mV[0m
+[0;32mI (262061) AXP2101: getSystemVoltage: 4363 mV[0m
+[0;32mI (262061) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (263071) AXP2101: Power Temperature: 41.60°C[0m
+[0;32mI (263071) AXP2101: isCharging: YES[0m
+[0;32mI (263071) AXP2101: isDischarge: NO[0m
+[0;32mI (263071) AXP2101: isStandby: NO[0m
+[0;32mI (263071) AXP2101: isVbusIn: YES[0m
+[0;32mI (263071) AXP2101: isVbusGood: YES[0m
+[0;32mI (263081) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (263081) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (263081) AXP2101: getVbusVoltage: 4653 mV[0m
+[0;32mI (263091) AXP2101: getSystemVoltage: 4361 mV[0m
+[0;32mI (263091) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (264101) AXP2101: Power Temperature: 41.60°C[0m
+[0;32mI (264101) AXP2101: isCharging: YES[0m
+[0;32mI (264101) AXP2101: isDischarge: NO[0m
+[0;32mI (264101) AXP2101: isStandby: NO[0m
+[0;32mI (264101) AXP2101: isVbusIn: YES[0m
+[0;32mI (264101) AXP2101: isVbusGood: YES[0m
+[0;32mI (264111) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (264111) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (264111) AXP2101: getVbusVoltage: 4649 mV[0m
+[0;32mI (264121) AXP2101: getSystemVoltage: 4362 mV[0m
+[0;32mI (264121) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (265131) AXP2101: Power Temperature: 41.60°C[0m
+[0;32mI (265131) AXP2101: isCharging: YES[0m
+[0;32mI (265131) AXP2101: isDischarge: NO[0m
+[0;32mI (265131) AXP2101: isStandby: NO[0m
+[0;32mI (265131) AXP2101: isVbusIn: YES[0m
+[0;32mI (265131) AXP2101: isVbusGood: YES[0m
+[0;32mI (265141) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (265141) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (265141) AXP2101: getVbusVoltage: 4648 mV[0m
+[0;32mI (265151) AXP2101: getSystemVoltage: 4363 mV[0m
+[0;32mI (265151) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (266161) AXP2101: Power Temperature: 41.60°C[0m
+[0;32mI (266161) AXP2101: isCharging: YES[0m
+[0;32mI (266161) AXP2101: isDischarge: NO[0m
+[0;32mI (266161) AXP2101: isStandby: NO[0m
+[0;32mI (266161) AXP2101: isVbusIn: YES[0m
+[0;32mI (266161) AXP2101: isVbusGood: YES[0m
+[0;32mI (266171) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (266171) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (266171) AXP2101: getVbusVoltage: 4651 mV[0m
+[0;32mI (266181) AXP2101: getSystemVoltage: 4374 mV[0m
+[0;32mI (266181) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (267191) AXP2101: Power Temperature: 41.65°C[0m
+[0;32mI (267191) AXP2101: isCharging: YES[0m
+[0;32mI (267191) AXP2101: isDischarge: NO[0m
+[0;32mI (267191) AXP2101: isStandby: NO[0m
+[0;32mI (267191) AXP2101: isVbusIn: YES[0m
+[0;32mI (267191) AXP2101: isVbusGood: YES[0m
+[0;32mI (267201) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (267201) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (267201) AXP2101: getVbusVoltage: 4647 mV[0m
+[0;32mI (267211) AXP2101: getSystemVoltage: 4367 mV[0m
+[0;32mI (267211) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (268221) AXP2101: Power Temperature: 41.60°C[0m
+[0;32mI (268221) AXP2101: isCharging: YES[0m
+[0;32mI (268221) AXP2101: isDischarge: NO[0m
+[0;32mI (268221) AXP2101: isStandby: NO[0m
+[0;32mI (268221) AXP2101: isVbusIn: YES[0m
+[0;32mI (268221) AXP2101: isVbusGood: YES[0m
+[0;32mI (268231) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (268231) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (268231) AXP2101: getVbusVoltage: 4649 mV[0m
+[0;32mI (268241) AXP2101: getSystemVoltage: 4363 mV[0m
+[0;32mI (268241) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (269251) AXP2101: Power Temperature: 41.65°C[0m
+[0;32mI (269251) AXP2101: isCharging: YES[0m
+[0;32mI (269251) AXP2101: isDischarge: NO[0m
+[0;32mI (269251) AXP2101: isStandby: NO[0m
+[0;32mI (269251) AXP2101: isVbusIn: YES[0m
+[0;32mI (269251) AXP2101: isVbusGood: YES[0m
+[0;32mI (269261) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (269261) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (269261) AXP2101: getVbusVoltage: 4649 mV[0m
+[0;32mI (269271) AXP2101: getSystemVoltage: 4366 mV[0m
+[0;32mI (269271) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (270281) AXP2101: Power Temperature: 41.55°C[0m
+[0;32mI (270281) AXP2101: isCharging: YES[0m
+[0;32mI (270281) AXP2101: isDischarge: NO[0m
+[0;32mI (270281) AXP2101: isStandby: NO[0m
+[0;32mI (270281) AXP2101: isVbusIn: YES[0m
+[0;32mI (270281) AXP2101: isVbusGood: YES[0m
+[0;32mI (270291) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (270291) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (270291) AXP2101: getVbusVoltage: 4652 mV[0m
+[0;32mI (270301) AXP2101: getSystemVoltage: 4366 mV[0m
+[0;32mI (270301) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (271311) AXP2101: Power Temperature: 41.65°C[0m
+[0;32mI (271311) AXP2101: isCharging: YES[0m
+[0;32mI (271311) AXP2101: isDischarge: NO[0m
+[0;32mI (271311) AXP2101: isStandby: NO[0m
+[0;32mI (271311) AXP2101: isVbusIn: YES[0m
+[0;32mI (271311) AXP2101: isVbusGood: YES[0m
+[0;32mI (271321) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (271321) AXP2101: getBattVoltage: 4210 mV[0m
+[0;32mI (271321) AXP2101: getVbusVoltage: 4650 mV[0m
+[0;32mI (271331) AXP2101: getSystemVoltage: 4369 mV[0m
+[0;32mI (271331) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (272341) AXP2101: Power Temperature: 41.65°C[0m
+[0;32mI (272341) AXP2101: isCharging: YES[0m
+[0;32mI (272341) AXP2101: isDischarge: NO[0m
+[0;32mI (272341) AXP2101: isStandby: NO[0m
+[0;32mI (272341) AXP2101: isVbusIn: YES[0m
+[0;32mI (272341) AXP2101: isVbusGood: YES[0m
+[0;32mI (272351) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (272351) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (272351) AXP2101: getVbusVoltage: 4654 mV[0m
+[0;32mI (272361) AXP2101: getSystemVoltage: 4368 mV[0m
+[0;32mI (272361) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (273371) AXP2101: Power Temperature: 41.65°C[0m
+[0;32mI (273371) AXP2101: isCharging: YES[0m
+[0;32mI (273371) AXP2101: isDischarge: NO[0m
+[0;32mI (273371) AXP2101: isStandby: NO[0m
+[0;32mI (273371) AXP2101: isVbusIn: YES[0m
+[0;32mI (273371) AXP2101: isVbusGood: YES[0m
+[0;32mI (273381) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (273381) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (273381) AXP2101: getVbusVoltage: 4655 mV[0m
+[0;32mI (273391) AXP2101: getSystemVoltage: 4365 mV[0m
+[0;32mI (273391) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (274401) AXP2101: Power Temperature: 41.65°C[0m
+[0;32mI (274401) AXP2101: isCharging: YES[0m
+[0;32mI (274401) AXP2101: isDischarge: NO[0m
+[0;32mI (274401) AXP2101: isStandby: NO[0m
+[0;32mI (274401) AXP2101: isVbusIn: YES[0m
+[0;32mI (274401) AXP2101: isVbusGood: YES[0m
+[0;32mI (274411) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (274411) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (274411) AXP2101: getVbusVoltage: 4653 mV[0m
+[0;32mI (274421) AXP2101: getSystemVoltage: 4367 mV[0m
+[0;32mI (274421) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (275431) AXP2101: Power Temperature: 41.70°C[0m
+[0;32mI (275431) AXP2101: isCharging: YES[0m
+[0;32mI (275431) AXP2101: isDischarge: NO[0m
+[0;32mI (275431) AXP2101: isStandby: NO[0m
+[0;32mI (275431) AXP2101: isVbusIn: YES[0m
+[0;32mI (275431) AXP2101: isVbusGood: YES[0m
+[0;32mI (275441) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (275441) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (275441) AXP2101: getVbusVoltage: 4652 mV[0m
+[0;32mI (275451) AXP2101: getSystemVoltage: 4368 mV[0m
+[0;32mI (275451) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (276461) AXP2101: Power Temperature: 41.65°C[0m
+[0;32mI (276461) AXP2101: isCharging: YES[0m
+[0;32mI (276461) AXP2101: isDischarge: NO[0m
+[0;32mI (276461) AXP2101: isStandby: NO[0m
+[0;32mI (276461) AXP2101: isVbusIn: YES[0m
+[0;32mI (276461) AXP2101: isVbusGood: YES[0m
+[0;32mI (276471) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (276471) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (276471) AXP2101: getVbusVoltage: 4661 mV[0m
+[0;32mI (276481) AXP2101: getSystemVoltage: 4371 mV[0m
+[0;32mI (276481) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (277491) AXP2101: Power Temperature: 41.70°C[0m
+[0;32mI (277491) AXP2101: isCharging: YES[0m
+[0;32mI (277491) AXP2101: isDischarge: NO[0m
+[0;32mI (277491) AXP2101: isStandby: NO[0m
+[0;32mI (277491) AXP2101: isVbusIn: YES[0m
+[0;32mI (277491) AXP2101: isVbusGood: YES[0m
+[0;32mI (277501) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (277501) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (277501) AXP2101: getVbusVoltage: 4653 mV[0m
+[0;32mI (277511) AXP2101: getSystemVoltage: 4370 mV[0m
+[0;32mI (277511) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (278521) AXP2101: Power Temperature: 41.70°C[0m
+[0;32mI (278521) AXP2101: isCharging: YES[0m
+[0;32mI (278521) AXP2101: isDischarge: NO[0m
+[0;32mI (278521) AXP2101: isStandby: NO[0m
+[0;32mI (278521) AXP2101: isVbusIn: YES[0m
+[0;32mI (278521) AXP2101: isVbusGood: YES[0m
+[0;32mI (278531) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (278531) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (278531) AXP2101: getVbusVoltage: 4664 mV[0m
+[0;32mI (278541) AXP2101: getSystemVoltage: 4372 mV[0m
+[0;32mI (278541) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (279551) AXP2101: Power Temperature: 41.65°C[0m
+[0;32mI (279551) AXP2101: isCharging: YES[0m
+[0;32mI (279551) AXP2101: isDischarge: NO[0m
+[0;32mI (279551) AXP2101: isStandby: NO[0m
+[0;32mI (279551) AXP2101: isVbusIn: YES[0m
+[0;32mI (279551) AXP2101: isVbusGood: YES[0m
+[0;32mI (279561) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (279561) AXP2101: getBattVoltage: 4210 mV[0m
+[0;32mI (279561) AXP2101: getVbusVoltage: 4654 mV[0m
+[0;32mI (279571) AXP2101: getSystemVoltage: 4374 mV[0m
+[0;32mI (279571) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (280581) AXP2101: Power Temperature: 41.65°C[0m
+[0;32mI (280581) AXP2101: isCharging: YES[0m
+[0;32mI (280581) AXP2101: isDischarge: NO[0m
+[0;32mI (280581) AXP2101: isStandby: NO[0m
+[0;32mI (280581) AXP2101: isVbusIn: YES[0m
+[0;32mI (280581) AXP2101: isVbusGood: YES[0m
+[0;32mI (280591) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (280591) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (280591) AXP2101: getVbusVoltage: 4654 mV[0m
+[0;32mI (280601) AXP2101: getSystemVoltage: 4380 mV[0m
+[0;32mI (280601) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (281611) AXP2101: Power Temperature: 41.65°C[0m
+[0;32mI (281611) AXP2101: isCharging: YES[0m
+[0;32mI (281611) AXP2101: isDischarge: NO[0m
+[0;32mI (281611) AXP2101: isStandby: NO[0m
+[0;32mI (281611) AXP2101: isVbusIn: YES[0m
+[0;32mI (281611) AXP2101: isVbusGood: YES[0m
+[0;32mI (281621) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (281621) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (281621) AXP2101: getVbusVoltage: 4656 mV[0m
+[0;32mI (281631) AXP2101: getSystemVoltage: 4368 mV[0m
+[0;32mI (281631) AXP2101: getBatteryPercent: 82 %[0m
+[0;32mI (282641) AXP2101: Power Temperature: 41.70°C[0m
+[0;32mI (282641) AXP2101: isCharging: YES[0m
+[0;32mI (282641) AXP2101: isDischarge: NO[0m
+[0;32mI (282641) AXP2101: isStandby: NO[0m
+[0;32mI (282641) AXP2101: isVbusIn: YES[0m
+[0;32mI (282641) AXP2101: isVbusGood: YES[0m
+[0;32mI (282651) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (282651) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (282651) AXP2101: getVbusVoltage: 4660 mV[0m
+[0;32mI (282661) AXP2101: getSystemVoltage: 4377 mV[0m
+[0;32mI (282661) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (283671) AXP2101: Power Temperature: 41.70°C[0m
+[0;32mI (283671) AXP2101: isCharging: YES[0m
+[0;32mI (283671) AXP2101: isDischarge: NO[0m
+[0;32mI (283671) AXP2101: isStandby: NO[0m
+[0;32mI (283671) AXP2101: isVbusIn: YES[0m
+[0;32mI (283671) AXP2101: isVbusGood: YES[0m
+[0;32mI (283681) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (283681) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (283681) AXP2101: getVbusVoltage: 4663 mV[0m
+[0;32mI (283691) AXP2101: getSystemVoltage: 4383 mV[0m
+[0;32mI (283691) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (284701) AXP2101: Power Temperature: 41.70°C[0m
+[0;32mI (284701) AXP2101: isCharging: YES[0m
+[0;32mI (284701) AXP2101: isDischarge: NO[0m
+[0;32mI (284701) AXP2101: isStandby: NO[0m
+[0;32mI (284701) AXP2101: isVbusIn: YES[0m
+[0;32mI (284701) AXP2101: isVbusGood: YES[0m
+[0;32mI (284711) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (284711) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (284711) AXP2101: getVbusVoltage: 4658 mV[0m
+[0;32mI (284721) AXP2101: getSystemVoltage: 4372 mV[0m
+[0;32mI (284721) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (285731) AXP2101: Power Temperature: 41.70°C[0m
+[0;32mI (285731) AXP2101: isCharging: YES[0m
+[0;32mI (285731) AXP2101: isDischarge: NO[0m
+[0;32mI (285731) AXP2101: isStandby: NO[0m
+[0;32mI (285731) AXP2101: isVbusIn: YES[0m
+[0;32mI (285731) AXP2101: isVbusGood: YES[0m
+[0;32mI (285741) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (285741) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (285741) AXP2101: getVbusVoltage: 4657 mV[0m
+[0;32mI (285751) AXP2101: getSystemVoltage: 4372 mV[0m
+[0;32mI (285751) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (286761) AXP2101: Power Temperature: 41.65°C[0m
+[0;32mI (286761) AXP2101: isCharging: YES[0m
+[0;32mI (286761) AXP2101: isDischarge: NO[0m
+[0;32mI (286761) AXP2101: isStandby: NO[0m
+[0;32mI (286761) AXP2101: isVbusIn: YES[0m
+[0;32mI (286761) AXP2101: isVbusGood: YES[0m
+[0;32mI (286771) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (286771) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (286771) AXP2101: getVbusVoltage: 4656 mV[0m
+[0;32mI (286781) AXP2101: getSystemVoltage: 4371 mV[0m
+[0;32mI (286781) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (287791) AXP2101: Power Temperature: 41.75°C[0m
+[0;32mI (287791) AXP2101: isCharging: YES[0m
+[0;32mI (287791) AXP2101: isDischarge: NO[0m
+[0;32mI (287791) AXP2101: isStandby: NO[0m
+[0;32mI (287791) AXP2101: isVbusIn: YES[0m
+[0;32mI (287791) AXP2101: isVbusGood: YES[0m
+[0;32mI (287801) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (287801) AXP2101: getBattVoltage: 4210 mV[0m
+[0;32mI (287801) AXP2101: getVbusVoltage: 4667 mV[0m
+[0;32mI (287811) AXP2101: getSystemVoltage: 4370 mV[0m
+[0;32mI (287811) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (288821) AXP2101: Power Temperature: 41.70°C[0m
+[0;32mI (288821) AXP2101: isCharging: YES[0m
+[0;32mI (288821) AXP2101: isDischarge: NO[0m
+[0;32mI (288821) AXP2101: isStandby: NO[0m
+[0;32mI (288821) AXP2101: isVbusIn: YES[0m
+[0;32mI (288821) AXP2101: isVbusGood: YES[0m
+[0;32mI (288831) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (288831) AXP2101: getBattVoltage: 4210 mV[0m
+[0;32mI (288831) AXP2101: getVbusVoltage: 4661 mV[0m
+[0;32mI (288841) AXP2101: getSystemVoltage: 4379 mV[0m
+[0;32mI (288841) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (289851) AXP2101: Power Temperature: 41.75°C[0m
+[0;32mI (289851) AXP2101: isCharging: YES[0m
+[0;32mI (289851) AXP2101: isDischarge: NO[0m
+[0;32mI (289851) AXP2101: isStandby: NO[0m
+[0;32mI (289851) AXP2101: isVbusIn: YES[0m
+[0;32mI (289851) AXP2101: isVbusGood: YES[0m
+[0;32mI (289861) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (289861) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (289861) AXP2101: getVbusVoltage: 4654 mV[0m
+[0;32mI (289871) AXP2101: getSystemVoltage: 4371 mV[0m
+[0;32mI (289871) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (290881) AXP2101: Power Temperature: 41.75°C[0m
+[0;32mI (290881) AXP2101: isCharging: YES[0m
+[0;32mI (290881) AXP2101: isDischarge: NO[0m
+[0;32mI (290881) AXP2101: isStandby: NO[0m
+[0;32mI (290881) AXP2101: isVbusIn: YES[0m
+[0;32mI (290881) AXP2101: isVbusGood: YES[0m
+[0;32mI (290891) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (290891) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (290891) AXP2101: getVbusVoltage: 4666 mV[0m
+[0;32mI (290901) AXP2101: getSystemVoltage: 4380 mV[0m
+[0;32mI (290901) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (291911) AXP2101: Power Temperature: 41.75°C[0m
+[0;32mI (291911) AXP2101: isCharging: YES[0m
+[0;32mI (291911) AXP2101: isDischarge: NO[0m
+[0;32mI (291911) AXP2101: isStandby: NO[0m
+[0;32mI (291911) AXP2101: isVbusIn: YES[0m
+[0;32mI (291911) AXP2101: isVbusGood: YES[0m
+[0;32mI (291921) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (291921) AXP2101: getBattVoltage: 4210 mV[0m
+[0;32mI (291921) AXP2101: getVbusVoltage: 4662 mV[0m
+[0;32mI (291931) AXP2101: getSystemVoltage: 4382 mV[0m
+[0;32mI (291931) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (292941) AXP2101: Power Temperature: 41.70°C[0m
+[0;32mI (292941) AXP2101: isCharging: YES[0m
+[0;32mI (292941) AXP2101: isDischarge: NO[0m
+[0;32mI (292941) AXP2101: isStandby: NO[0m
+[0;32mI (292941) AXP2101: isVbusIn: YES[0m
+[0;32mI (292941) AXP2101: isVbusGood: YES[0m
+[0;32mI (292951) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (292951) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (292951) AXP2101: getVbusVoltage: 4655 mV[0m
+[0;32mI (292961) AXP2101: getSystemVoltage: 4371 mV[0m
+[0;32mI (292961) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (293971) AXP2101: Power Temperature: 41.75°C[0m
+[0;32mI (293971) AXP2101: isCharging: YES[0m
+[0;32mI (293971) AXP2101: isDischarge: NO[0m
+[0;32mI (293971) AXP2101: isStandby: NO[0m
+[0;32mI (293971) AXP2101: isVbusIn: YES[0m
+[0;32mI (293971) AXP2101: isVbusGood: YES[0m
+[0;32mI (293981) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (293981) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (293981) AXP2101: getVbusVoltage: 4655 mV[0m
+[0;32mI (293991) AXP2101: getSystemVoltage: 4376 mV[0m
+[0;32mI (293991) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (295001) AXP2101: Power Temperature: 41.65°C[0m
+[0;32mI (295001) AXP2101: isCharging: YES[0m
+[0;32mI (295001) AXP2101: isDischarge: NO[0m
+[0;32mI (295001) AXP2101: isStandby: NO[0m
+[0;32mI (295001) AXP2101: isVbusIn: YES[0m
+[0;32mI (295001) AXP2101: isVbusGood: YES[0m
+[0;32mI (295011) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (295011) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (295011) AXP2101: getVbusVoltage: 4652 mV[0m
+[0;32mI (295021) AXP2101: getSystemVoltage: 4372 mV[0m
+[0;32mI (295021) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (296031) AXP2101: Power Temperature: 41.70°C[0m
+[0;32mI (296031) AXP2101: isCharging: YES[0m
+[0;32mI (296031) AXP2101: isDischarge: NO[0m
+[0;32mI (296031) AXP2101: isStandby: NO[0m
+[0;32mI (296031) AXP2101: isVbusIn: YES[0m
+[0;32mI (296031) AXP2101: isVbusGood: YES[0m
+[0;32mI (296041) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (296041) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (296041) AXP2101: getVbusVoltage: 4657 mV[0m
+[0;32mI (296051) AXP2101: getSystemVoltage: 4369 mV[0m
+[0;32mI (296051) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (297061) AXP2101: Power Temperature: 41.70°C[0m
+[0;32mI (297061) AXP2101: isCharging: YES[0m
+[0;32mI (297061) AXP2101: isDischarge: NO[0m
+[0;32mI (297061) AXP2101: isStandby: NO[0m
+[0;32mI (297061) AXP2101: isVbusIn: YES[0m
+[0;32mI (297061) AXP2101: isVbusGood: YES[0m
+[0;32mI (297071) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (297071) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (297071) AXP2101: getVbusVoltage: 4655 mV[0m
+[0;32mI (297081) AXP2101: getSystemVoltage: 4370 mV[0m
+[0;32mI (297081) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (298091) AXP2101: Power Temperature: 41.70°C[0m
+[0;32mI (298091) AXP2101: isCharging: YES[0m
+[0;32mI (298091) AXP2101: isDischarge: NO[0m
+[0;32mI (298091) AXP2101: isStandby: NO[0m
+[0;32mI (298091) AXP2101: isVbusIn: YES[0m
+[0;32mI (298091) AXP2101: isVbusGood: YES[0m
+[0;32mI (298101) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (298101) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (298101) AXP2101: getVbusVoltage: 4656 mV[0m
+[0;32mI (298111) AXP2101: getSystemVoltage: 4377 mV[0m
+[0;32mI (298111) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (299121) AXP2101: Power Temperature: 41.65°C[0m
+[0;32mI (299121) AXP2101: isCharging: YES[0m
+[0;32mI (299121) AXP2101: isDischarge: NO[0m
+[0;32mI (299121) AXP2101: isStandby: NO[0m
+[0;32mI (299121) AXP2101: isVbusIn: YES[0m
+[0;32mI (299121) AXP2101: isVbusGood: YES[0m
+[0;32mI (299131) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (299131) AXP2101: getBattVoltage: 4210 mV[0m
+[0;32mI (299131) AXP2101: getVbusVoltage: 4654 mV[0m
+[0;32mI (299141) AXP2101: getSystemVoltage: 4373 mV[0m
+[0;32mI (299141) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (300151) AXP2101: Power Temperature: 41.70°C[0m
+[0;32mI (300151) AXP2101: isCharging: YES[0m
+[0;32mI (300151) AXP2101: isDischarge: NO[0m
+[0;32mI (300151) AXP2101: isStandby: NO[0m
+[0;32mI (300151) AXP2101: isVbusIn: YES[0m
+[0;32mI (300151) AXP2101: isVbusGood: YES[0m
+[0;32mI (300161) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (300161) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (300161) AXP2101: getVbusVoltage: 4655 mV[0m
+[0;32mI (300171) AXP2101: getSystemVoltage: 4377 mV[0m
+[0;32mI (300171) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (301181) AXP2101: Power Temperature: 41.75°C[0m
+[0;32mI (301181) AXP2101: isCharging: YES[0m
+[0;32mI (301181) AXP2101: isDischarge: NO[0m
+[0;32mI (301181) AXP2101: isStandby: NO[0m
+[0;32mI (301181) AXP2101: isVbusIn: YES[0m
+[0;32mI (301181) AXP2101: isVbusGood: YES[0m
+[0;32mI (301191) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (301191) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (301191) AXP2101: getVbusVoltage: 4664 mV[0m
+[0;32mI (301201) AXP2101: getSystemVoltage: 4386 mV[0m
+[0;32mI (301201) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (302211) AXP2101: Power Temperature: 41.70°C[0m
+[0;32mI (302211) AXP2101: isCharging: YES[0m
+[0;32mI (302211) AXP2101: isDischarge: NO[0m
+[0;32mI (302211) AXP2101: isStandby: NO[0m
+[0;32mI (302211) AXP2101: isVbusIn: YES[0m
+[0;32mI (302211) AXP2101: isVbusGood: YES[0m
+[0;32mI (302221) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (302221) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (302221) AXP2101: getVbusVoltage: 4660 mV[0m
+[0;32mI (302231) AXP2101: getSystemVoltage: 4380 mV[0m
+[0;32mI (302231) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (303241) AXP2101: Power Temperature: 41.70°C[0m
+[0;32mI (303241) AXP2101: isCharging: YES[0m
+[0;32mI (303241) AXP2101: isDischarge: NO[0m
+[0;32mI (303241) AXP2101: isStandby: NO[0m
+[0;32mI (303241) AXP2101: isVbusIn: YES[0m
+[0;32mI (303241) AXP2101: isVbusGood: YES[0m
+[0;32mI (303251) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (303251) AXP2101: getBattVoltage: 4210 mV[0m
+[0;32mI (303251) AXP2101: getVbusVoltage: 4656 mV[0m
+[0;32mI (303261) AXP2101: getSystemVoltage: 4375 mV[0m
+[0;32mI (303261) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (304271) AXP2101: Power Temperature: 41.75°C[0m
+[0;32mI (304271) AXP2101: isCharging: YES[0m
+[0;32mI (304271) AXP2101: isDischarge: NO[0m
+[0;32mI (304271) AXP2101: isStandby: NO[0m
+[0;32mI (304271) AXP2101: isVbusIn: YES[0m
+[0;32mI (304271) AXP2101: isVbusGood: YES[0m
+[0;32mI (304281) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (304281) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (304281) AXP2101: getVbusVoltage: 4667 mV[0m
+[0;32mI (304291) AXP2101: getSystemVoltage: 4390 mV[0m
+[0;32mI (304291) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (305301) AXP2101: Power Temperature: 41.80°C[0m
+[0;32mI (305301) AXP2101: isCharging: YES[0m
+[0;32mI (305301) AXP2101: isDischarge: NO[0m
+[0;32mI (305301) AXP2101: isStandby: NO[0m
+[0;32mI (305301) AXP2101: isVbusIn: YES[0m
+[0;32mI (305301) AXP2101: isVbusGood: YES[0m
+[0;32mI (305311) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (305311) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (305311) AXP2101: getVbusVoltage: 4674 mV[0m
+[0;32mI (305321) AXP2101: getSystemVoltage: 4393 mV[0m
+[0;32mI (305321) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (306331) AXP2101: Power Temperature: 41.80°C[0m
+[0;32mI (306331) AXP2101: isCharging: YES[0m
+[0;32mI (306331) AXP2101: isDischarge: NO[0m
+[0;32mI (306331) AXP2101: isStandby: NO[0m
+[0;32mI (306331) AXP2101: isVbusIn: YES[0m
+[0;32mI (306331) AXP2101: isVbusGood: YES[0m
+[0;32mI (306341) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (306341) AXP2101: getBattVoltage: 4212 mV[0m
+[0;32mI (306341) AXP2101: getVbusVoltage: 4675 mV[0m
+[0;32mI (306351) AXP2101: getSystemVoltage: 4392 mV[0m
+[0;32mI (306351) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (307361) AXP2101: Power Temperature: 41.80°C[0m
+[0;32mI (307361) AXP2101: isCharging: YES[0m
+[0;32mI (307361) AXP2101: isDischarge: NO[0m
+[0;32mI (307361) AXP2101: isStandby: NO[0m
+[0;32mI (307361) AXP2101: isVbusIn: YES[0m
+[0;32mI (307361) AXP2101: isVbusGood: YES[0m
+[0;32mI (307371) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (307371) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (307371) AXP2101: getVbusVoltage: 4670 mV[0m
+[0;32mI (307381) AXP2101: getSystemVoltage: 4387 mV[0m
+[0;32mI (307381) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (308391) AXP2101: Power Temperature: 41.75°C[0m
+[0;32mI (308391) AXP2101: isCharging: YES[0m
+[0;32mI (308391) AXP2101: isDischarge: NO[0m
+[0;32mI (308391) AXP2101: isStandby: NO[0m
+[0;32mI (308391) AXP2101: isVbusIn: YES[0m
+[0;32mI (308391) AXP2101: isVbusGood: YES[0m
+[0;32mI (308401) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (308401) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (308401) AXP2101: getVbusVoltage: 4664 mV[0m
+[0;32mI (308411) AXP2101: getSystemVoltage: 4394 mV[0m
+[0;32mI (308411) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (309421) AXP2101: Power Temperature: 41.80°C[0m
+[0;32mI (309421) AXP2101: isCharging: YES[0m
+[0;32mI (309421) AXP2101: isDischarge: NO[0m
+[0;32mI (309421) AXP2101: isStandby: NO[0m
+[0;32mI (309421) AXP2101: isVbusIn: YES[0m
+[0;32mI (309421) AXP2101: isVbusGood: YES[0m
+[0;32mI (309431) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (309431) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (309431) AXP2101: getVbusVoltage: 4662 mV[0m
+[0;32mI (309441) AXP2101: getSystemVoltage: 4382 mV[0m
+[0;32mI (309441) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (310451) AXP2101: Power Temperature: 41.75°C[0m
+[0;32mI (310451) AXP2101: isCharging: YES[0m
+[0;32mI (310451) AXP2101: isDischarge: NO[0m
+[0;32mI (310451) AXP2101: isStandby: NO[0m
+[0;32mI (310451) AXP2101: isVbusIn: YES[0m
+[0;32mI (310451) AXP2101: isVbusGood: YES[0m
+[0;32mI (310461) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (310461) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (310461) AXP2101: getVbusVoltage: 4668 mV[0m
+[0;32mI (310471) AXP2101: getSystemVoltage: 4382 mV[0m
+[0;32mI (310471) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (311481) AXP2101: Power Temperature: 41.80°C[0m
+[0;32mI (311481) AXP2101: isCharging: YES[0m
+[0;32mI (311481) AXP2101: isDischarge: NO[0m
+[0;32mI (311481) AXP2101: isStandby: NO[0m
+[0;32mI (311481) AXP2101: isVbusIn: YES[0m
+[0;32mI (311481) AXP2101: isVbusGood: YES[0m
+[0;32mI (311491) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (311491) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (311491) AXP2101: getVbusVoltage: 4663 mV[0m
+[0;32mI (311501) AXP2101: getSystemVoltage: 4374 mV[0m
+[0;32mI (311501) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (312511) AXP2101: Power Temperature: 41.75°C[0m
+[0;32mI (312511) AXP2101: isCharging: YES[0m
+[0;32mI (312511) AXP2101: isDischarge: NO[0m
+[0;32mI (312511) AXP2101: isStandby: NO[0m
+[0;32mI (312511) AXP2101: isVbusIn: YES[0m
+[0;32mI (312511) AXP2101: isVbusGood: YES[0m
+[0;32mI (312521) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (312521) AXP2101: getBattVoltage: 4210 mV[0m
+[0;32mI (312521) AXP2101: getVbusVoltage: 4656 mV[0m
+[0;32mI (312531) AXP2101: getSystemVoltage: 4374 mV[0m
+[0;32mI (312531) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (315681) AXP2101: Power Temperature: 41.30°C[0m
+[0;32mI (315681) AXP2101: isCharging: YES[0m
+[0;32mI (315681) AXP2101: isDischarge: NO[0m
+[0;32mI (315681) AXP2101: isStandby: NO[0m
+[0;32mI (315681) AXP2101: isVbusIn: YES[0m
+[0;32mI (315681) AXP2101: isVbusGood: YES[0m
+[0;32mI (315691) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (315691) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (315691) AXP2101: getVbusVoltage: 4645 mV[0m
+[0;32mI (315701) AXP2101: getSystemVoltage: 4366 mV[0m
+[0;32mI (315701) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (316711) AXP2101: Power Temperature: 41.50°C[0m
+[0;32mI (316711) AXP2101: isCharging: YES[0m
+[0;32mI (316711) AXP2101: isDischarge: NO[0m
+[0;32mI (316711) AXP2101: isStandby: NO[0m
+[0;32mI (316711) AXP2101: isVbusIn: YES[0m
+[0;32mI (316711) AXP2101: isVbusGood: YES[0m
+[0;32mI (316721) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (316721) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (316721) AXP2101: getVbusVoltage: 4654 mV[0m
+[0;32mI (316731) AXP2101: getSystemVoltage: 4376 mV[0m
+[0;32mI (316731) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (317741) AXP2101: Power Temperature: 41.60°C[0m
+[0;32mI (317741) AXP2101: isCharging: YES[0m
+[0;32mI (317741) AXP2101: isDischarge: NO[0m
+[0;32mI (317741) AXP2101: isStandby: NO[0m
+[0;32mI (317741) AXP2101: isVbusIn: YES[0m
+[0;32mI (317741) AXP2101: isVbusGood: YES[0m
+[0;32mI (317751) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (317751) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (317751) AXP2101: getVbusVoltage: 4652 mV[0m
+[0;32mI (317761) AXP2101: getSystemVoltage: 4373 mV[0m
+[0;32mI (317761) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (318771) AXP2101: Power Temperature: 41.60°C[0m
+[0;32mI (318771) AXP2101: isCharging: YES[0m
+[0;32mI (318771) AXP2101: isDischarge: NO[0m
+[0;32mI (318771) AXP2101: isStandby: NO[0m
+[0;32mI (318771) AXP2101: isVbusIn: YES[0m
+[0;32mI (318771) AXP2101: isVbusGood: YES[0m
+[0;32mI (318781) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (318781) AXP2101: getBattVoltage: 4210 mV[0m
+[0;32mI (318781) AXP2101: getVbusVoltage: 4652 mV[0m
+[0;32mI (318791) AXP2101: getSystemVoltage: 4374 mV[0m
+[0;32mI (318791) AXP2101: getBatteryPercent: 83 %[0m
+[0;32mI (319801) AXP2101: Power Temperature: 41.60°C[0m
+[0;32mI (319801) AXP2101: isCharging: YES[0m
+[0;32mI (319801) AXP2101: isDischarge: NO[0m
+[0;32mI (319801) AXP2101: isStandby: NO[0m
+[0;32mI (319801) AXP2101: isVbusIn: YES[0m
+[0;32mI (319801) AXP2101: isVbusGood: YES[0m
+[0;32mI (319811) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (319811) AXP2101: getBattVoltage: 4211 mV[0m
+[0;32mI (319811) AXP2101: getVbusVoltage: 4650 mV[0m
+[0;32mI (319821) AXP2101: getSystemVoltage: 4372 mV[0m
+[0;32mI (319821) AXP2101: getBatteryPercent: 83 %[0m

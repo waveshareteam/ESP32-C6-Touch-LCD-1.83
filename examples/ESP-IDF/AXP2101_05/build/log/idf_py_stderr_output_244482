@@ -1,0 +1,4 @@
+Command: cmake -G Ninja -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/home/wxggc/.espressif/python_env/idf5.5_py3.10_env/bin/python -DESP_PLATFORM=1 -DCCACHE_ENABLE=0 /home/wxggc/桌面/project2025/ESP32-C6-Touch-LCD-1.83/AXP2101_05
+/tmp/kconfgen_tmpfavpjlpq:1: warning: ignoring malformed line 'CONFIG_PMU_I2C_SCL 14'
+/tmp/kconfgen_tmpfavpjlpq:2: warning: ignoring malformed line 'CONFIG_PMU_I2C_SDA 15'
+/tmp/kconfgen_tmpfavpjlpq:3: warning: ignoring malformed line 'CONFIG_PMU_INTERRUPT_PIN -1'

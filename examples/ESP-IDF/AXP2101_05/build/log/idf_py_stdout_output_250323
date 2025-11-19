@@ -1,0 +1,19 @@
+Command: ninja flash
+[1/5] cd /home/wxggc/桌面/project2025/ESP32-C6-Touch-LCD-1.83/AXP2101_05/build/esp-idf/esptool_py && /home/wxggc/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/wxggc/esp/v550/esp-idf-v5.5/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/wxggc/桌面/project2025/ESP32-C6-Touch-LCD-1.83/AXP2101_05/build/partition_table/partition-table.bin /home/wxggc/桌面/project2025/ESP32-C6-Touch-LCD-1.83/AXP2101_05/build/XPowersLib_Example.bin
+XPowersLib_Example.bin binary size 0x309c0 bytes. Smallest app partition is 0x100000 bytes. 0xcf640 bytes (81%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/wxggc/桌面/project2025/ESP32-C6-Touch-LCD-1.83/AXP2101_05/build/bootloader/esp-idf/esptool_py && /home/wxggc/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/wxggc/esp/v550/esp-idf-v5.5/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/wxggc/桌面/project2025/ESP32-C6-Touch-LCD-1.83/AXP2101_05/build/bootloader/bootloader.bin
+Bootloader binary size 0x57e0 bytes. 0x2820 bytes (31%) free.
+[2/3] cd /home/wxggc/esp/v550/esp-idf-v5.5/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/wxggc/esp/v550/esp-idf-v5.5 -D "SERIAL_TOOL=/home/wxggc/.espressif/python_env/idf5.5_py3.10_env/bin/python;;/home/wxggc/esp/v550/esp-idf-v5.5/components/esptool_py/esptool/esptool.py;--chip;esp32c6" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/wxggc/桌面/project2025/ESP32-C6-Touch-LCD-1.83/AXP2101_05/build -P /home/wxggc/esp/v550/esp-idf-v5.5/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32c6 -p /dev/ttyACM0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 XPowersLib_Example.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.10.0
+Serial port /dev/ttyACM0
+
+A fatal error occurred: Could not open /dev/ttyACM0, the port is busy or doesn't exist.
+([Errno 2] could not open port /dev/ttyACM0: [Errno 2] No such file or directory: '/dev/ttyACM0')
+
+Hint: Check if the port is correct and ESP connected
+
+FAILED: CMakeFiles/flash /home/wxggc/桌面/project2025/ESP32-C6-Touch-LCD-1.83/AXP2101_05/build/CMakeFiles/flash 
+cd /home/wxggc/esp/v550/esp-idf-v5.5/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/wxggc/esp/v550/esp-idf-v5.5 -D "SERIAL_TOOL=/home/wxggc/.espressif/python_env/idf5.5_py3.10_env/bin/python;;/home/wxggc/esp/v550/esp-idf-v5.5/components/esptool_py/esptool/esptool.py;--chip;esp32c6" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/wxggc/桌面/project2025/ESP32-C6-Touch-LCD-1.83/AXP2101_05/build -P /home/wxggc/esp/v550/esp-idf-v5.5/components/esptool_py/run_serial_tool.cmake
+ninja: build stopped: subcommand failed.

@@ -1,0 +1,8 @@
+Command: /home/wxggc/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/wxggc/esp/v550/esp-idf-v5.5/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /home/wxggc/桌面/project2025/ESP32-C6-Touch-LCD-1.83/AXP2101_05/build/XPowersLib_Example.elf /home/wxggc/桌面/project2025/ESP32-C6-Touch-LCD-1.83/AXP2101_05/build/bootloader/bootloader.elf -m '/home/wxggc/.espressif/python_env/idf5.5_py3.10_env/bin/python' '/home/wxggc/esp/v550/esp-idf-v5.5/tools/idf.py' '-p' '/dev/ttyACM0'
+[0;33m--- esp-idf-monitor 1.8.0 on /dev/ttyACM0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40017600: [0;33mets_delay_us[0m[0m in [0;32mROM[0m
+[1;31m--- Error: device reports readiness to read but returned no data (device disconnected or multiple access on port?)[0m
+[0;33m--- Waiting for the device to reconnect[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m[0m
+[0;33m--- Warning: Writing to serial is timing out. Please make sure that your application supports an interactive console and that you have picked the correct console for serial communication.[0m
+[0m

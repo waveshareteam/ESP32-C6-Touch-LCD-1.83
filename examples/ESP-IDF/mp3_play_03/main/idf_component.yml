@@ -1,0 +1,2 @@
+dependencies:
+  espressif/esp_audio_simple_player: ^0.9.4~1

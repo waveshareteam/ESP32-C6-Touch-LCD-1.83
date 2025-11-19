@@ -1,0 +1,6 @@
+{
+    "idf.pythonInstallPath": "/usr/bin/python3",
+    "files.associations": {
+        "cstring": "cpp"
+    }
+}

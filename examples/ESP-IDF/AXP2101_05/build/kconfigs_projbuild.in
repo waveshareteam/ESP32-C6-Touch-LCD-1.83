@@ -1,0 +1,7 @@
+source "/home/wxggc/esp/v550/esp-idf-v5.5/components/bootloader/Kconfig.projbuild"
+source "/home/wxggc/esp/v550/esp-idf-v5.5/components/esp_app_format/Kconfig.projbuild"
+source "/home/wxggc/esp/v550/esp-idf-v5.5/components/esp_rom/Kconfig.projbuild"
+source "/home/wxggc/esp/v550/esp-idf-v5.5/components/esp_tee/Kconfig.projbuild"
+source "/home/wxggc/esp/v550/esp-idf-v5.5/components/esptool_py/Kconfig.projbuild"
+source "/home/wxggc/esp/v550/esp-idf-v5.5/components/partition_table/Kconfig.projbuild"
+source "/home/wxggc/桌面/project2025/ESP32-C6-Touch-LCD-1.83/AXP2101_05/main/Kconfig.projbuild"

@@ -1,0 +1,195 @@
+Command: /home/wxggc/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/wxggc/esp/v550/esp-idf-v5.5/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /home/wxggc/桌面/project2025/ESP32-C6-Touch-LCD-1.83/AXP2101_05/build/XPowersLib_Example.elf /home/wxggc/桌面/project2025/ESP32-C6-Touch-LCD-1.83/AXP2101_05/build/bootloader/bootloader.elf -m '/home/wxggc/.espressif/python_env/idf5.5_py3.10_env/bin/python' '/home/wxggc/esp/v550/esp-idf-v5.5/tools/idf.py' '-p' '/dev/ttyACM0'
+[0;32mI (5550) AXP2101: isDischarge: NO[0m
+[0;32mI (5550) AXP2101: isStandby: NO[0m
+[0;32mI (5550) AXP2101: isVbusIn: YES[0m
+[0;32mI (5550) AXP2101: isVbusGood: YES[0m
+[0;32mI (5560) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (5560) AXP2101: getBattVoltage: 4202 mV[0m
+[0;32mI (5560) AXP2101: getVbusVoltage: 4845 mV[0m
+[0;32mI (5570) AXP2101: getSystemVoltage: 4425 mV[0m
+[0;32mI (5570) AXP2101: getBatteryPercent: 80 %[0m
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x15 (USB_UART_HPSYS),boot:0x2d (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40803460
+SPIWP:0xee
+mode:DIO, clock div:2
+len:0x31c8
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (23) boot: compile time Oct 28 2025 18:30:15[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (30) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (34) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (38) boot: Enabling RNG early entropy source...[0m
+[0;32mI (42) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (51) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (58) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (64) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (71) boot: End of partition table[0m
+[0;32mI (74) esp_image: segment 0: paddr=00010020 vaddr=42020020 size=0ae00h ( 44544) map[0m
+[0;32mI (90) esp_image: segment 1: paddr=0001ae28 vaddr=40800000 size=051f0h ( 20976) load[0m
+[0;32mI (95) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=18a18h (100888) map[0m
+[0;32mI (115) esp_image: segment 3: paddr=00038a40 vaddr=408051f0 size=07f58h ( 32600) load[0m
+[0;32mI (125) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (126) boot: Disabling RNG early entropy source...[0m
+[0;32mI (136) cpu_start: Unicore app[0m
+[0;32mI (144) cpu_start: Pro cpu start user code[0m
+[0;32mI (144) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (145) app_init: Application information:[0m
+[0;32mI (145) app_init: Project name:     XPowersLib_Example[0m
+[0;32mI (149) app_init: App version:      1[0m
+[0;32mI (152) app_init: Compile time:     Oct 28 2025 18:30:10[0m
+[0;32mI (157) app_init: ELF file SHA256:  a5bfdb740...[0m
+[0;32mI (162) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (165) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (169) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (173) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (177) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (183) heap_init: At 4080E2A0 len 0006E370 (440 KiB): RAM[0m
+[0;32mI (189) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (194) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (200) spi_flash: detected chip: generic[0m
+[0;32mI (203) spi_flash: flash io: dio[0m
+[0;33mW (206) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (218) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (224) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (231) coexist: coex firmware version: 831ec70[0m
+[0;32mI (235) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (240) main_task: Started on CPU0[0m
+[0;32mI (240) main_task: Calling app_main()[0m
+[0;32mI (240) main: I2C initialized successfully[0m
+[0;32mI (250) AXP2101: Init PMU SUCCESS![0m
+[0;32mI (260) AXP2101: DCDC=======================================================================[0m
+
+[0;32mI (260) AXP2101: DC1  : +   Voltage:3300 mV [0m
+
+[0;32mI (260) AXP2101: DC2  : -   Voltage:900 mV [0m
+
+[0;32mI (270) AXP2101: DC3  : -   Voltage:1200 mV [0m
+
+[0;32mI (270) AXP2101: DC4  : -   Voltage:1800 mV [0m
+
+[0;32mI (270) AXP2101: DC5  : -   Voltage:1400 mV [0m
+
+[0;32mI (280) AXP2101: ALDO=======================================================================[0m
+
+[0;32mI (290) AXP2101: ALDO1: +   Voltage:3300 mV[0m
+
+[0;32mI (290) AXP2101: ALDO2: -   Voltage:3300 mV[0m
+
+[0;32mI (300) AXP2101: ALDO3: -   Voltage:3000 mV[0m
+
+[0;32mI (300) AXP2101: ALDO4: -   Voltage:1800 mV[0m
+
+[0;32mI (300) AXP2101: BLDO=======================================================================[0m
+
+[0;32mI (310) AXP2101: BLDO1: -   Voltage:1200 mV[0m
+
+[0;32mI (320) AXP2101: BLDO2: -   Voltage:2800 mV[0m
+
+[0;32mI (320) AXP2101: CPUSLDO====================================================================[0m
+
+[0;32mI (330) AXP2101: CPUSLDO: - Voltage:1200 mV[0m
+
+[0;32mI (330) AXP2101: DLDO=======================================================================[0m
+
+[0;32mI (340) AXP2101: DLDO1: -   Voltage:500 mV[0m
+
+[0;32mI (340) AXP2101: DLDO2: -   Voltage:500 mV[0m
+
+[0;32mI (350) AXP2101: ===========================================================================[0m
+
+[0;32mI (370) AXP2101: battery percentage:80 %[0m
+[0;32mI (370) main_task: Returned from app_main()[0m
+[0;32mI (370) AXP2101: Power Temperature: 36.60°C[0m
+[0;32mI (370) AXP2101: isCharging: YES[0m
+[0;32mI (370) AXP2101: isDischarge: NO[0m
+[0;32mI (380) AXP2101: isStandby: NO[0m
+[0;32mI (380) AXP2101: isVbusIn: YES[0m
+[0;32mI (380) AXP2101: isVbusGood: YES[0m
+[0;32mI (390) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (390) AXP2101: getBattVoltage: 4202 mV[0m
+[0;32mI (390) AXP2101: getVbusVoltage: 4857 mV[0m
+[0;32mI (400) AXP2101: getSystemVoltage: 4424 mV[0m
+[0;32mI (400) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (1410) AXP2101: Power Temperature: 36.85°C[0m
+[0;32mI (1410) AXP2101: isCharging: YES[0m
+[0;32mI (1410) AXP2101: isDischarge: NO[0m
+[0;32mI (1410) AXP2101: isStandby: NO[0m
+[0;32mI (1410) AXP2101: isVbusIn: YES[0m
+[0;32mI (1410) AXP2101: isVbusGood: YES[0m
+[0;32mI (1420) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (1420) AXP2101: getBattVoltage: 4201 mV[0m
+[0;32mI (1420) AXP2101: getVbusVoltage: 4857 mV[0m
+[0;32mI (1430) AXP2101: getSystemVoltage: 4427 mV[0m
+[0;32mI (1430) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (2440) AXP2101: Power Temperature: 37.15°C[0m
+[0;32mI (2440) AXP2101: isCharging: YES[0m
+[0;32mI (2440) AXP2101: isDischarge: NO[0m
+[0;32mI (2440) AXP2101: isStandby: NO[0m
+[0;32mI (2440) AXP2101: isVbusIn: YES[0m
+[0;32mI (2440) AXP2101: isVbusGood: YES[0m
+[0;32mI (2450) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (2450) AXP2101: getBattVoltage: 4201 mV[0m
+[0;32mI (2450) AXP2101: getVbusVoltage: 4863 mV[0m
+[0;32mI (2460) AXP2101: getSystemVoltage: 4426 mV[0m
+[0;32mI (2460) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (3470) AXP2101: Power Temperature: 37.20°C[0m
+[0;32mI (3470) AXP2101: isCharging: YES[0m
+[0;32mI (3470) AXP2101: isDischarge: NO[0m
+[0;32mI (3470) AXP2101: isStandby: NO[0m
+[0;32mI (3470) AXP2101: isVbusIn: YES[0m
+[0;32mI (3470) AXP2101: isVbusGood: YES[0m
+[0;32mI (3480) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (3480) AXP2101: getBattVoltage: 4201 mV[0m
+[0;32mI (3480) AXP2101: getVbusVoltage: 4856 mV[0m
+[0;32mI (3490) AXP2101: getSystemVoltage: 4425 mV[0m
+[0;32mI (3490) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (4500) AXP2101: Power Temperature: 37.45°C[0m
+[0;32mI (4500) AXP2101: isCharging: YES[0m
+[0;32mI (4500) AXP2101: isDischarge: NO[0m
+[0;32mI (4500) AXP2101: isStandby: NO[0m
+[0;32mI (4500) AXP2101: isVbusIn: YES[0m
+[0;32mI (4500) AXP2101: isVbusGood: YES[0m
+[0;32mI (4510) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (4510) AXP2101: getBattVoltage: 4200 mV[0m
+[0;32mI (4510) AXP2101: getVbusVoltage: 4860 mV[0m
+[0;32mI (4520) AXP2101: getSystemVoltage: 4426 mV[0m
+[0;32mI (4520) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (5530) AXP2101: Power Temperature: 37.45°C[0m
+[0;32mI (5530) AXP2101: isCharging: YES[0m
+[0;32mI (5530) AXP2101: isDischarge: NO[0m
+[0;32mI (5530) AXP2101: isStandby: NO[0m
+[0;32mI (5530) AXP2101: isVbusIn: YES[0m
+[0;32mI (5530) AXP2101: isVbusGood: YES[0m
+[0;32mI (5540) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (5540) AXP2101: getBattVoltage: 4201 mV[0m
+[0;32mI (5540) AXP2101: getVbusVoltage: 4863 mV[0m
+[0;32mI (5550) AXP2101: getSystemVoltage: 4425 mV[0m
+[0;32mI (5550) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (6560) AXP2101: Power Temperature: 37.60°C[0m
+[0;32mI (6560) AXP2101: isCharging: YES[0m
+[0;32mI (6560) AXP2101: isDischarge: NO[0m
+[0;32mI (6560) AXP2101: isStandby: NO[0m
+[0;32mI (6560) AXP2101: isVbusIn: YES[0m
+[0;32mI (6560) AXP2101: isVbusGood: YES[0m
+[0;32mI (6570) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (6570) AXP2101: getBattVoltage: 4201 mV[0m
+[0;32mI (6570) AXP2101: getVbusVoltage: 4865 mV[0m
+[0;32mI (6580) AXP2101: getSystemVoltage: 4424 mV[0m
+[0;32mI (6580) AXP2101: getBatteryPercent: 80 %[0m
+[0;32mI (7590) AXP2101: Power Temperature: 37.55°C[0m
+[0;32mI (7590) AXP2101: isCharging: YES[0m
+[0;32mI (7590) AXP2101: isDischarge: NO[0m
+[0;32mI (7590) AXP2101: isStandby: NO[0m
+[0;32mI (7590) AXP2101: isVbusIn: YES[0m
+[0;32mI (7590) AXP2101: isVbusGood: YES[0m
+[0;32mI (7600) AXP2101: Charger Status: constant voltage[0m
+[0;32mI (7600) AXP2101: getBattVoltage: 4203 mV[0m
+[0;32mI (7600) AXP2101: getVbusVoltage: 4859 mV[0m
+[0;32mI (7610) AXP2101: getSystemVoltage: 4425 mV[0m
+[0;32mI (7610) AXP2101: getBatteryPercent: 80 %[0m

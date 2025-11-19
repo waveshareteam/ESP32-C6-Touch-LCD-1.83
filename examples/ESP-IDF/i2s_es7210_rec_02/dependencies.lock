@@ -1,0 +1,28 @@
+dependencies:
+  espressif/es7210:
+    component_hash: 761ac59d31d8babb01f6338045cc877f2a75027bae9823a4e4d0b6e5b6f63faf
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.4,<6.0'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.0.1~1
+  i2s_examples_common:
+    dependencies: []
+    source:
+      path: /home/wxggc/esp/v550/esp-idf-v5.5/examples/peripherals/i2s/i2s_examples_common
+      type: local
+    version: '*'
+  idf:
+    source:
+      type: idf
+    version: 5.5.0
+direct_dependencies:
+- espressif/es7210
+- i2s_examples_common
+- idf
+manifest_hash: 863657df7e7519723c9138bb68184ea6356d8a75755ca10310a21f33d177b53a
+target: esp32c6
+version: 2.0.0
